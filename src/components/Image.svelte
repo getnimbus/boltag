@@ -1,0 +1,15 @@
+<svelte:options immutable />
+
+<script>
+  import { handleImgError } from "~/utils/index";
+
+  export let logo;
+  export let defaultLogo;
+</script>
+
+<img
+  src={logo || defaultLogo}
+  alt=""
+  class="w-full h-full object-contain block"
+  on:error={(e) => handleImgError(e, defaultLogo)}
+/>
