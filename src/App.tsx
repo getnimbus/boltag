@@ -103,7 +103,6 @@ function App() {
 
   const handleChangeAddressChart = () => {
     if (paramsTokenInfo && Object.keys(paramsTokenInfo)?.length !== 0) {
-      console.log("paramsTokenInfo: ", paramsTokenInfo);
       if (
         listNativeToken.includes(paramsTokenInfo.fromToken) &&
         listNativeToken.includes(paramsTokenInfo.toToken)
