@@ -6627,10 +6627,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-nimbus-universal-swap@^4.30.0:
-  version "4.30.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.30.0.tgz#800e1b34cc84dfa3295f5e950e304375b52c0ce4"
-  integrity sha512-xS8UpziUFV2m1JjcxTSoD23VfQ7VRQsfi5EuYoFNkNrIKCqQ7rfaM1yz4lSOlX4DHn8CVWL8qXJ1cwO0mbxZlg==
+nimbus-universal-swap@^4.32.0:
+  version "4.32.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.32.0.tgz#5b17b5f3dc42dec5370aa785b58de555a36a5a52"
+  integrity sha512-42A2FGbXSPucuq9j3UwPja+mCs8rTSscycZ5F6DkUx+qXxLI51k8i3eMn7v83VQz/3/dmn8n1fJkp3IKz7o71w==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.4"
     "@emotion/react" "^11.13.3"
