@@ -14,7 +14,7 @@
     "axios": "^1.7.7",
     "framer-motion": "^11.11.9",
     "mixpanel-browser": "^2.55.1",
-    "nimbus-universal-swap": "^4.32.0",
+    "nimbus-universal-swap": "^4.33.0",
     "numeral": "^2.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
