@@ -120,7 +120,7 @@ function App() {
 
   useEffect(() => {
     const showCandleChartSwapStorage = localStorage.getItem(
-      "showCandleChartSwap",
+      "showCandleChartSwap"
     );
     const refAddressSwapStorage = localStorage.getItem("refAddressSwap");
 
@@ -137,7 +137,7 @@ function App() {
     if (Number(data.chainId) !== 0) {
       localStorage.setItem(
         "connectedWalletSwapChain",
-        (data.chainId || 0)?.toString(),
+        (data.chainId || 0)?.toString()
       );
     } else {
       localStorage.setItem("connectedWalletSwapChain", "0");
@@ -154,7 +154,7 @@ function App() {
         null,
         "",
         window.location.pathname +
-          `?fromChain=${paramsChain}&toChain=${paramsChain}`,
+          `?fromChain=${paramsChain}&toChain=${paramsChain}`
       );
     }
   };
@@ -209,7 +209,7 @@ function App() {
       setToTokenParam(toTokenParams || USDCAddress);
     } else {
       const connectedWalletSwapChainStorage = localStorage.getItem(
-        "connectedWalletSwapChain",
+        "connectedWalletSwapChain"
       );
       if (
         connectedWalletSwapChainStorage &&
@@ -223,12 +223,12 @@ function App() {
           "",
           window.location.pathname +
             `?fromChain=${Number(
-              connectedWalletSwapChainStorage,
+              connectedWalletSwapChainStorage
             )}&toChain=${Number(connectedWalletSwapChainStorage)}${
               fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
             }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
               refAddress ? `&refAddress=${refAddress}` : ""
-            }`,
+            }`
         );
       } else {
         setParamsChain(ChainId.MOVE);
@@ -242,7 +242,7 @@ function App() {
               fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
             }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
               refAddress ? `&refAddress=${refAddress}` : ""
-            }`,
+            }`
         );
       }
     }
@@ -258,7 +258,7 @@ function App() {
             paramsTokenInfo?.fromToken
           }&toChain=${paramsChain}&toToken=${paramsTokenInfo?.toToken}${
             refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`,
+          }`
       );
     } else {
       await wait(100);
@@ -270,7 +270,7 @@ function App() {
             fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
           }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
             refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`,
+          }`
       );
     }
   };
@@ -284,7 +284,7 @@ function App() {
   const birdeyeChartUrl = useMemo(() => {
     return `https://birdeye.so/tv-widget/${
       addressChart || SUIAddress
-    }?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartTimezone=Asia%2FHo_Chi_Minh&chartLeftToolbar=show&theme=light`;
+    }?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=light`;
   }, [addressChart]);
 
   return (
