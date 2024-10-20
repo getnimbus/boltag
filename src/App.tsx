@@ -10,6 +10,7 @@ import {
 } from "nimbus-universal-swap";
 import { wait } from "./utils";
 import { motion } from "framer-motion";
+import styled, { keyframes } from "styled-components";
 
 const listDefaultToken = [
   {
@@ -120,7 +121,19 @@ const random = () => {
   return {
     randomX: Math.random() * 100,
     randomY: Math.random() * 100,
+    token: Math.random() * 5,
   };
+};
+
+const tokenAnimation = (index: number) => {
+  return keyframes`
+    0%, 100% {
+      transform: translateY(${-random().token * index}px);
+    }
+    50% {
+      transform: translateY(${random().token * index}px);
+    }
+  `;
 };
 
 const listDefaultTokenPosition = listDefaultToken.map((item, index) => {
@@ -418,6 +431,13 @@ function App() {
     setAddressChart(token.address);
   };
 
+  const AnimatedDiv = styled.div<{ $index: number }>`
+    animation: ${(props) => {
+        return tokenAnimation(props.$index);
+      }}
+      5522.1ms infinite linear;
+  `;
+
   return (
     <div className="relative overflow-hidden lg:pt-20 pt-[104px] md:pb-[144px] pb-[244px] min-h-screen flex justify-center items-center">
       <div
@@ -521,7 +541,7 @@ function App() {
             flexShrink: 0,
           }}
         >
-          {listDefaultTokenPosition.map((token) => {
+          {listDefaultTokenPosition.map((token, index) => {
             return (
               <motion.div
                 key={token.symbol}
@@ -534,40 +554,38 @@ function App() {
                   height: `${token.randomSize}px`,
                   left: `${token.left}%`,
                   top: `${token.top}%`,
-                  animationName: "tokenAnimation",
-                  animationDuration: "5522.1ms",
-                  animationIterationCount: "infinite",
-                  animationTimingFunction: "linear",
                 }}
               >
-                <div
-                  className="flex items-center justify-center w-full h-full p-4 transition-all rounded-full cursor-pointer hover:border group"
-                  style={{
-                    borderColor: "rgba(30, 150, 252, 0.2)",
-                  }}
-                  onClick={() => {
-                    handleSelectedToken(token);
-                  }}
-                >
-                  <img
-                    src={token.logo}
-                    alt=""
+                <AnimatedDiv $index={index + 1}>
+                  <div
+                    className="flex items-center justify-center w-full h-full p-4 transition-all rounded-full cursor-pointer hover:border group"
                     style={{
-                      borderColor: "rgba(30, 150, 252, 0.4)",
-                      animationName: "tokenAnimationRotate",
-                      animationDuration: "5522.1ms",
-                      animationIterationCount: "infinite",
-                      animationTimingFunction: "linear",
+                      borderColor: "rgba(30, 150, 252, 0.2)",
                     }}
-                    className="w-full h-full overflow-hidden transition-all rounded-full group-hover:border group-hover:scale-125 group-hover:rotate-12 group-hover:p-1"
-                  />
-                </div>
+                    onClick={() => {
+                      handleSelectedToken(token);
+                    }}
+                  >
+                    <img
+                      src={token.logo}
+                      alt=""
+                      style={{
+                        borderColor: "rgba(30, 150, 252, 0.4)",
+                        animationName: "tokenAnimationRotate",
+                        animationDuration: "5522.1ms",
+                        animationIterationCount: "infinite",
+                        animationTimingFunction: "linear",
+                      }}
+                      className="w-full h-full overflow-hidden transition-all rounded-full group-hover:border group-hover:scale-125 group-hover:rotate-12 group-hover:p-1"
+                    />
+                  </div>
 
-                <div className="absolute hidden text-sm transform -translate-x-1/2 group-hover:block -bottom-6 left-1/2">
-                  {token.symbol}
-                </div>
+                  <div className="absolute hidden text-sm transform -translate-x-1/2 group-hover:block -bottom-6 left-1/2">
+                    {token.symbol}
+                  </div>
 
-                <div className="absolute inset-0 block rounded-full bg-white/30 backdrop-blur-sm group-hover:hidden"></div>
+                  <div className="absolute inset-0 block rounded-full bg-white/30 backdrop-blur-sm group-hover:hidden"></div>
+                </AnimatedDiv>
               </motion.div>
             );
           })}
