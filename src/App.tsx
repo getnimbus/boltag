@@ -413,10 +413,12 @@ function App() {
   };
 
   return (
-    <div className="relative overflow-hidden lg:pt-20 pt-[44px] md:pb-[144px] pb-[184px] min-h-screen">
+    <div className="relative overflow-hidden lg:pt-20 pt-[44px] md:pb-[144px] pb-[184px] min-h-screen flex justify-center items-center">
       <div
         className={`relative z-20 m-auto flex items-center justify-center ${
-          isShowChart ? "max-w-[1600px] xl:w-[82%] w-[90%]" : "w-max"
+          isShowChart
+            ? "max-w-[1600px] xl:w-[82%] lg:w-[90%] md:w-max"
+            : "w-max"
         }`}
       >
         <div className="flex flex-col w-full h-full gap-10">
@@ -557,7 +559,7 @@ function App() {
                   />
                 </div>
 
-                <div className="absolute hidden text-sm text-gray-500 transform -translate-x-1/2 group-hover:block -bottom-6 left-1/2">
+                <div className="absolute hidden text-sm transform -translate-x-1/2 group-hover:block -bottom-6 left-1/2">
                   {token.symbol}
                 </div>
 

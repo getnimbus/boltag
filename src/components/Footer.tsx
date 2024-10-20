@@ -1,38 +1,37 @@
 import Logo from "../assets/logo.svg";
+import Bolt from "../assets/bolt.png";
 
 export const Footer = () => {
   return (
     <div
-      className="fixed bottom-0 left-0 z-30 w-full py-1 bg-white"
+      className="fixed bottom-0 left-0 z-30 w-full pt-4 pb-6 bg-white md:py-1"
       style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 40px" }}
     >
-      <div className="flex items-center justify-between max-w-[1600px] m-auto xl:w-[88%] w-[90%]">
-        <div className="flex items-center gap-1">
-          <div className="text-sm">Powered by</div>
-          <a href="https://getnimbus.io" target="_blank">
-            <img
-              src={Logo}
-              alt="logo"
-              className="xl:w-[167px] w-[127px] xl:h-[50px] h-[80px] xl:-ml-6"
-            />
-          </a>
+      <div className="flex md:flex-row flex-col gap-6 md:items-center justify-between max-w-[1600px] m-auto xl:w-[88%] w-[90%]">
+        <div className="flex flex-col">
+          <div className="flex items-center -ml-4">
+            <img src={Bolt} alt="logo" className="w-12 h-12" />
+            <div className="-ml-2 font-medium">Bolt</div>
+          </div>
+
+          <div className="flex items-center -mt-2">
+            <div className="text-xs">Powered by</div>
+            <a href="https://getnimbus.io" target="_blank">
+              <img src={Logo} alt="logo" className="w-[127px] h-[40px] -ml-4" />
+            </a>
+          </div>
         </div>
 
-        <div className="flex items-center gap-4 svelte-1twzypu">
-          <div className="text-sm svelte-1twzypu">Find us on</div>{" "}
-          <div className="flex items-center gap-6 xl:gap-4 svelte-1twzypu">
+        <div className="flex items-center gap-4">
+          <div className="text-sm">Find us on</div>
+          <div className="flex items-center gap-6 xl:gap-4">
             <a
               href="https://github.com/getnimbus"
               target="_blank"
               aria-label="Learn more about GetNimbus"
-              className="hover:text-[#3b82f6] transition-all xl:w-6 xl:h-6 w-12 h-12 svelte-1twzypu"
+              className="hover:text-[#3b82f6] transition-all xl:w-6 xl:h-6 w-8 h-8"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 16 16"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path
                   fill="currentColor"
                   fill-rule="evenodd"
@@ -40,30 +39,25 @@ export const Footer = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>{" "}
+            </a>
             <a
               href="https://twitter.com/get_nimbus"
               target="_blank"
               aria-label="Learn more about GetNimbus"
-              className="hover:text-[#3b82f6] transition-all xl:w-6 xl:h-6 w-12 h-12 svelte-1twzypu"
+              className="hover:text-[#3b82f6] transition-all xl:w-6 xl:h-6 w-8 h-8"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 16 16"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                 <path
                   fill="currentColor"
                   d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07l-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"
                 ></path>
               </svg>
-            </a>{" "}
+            </a>
             <a
               href="https://discord.gg/u5b9dTrSTr"
               target="_blank"
               aria-label="Learn more about GetNimbus"
-              className="hover:text-[#3b82f6] transition-all xl:w-6 xl:h-6 w-12 h-12 svelte-1twzypu"
+              className="hover:text-[#3b82f6] transition-all xl:w-6 xl:h-6 w-8 h-8"
             >
               <svg viewBox="0 0 24 24">
                 <title>media/discord</title>
@@ -88,14 +82,9 @@ export const Footer = () => {
               href="https://t.me/getnimbus"
               target="_blank"
               aria-label="Learn more about GetNimbus"
-              className="transition-all hover:text-[#3b82f6] xl:w-6 xl:h-6 w-12 h-12 svelte-1twzypu"
+              className="transition-all hover:text-[#3b82f6] xl:w-6 xl:h-6 w-8 h-8"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                   fill="currentColor"
                   d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345c-.48.33-.913.49-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789c.027-.216.325-.437.893-.663c3.498-1.524 5.83-2.529 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635z"
