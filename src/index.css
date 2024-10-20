@@ -37,3 +37,15 @@ select:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
+@keyframes tokenAnimation {
+  0% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
