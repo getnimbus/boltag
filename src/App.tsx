@@ -120,7 +120,7 @@ function App() {
 
   useEffect(() => {
     const showCandleChartSwapStorage = localStorage.getItem(
-      "showCandleChartSwap"
+      "showCandleChartSwap",
     );
     const refAddressSwapStorage = localStorage.getItem("refAddressSwap");
 
@@ -137,7 +137,7 @@ function App() {
     if (Number(data.chainId) !== 0) {
       localStorage.setItem(
         "connectedWalletSwapChain",
-        (data.chainId || 0)?.toString()
+        (data.chainId || 0)?.toString(),
       );
     } else {
       localStorage.setItem("connectedWalletSwapChain", "0");
@@ -154,7 +154,7 @@ function App() {
         null,
         "",
         window.location.pathname +
-          `?fromChain=${paramsChain}&toChain=${paramsChain}`
+          `?fromChain=${paramsChain}&toChain=${paramsChain}`,
       );
     }
   };
@@ -209,7 +209,7 @@ function App() {
       setToTokenParam(toTokenParams || USDCAddress);
     } else {
       const connectedWalletSwapChainStorage = localStorage.getItem(
-        "connectedWalletSwapChain"
+        "connectedWalletSwapChain",
       );
       if (
         connectedWalletSwapChainStorage &&
@@ -223,12 +223,12 @@ function App() {
           "",
           window.location.pathname +
             `?fromChain=${Number(
-              connectedWalletSwapChainStorage
+              connectedWalletSwapChainStorage,
             )}&toChain=${Number(connectedWalletSwapChainStorage)}${
               fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
             }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
               refAddress ? `&refAddress=${refAddress}` : ""
-            }`
+            }`,
         );
       } else {
         setParamsChain(ChainId.MOVE);
@@ -242,7 +242,7 @@ function App() {
               fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
             }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
               refAddress ? `&refAddress=${refAddress}` : ""
-            }`
+            }`,
         );
       }
     }
@@ -258,7 +258,7 @@ function App() {
             paramsTokenInfo?.fromToken
           }&toChain=${paramsChain}&toToken=${paramsTokenInfo?.toToken}${
             refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`
+          }`,
       );
     } else {
       await wait(100);
@@ -270,7 +270,7 @@ function App() {
             fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
           }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
             refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`
+          }`,
       );
     }
   };
@@ -288,17 +288,8 @@ function App() {
   }, [addressChart]);
 
   return (
-    <div
-      style={{
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "top right",
-        minHeight: "100vh",
-        backgroundColor: "#27326f",
-        backgroundImage: `url(${Capa})`,
-      }}
-    >
-      <div className="max-w-[1600px] m-auto xl:w-[82%] w-[90%] flex items-center justify-center min-h-screen lg:pt-20 pt-[44px] md:pb-[144px] pb-[184px]">
+    <div className="relative">
+      <div className="relative z-10 max-w-[1600px] m-auto xl:w-[82%] w-[90%] flex items-center justify-center min-h-screen lg:pt-20 pt-[44px] md:pb-[144px] pb-[184px]">
         <div className="flex flex-col w-full h-full gap-10">
           <div className="text-3xl font-semibold text-center text-white">
             Get the best swap routes from Hop, FlowX and 7K
@@ -316,6 +307,9 @@ function App() {
                       hidden: { x: 100, display: "none" },
                     }}
                     className="rounded-[20px] overflow-hidden w-full bg-white"
+                    style={{
+                      boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)",
+                    }}
                   >
                     <iframe
                       width="100%"
@@ -336,6 +330,9 @@ function App() {
                       hidden: { y: -100, display: "none" },
                     }}
                     className="rounded-[20px] overflow-hidden w-full bg-white"
+                    style={{
+                      boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)",
+                    }}
                   >
                     <iframe
                       width="100%"
@@ -380,6 +377,10 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* <div className="absolute top-0 left-0 w-full h-full border border-red-500 backdrop-blur-sm bg-white/30">
+        hello
+      </div> */}
     </div>
   );
 }

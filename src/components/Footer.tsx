@@ -3,7 +3,7 @@ import Logo from "../assets/logo.svg";
 export const Footer = () => {
   return (
     <div
-      className="fixed bottom-0 left-0 w-full py-1 bg-white z-8"
+      className="fixed bottom-0 left-0 z-10 w-full py-1 bg-white"
       style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 40px" }}
     >
       <div className="flex items-center justify-between max-w-[1600px] m-auto xl:w-[88%] w-[90%]">
