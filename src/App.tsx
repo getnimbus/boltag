@@ -300,10 +300,6 @@ function App() {
     >
       <div className="max-w-[1600px] m-auto xl:w-[82%] w-[90%] flex items-center justify-center min-h-screen lg:pt-20 pt-[44px] md:pb-[144px] pb-[184px]">
         <div className="flex flex-col w-full h-full gap-10">
-          <div className="text-4xl font-semibold text-center text-white">
-            Sui's Scary Fast & Custom Swap Aggregator
-          </div>
-
           <div className="flex flex-col items-center justify-center gap-5 lg:items-start lg:gap-8 lg:flex-row">
             {isShowChart ? (
               <>
