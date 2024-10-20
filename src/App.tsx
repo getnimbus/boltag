@@ -11,8 +11,6 @@ import {
 import { wait } from "./utils";
 import { motion } from "framer-motion";
 
-import Capa from "./assets/capa.svg";
-
 enum ChainType {
   EVM = "EVM",
   SVM = "SVM",
@@ -320,7 +318,7 @@ function App() {
     <div className="relative">
       <div className="relative z-10 max-w-[1600px] m-auto xl:w-[82%] w-[90%] flex items-center justify-center min-h-screen lg:pt-20 pt-[44px] md:pb-[144px] pb-[184px]">
         <div className="flex flex-col w-full h-full gap-10">
-          <div className="text-3xl font-semibold text-center text-white">
+          <div className="text-3xl font-semibold text-center">
             Get the best swap routes from Hop, FlowX and 7K
           </div>
 
@@ -408,9 +406,9 @@ function App() {
         </div>
       </div>
 
-      {/* <div className="absolute top-0 left-0 w-full h-full border border-red-500 backdrop-blur-sm bg-white/30">
+      <div className="absolute top-0 left-0 w-full h-full border border-red-500 backdrop-blur-sm bg-white/30">
         hello
-      </div> */}
+      </div>
     </div>
   );
 }
