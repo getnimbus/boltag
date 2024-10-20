@@ -5,20 +5,15 @@ interface IOption {
   getHeaderAuthorize: () => void;
 }
 
-interface IReqOption {
-  params?: Record<string, any>;
-  headers?: Record<string, any>;
-}
-
 const createAxiosInterface = ({ baseURL, getHeaderAuthorize }: IOption) => {
   return {
-    get<T>(url: string, config?: IReqOption): Promise<T> {
+    get<T>(url: string, config?: any): Promise<T> {
       const apiUrl = new URL(`${baseURL}${url}`);
-      if (config?.params) {
+      if (config?.params && config?.params !== undefined) {
         Object.keys(config.params)
           .filter((_) => _)
           .forEach((key) =>
-            apiUrl.searchParams.append(key, config.params[key]),
+            apiUrl.searchParams.append(key, config?.params[key]),
           );
       }
       const authorization: any = getHeaderAuthorize();
@@ -37,13 +32,13 @@ const createAxiosInterface = ({ baseURL, getHeaderAuthorize }: IOption) => {
         return await response.json();
       });
     },
-    post<T>(url: string, body: any, config?: IReqOption): Promise<T> {
+    post<T>(url: string, body: any, config?: any): Promise<T> {
       const apiUrl = new URL(`${baseURL}${url}`);
       if (config?.params) {
         Object.keys(config.params)
           .filter((_) => _)
           .forEach((key) =>
-            apiUrl.searchParams.append(key, config.params[key]),
+            apiUrl.searchParams.append(key, config?.params[key]),
           );
       }
       const authorization: any = getHeaderAuthorize();
