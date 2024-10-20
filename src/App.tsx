@@ -116,6 +116,24 @@ const SUIAddress = "0x2::sui::SUI";
 const USDCAddress =
   "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC";
 
+const random = () => {
+  return {
+    randomX: Math.random() * 100,
+    randomY: Math.random() * 100,
+  };
+};
+
+const listDefaultTokenPosition = listDefaultToken.map((item, index) => {
+  const randomSize = Math.round(Math.random() * (120 - 60) + 60);
+
+  return {
+    ...item,
+    randomSize,
+    left: random().randomX + index,
+    top: random().randomY + index,
+  };
+});
+
 function App() {
   const [isShowChart, setIsShowChart] = useState<boolean>(false);
   const [addressChart, setAddressChart] = useState<string>(SUIAddress);
@@ -242,7 +260,6 @@ function App() {
 
   const handleSelectToken = (data: any) => {
     if (data && Object.keys(data).length !== 0) {
-      console.log("HELLO: ", data);
       if (data.fromToken !== paramsTokenInfo.fromToken) {
         setParamsTokenInfo({
           fromToken: data.fromToken,
@@ -396,20 +413,9 @@ function App() {
     }
   };
 
-  const random = () => {
-    return {
-      randomX: Math.random() * 100,
-      randomY: Math.random() * 100,
-    };
-  };
-
   const handleSelectedToken = (token: any) => {
     setToTokenParam(token.address);
     setAddressChart(token.address);
-    handleSelectToken({
-      fromToken: fromTokenParam,
-      toToken: token.address,
-    });
   };
 
   return (
@@ -515,9 +521,7 @@ function App() {
             flexShrink: 0,
           }}
         >
-          {listDefaultToken.map((token, index) => {
-            const randomSize = Math.round(Math.random() * (120 - 60) + 60);
-
+          {listDefaultTokenPosition.map((token) => {
             return (
               <motion.div
                 key={token.symbol}
@@ -526,10 +530,10 @@ function App() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ type: "spring", stiffness: 100 }}
                 style={{
-                  width: `${randomSize}px`,
-                  height: `${randomSize}px`,
-                  left: `${random().randomX + index}%`,
-                  top: `${random().randomY + index}%`,
+                  width: `${token.randomSize}px`,
+                  height: `${token.randomSize}px`,
+                  left: `${token.left}%`,
+                  top: `${token.top}%`,
                   animationName: "tokenAnimation",
                   animationDuration: "5522.1ms",
                   animationIterationCount: "infinite",
