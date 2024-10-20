@@ -403,7 +403,7 @@ function App() {
     };
   };
 
-  const handleSelectedToken = (token) => {
+  const handleSelectedToken = (token: any) => {
     setToTokenParam(token.address);
     setAddressChart(token.address);
     handleSelectToken({
