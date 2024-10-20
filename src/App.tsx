@@ -1,6 +1,9 @@
+import { useState, useEffect, useMemo } from "react";
+import { nimbus } from "./lib/network";
 import {
   HiddenUI,
   NimbusSwapWidget,
+  type Route,
   type WidgetConfig,
   WidgetEvent,
   widgetEvents,
@@ -9,7 +12,6 @@ import { wait } from "./utils";
 import { motion } from "framer-motion";
 
 import Capa from "./assets/capa.svg";
-import { useState, useEffect, useMemo } from "react";
 
 enum ChainType {
   EVM = "EVM",
@@ -287,6 +289,33 @@ function App() {
     }?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=light`;
   }, [addressChart]);
 
+  const handleSwapBonus = async (data: Route & any) => {
+    const txHash = (data.steps?.[0] as any)?.execution?.process?.[0]?.txHash;
+    const volume = Number(data.steps?.[0]?.estimate?.fromAmountUSD || 0);
+
+    const connectedAddressSwap = data?.account?.address;
+
+    const tradeLogPayload = {
+      txHash,
+      owner: connectedAddressSwap,
+      token0: data?.fromAddress || data?.fromToken?.address,
+      amount0: data?.fromAmount,
+      token1: data?.toAddress || data?.toToken?.address,
+      amount1: data?.toAmount,
+      referrer: refAddressParam ? refAddressParam : undefined,
+      trade_vol: volume,
+    };
+
+    try {
+      const response: any = await nimbus.post("/swap/logs", tradeLogPayload);
+      if (response && response.error) {
+        console.error("Error submitting trade log:", response.error);
+      }
+    } catch (error) {
+      console.error("Error submitting trade log:", error);
+    }
+  };
+
   return (
     <div className="relative">
       <div className="relative z-10 max-w-[1600px] m-auto xl:w-[82%] w-[90%] flex items-center justify-center min-h-screen lg:pt-20 pt-[44px] md:pb-[144px] pb-[184px]">
@@ -360,6 +389,7 @@ function App() {
                     toChain: paramsChain,
                     fromToken: fromTokenParam,
                     toToken: toTokenParam,
+                    handleSwapBonus,
                     handleSelectChainId,
                     handleSelectToken,
                     isUniversalSwap: true,
