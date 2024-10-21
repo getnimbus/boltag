@@ -8,13 +8,13 @@ export const Footer = () => {
       style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 40px" }}
     >
       <div className="flex md:flex-row flex-col gap-6 md:items-center justify-between max-w-[1600px] m-auto xl:w-[88%] w-[90%]">
-        <div className="flex flex-col">
+        <div className="flex flex-row items-center">
           <div className="flex items-center -ml-4">
             <img src={Bolt} alt="logo" className="w-12 h-12" />
             <div className="-ml-2 font-medium">Bolt</div>
           </div>
 
-          <div className="flex items-center -mt-2">
+          <div className="flex items-center ml-2">
             <div className="text-xs">Powered by</div>
             <a href="https://getnimbus.io" target="_blank">
               <img src={Logo} alt="logo" className="w-[127px] h-[40px] -ml-4" />
