@@ -404,14 +404,6 @@ function App() {
   const handleSwapBonus = async (data: Route & any) => {
     const now = dayjs().valueOf();
 
-    const computed = await hmac.compute(
-      Buffer.from(import.meta.env.VITE_TRADE_REQUEST_KEY),
-      Buffer.from(`${now}:${JSON.stringify(data)}`),
-      "SHA-256",
-    );
-
-    const sig = Buffer.from(computed.buffer).toString("base64");
-
     const txHash = (data.steps?.[0] as any)?.execution?.process?.[0]?.txHash;
     const volume = Number(data.steps?.[0]?.estimate?.fromAmountUSD || 0);
 
@@ -430,6 +422,14 @@ function App() {
       trade_vol: volume,
       aggregator,
     };
+
+    const computed = await hmac.compute(
+      Buffer.from(import.meta.env.VITE_TRADE_REQUEST_KEY),
+      Buffer.from(`${now}:${JSON.stringify(tradeLogPayload)}`),
+      "SHA-256",
+    );
+
+    const sig = Buffer.from(computed.buffer).toString("base64");
 
     try {
       const response: any = await nimbus.post("/swap/logs", tradeLogPayload, {
