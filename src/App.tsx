@@ -11,6 +11,8 @@ import {
 import { wait } from "./utils";
 import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
+import dayjs from "dayjs";
+import hmac from "js-crypto-hmac";
 
 const listDefaultToken = [
   {
@@ -400,10 +402,22 @@ function App() {
   }, [addressChart]);
 
   const handleSwapBonus = async (data: Route & any) => {
+    const now = dayjs().valueOf();
+
+    const computed = await hmac.compute(
+      Buffer.from(import.meta.env.VITE_TRADE_REQUEST_KEY),
+      Buffer.from(`${now}:${JSON.stringify(data)}`),
+      "SHA-256",
+    );
+
+    const sig = Buffer.from(computed.buffer).toString("base64");
+
     const txHash = (data.steps?.[0] as any)?.execution?.process?.[0]?.txHash;
     const volume = Number(data.steps?.[0]?.estimate?.fromAmountUSD || 0);
 
     const connectedAddressSwap = data?.account?.address;
+
+    const aggregator = data.steps?.[0]?.integrator?.toLowerCase();
 
     const tradeLogPayload = {
       txHash,
@@ -414,10 +428,16 @@ function App() {
       amount1: data?.toAmount,
       referrer: refAddressParam ? refAddressParam : undefined,
       trade_vol: volume,
+      aggregator,
     };
 
     try {
-      const response: any = await nimbus.post("/swap/logs", tradeLogPayload);
+      const response: any = await nimbus.post("/swap/logs", tradeLogPayload, {
+        headers: {
+          "x-signature": sig,
+          "x-request-timestamp": now,
+        },
+      });
       if (response && response.error) {
         console.error("Error submitting trade log:", response.error);
       }
