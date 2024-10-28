@@ -439,7 +439,7 @@ function App() {
   `;
 
   return (
-    <div className="relative overflow-hidden lg:pt-20 pt-[104px] md:pb-[144px] pb-[244px] min-h-screen flex justify-center items-center">
+    <div className="relative overflow-hidden lg:pt-20 pt-[104px] pb-[144px] min-h-screen flex justify-center items-center">
       <div
         className={`relative z-20 m-auto flex items-center justify-center ${
           isShowChart
