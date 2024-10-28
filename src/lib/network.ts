@@ -95,7 +95,7 @@ const createAxiosInterface = ({ baseURL, getHeaderAuthorize }: IOption) => {
 };
 
 export const API_URL =
-  import.meta.env.VITE_API_URL || "https://api-staging.getnimbus.io";
+  import.meta.env.VITE_API_URL || "https://api.getnimbus.io";
 
 export const internalNimbus = axios.create({
   baseURL: API_URL,
