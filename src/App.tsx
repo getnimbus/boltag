@@ -259,7 +259,7 @@ function App() {
   });
 
   const handleSelectChainId = (chainId: number) => {
-    if (paramsChain !== chainId) {
+    if (paramsChain !== chainId && paramsChain !== 0) {
       setParamsChain(chainId);
       setFromTokenParam("");
       setToTokenParam("");
@@ -317,10 +317,10 @@ function App() {
       localStorage.setItem("refAddressSwap", refAddress.toString());
     }
 
-    if (chainParams && Number(chainParams) !== 0) {
+    if (chainParams && chainParams !== undefined && Number(chainParams) !== 0) {
       setParamsChain(Number(chainParams));
-      setFromTokenParam(fromTokenParams || SUIAddress);
-      setToTokenParam(toTokenParams || USDCAddress);
+      setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
+      setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
     } else {
       const connectedWalletSwapChainStorage = localStorage.getItem(
         "connectedWalletSwapChain",
@@ -330,8 +330,8 @@ function App() {
         Number(connectedWalletSwapChainStorage) !== 0
       ) {
         setParamsChain(Number(connectedWalletSwapChainStorage));
-        setFromTokenParam(fromTokenParams || SUIAddress);
-        setToTokenParam(toTokenParams || USDCAddress);
+        setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
         window.history.replaceState(
           null,
           "",
@@ -346,8 +346,8 @@ function App() {
         );
       } else {
         setParamsChain(ChainId.MOVE);
-        setFromTokenParam(fromTokenParams || SUIAddress);
-        setToTokenParam(toTokenParams || USDCAddress);
+        setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
         window.history.replaceState(
           null,
           "",
@@ -375,7 +375,7 @@ function App() {
           }`,
       );
     } else {
-      await wait(100);
+      await wait(200);
       window.history.replaceState(
         null,
         "",
