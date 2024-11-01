@@ -554,19 +554,7 @@ function App() {
                   }}
                   integrator="nimbus-swap"
                 />
-              ) : // <div
-              //   onClick={() => {
-              //     handleChangeAddressChart();
-              //     setParamsTokenInfo({});
-              //     handleSwapBonus({});
-              //     handleToggleChartCandles(false);
-              //     handleSelectToken({});
-              //     handleSelectChainId(0);
-              //   }}
-              // >
-              //   hello world
-              // </div>
-              null}
+              ) : null}
             </div>
           </div>
         </div>
