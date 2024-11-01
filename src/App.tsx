@@ -138,6 +138,13 @@ const tokenAnimation = (index: number) => {
   `;
 };
 
+const AnimatedDiv = styled.div<{ $index: number }>`
+  animation: ${(props) => {
+      return tokenAnimation(props.$index);
+    }}
+    5522.1ms infinite linear;
+`;
+
 const listDefaultTokenPosition = listDefaultToken.map((item, index) => {
   const randomSize = Math.round(Math.random() * (120 - 60) + 60);
 
@@ -259,7 +266,7 @@ function App() {
   });
 
   const handleSelectChainId = (chainId: number) => {
-    if (paramsChain !== chainId) {
+    if (paramsChain !== chainId && paramsChain !== 0) {
       setParamsChain(chainId);
       setFromTokenParam("");
       setToTokenParam("");
@@ -317,10 +324,10 @@ function App() {
       localStorage.setItem("refAddressSwap", refAddress.toString());
     }
 
-    if (chainParams && Number(chainParams) !== 0) {
+    if (chainParams && chainParams !== undefined && Number(chainParams) !== 0) {
       setParamsChain(Number(chainParams));
-      setFromTokenParam(fromTokenParams || SUIAddress);
-      setToTokenParam(toTokenParams || USDCAddress);
+      setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
+      setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
     } else {
       const connectedWalletSwapChainStorage = localStorage.getItem(
         "connectedWalletSwapChain",
@@ -330,24 +337,26 @@ function App() {
         Number(connectedWalletSwapChainStorage) !== 0
       ) {
         setParamsChain(Number(connectedWalletSwapChainStorage));
-        setFromTokenParam(fromTokenParams || SUIAddress);
-        setToTokenParam(toTokenParams || USDCAddress);
-        window.history.replaceState(
-          null,
-          "",
-          window.location.pathname +
-            `?fromChain=${Number(
-              connectedWalletSwapChainStorage,
-            )}&toChain=${Number(connectedWalletSwapChainStorage)}${
-              fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
-            }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
-              refAddress ? `&refAddress=${refAddress}` : ""
-            }`,
-        );
+        setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
+        if (Number(connectedWalletSwapChainStorage) !== 0) {
+          window.history.replaceState(
+            null,
+            "",
+            window.location.pathname +
+              `?fromChain=${Number(
+                connectedWalletSwapChainStorage,
+              )}&toChain=${Number(connectedWalletSwapChainStorage)}${
+                fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
+              }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
+                refAddress ? `&refAddress=${refAddress}` : ""
+              }`,
+          );
+        }
       } else {
         setParamsChain(ChainId.MOVE);
-        setFromTokenParam(fromTokenParams || SUIAddress);
-        setToTokenParam(toTokenParams || USDCAddress);
+        setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
         window.history.replaceState(
           null,
           "",
@@ -363,29 +372,31 @@ function App() {
   }, []);
 
   const handleUpdateChain = async () => {
-    if (paramsTokenInfo && Object.keys(paramsTokenInfo).length !== 0) {
-      window.history.replaceState(
-        null,
-        "",
-        window.location.pathname +
-          `?fromChain=${paramsChain}&fromToken=${
-            paramsTokenInfo?.fromToken
-          }&toChain=${paramsChain}&toToken=${paramsTokenInfo?.toToken}${
-            refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`,
-      );
-    } else {
-      await wait(100);
-      window.history.replaceState(
-        null,
-        "",
-        window.location.pathname +
-          `?fromChain=${paramsChain}&toChain=${paramsChain}${
-            fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
-          }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
-            refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`,
-      );
+    if (Number(paramsChain) !== 0) {
+      if (paramsTokenInfo && Object.keys(paramsTokenInfo).length !== 0) {
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname +
+            `?fromChain=${paramsChain}&fromToken=${
+              paramsTokenInfo?.fromToken
+            }&toChain=${paramsChain}&toToken=${paramsTokenInfo?.toToken}${
+              refAddressParam ? `&refAddress=${refAddressParam}` : ""
+            }`,
+        );
+      } else {
+        await wait(200);
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname +
+            `?fromChain=${paramsChain}&toChain=${paramsChain}${
+              fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
+            }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
+              refAddressParam ? `&refAddress=${refAddressParam}` : ""
+            }`,
+        );
+      }
     }
   };
 
@@ -447,16 +458,11 @@ function App() {
   };
 
   const handleSelectedToken = (token: any) => {
-    setToTokenParam(token.address);
-    setAddressChart(token.address);
+    if (token) {
+      setToTokenParam(token.address);
+      setAddressChart(token.address);
+    }
   };
-
-  const AnimatedDiv = styled.div<{ $index: number }>`
-    animation: ${(props) => {
-        return tokenAnimation(props.$index);
-      }}
-      5522.1ms infinite linear;
-  `;
 
   return (
     <div className="relative overflow-hidden lg:pt-20 pt-[104px] pb-[144px] min-h-screen flex justify-center items-center">
