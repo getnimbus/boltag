@@ -339,18 +339,20 @@ function App() {
         setParamsChain(Number(connectedWalletSwapChainStorage));
         setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
         setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
-        window.history.replaceState(
-          null,
-          "",
-          window.location.pathname +
-            `?fromChain=${Number(
-              connectedWalletSwapChainStorage,
-            )}&toChain=${Number(connectedWalletSwapChainStorage)}${
-              fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
-            }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
-              refAddress ? `&refAddress=${refAddress}` : ""
-            }`,
-        );
+        if (Number(connectedWalletSwapChainStorage) !== 0) {
+          window.history.replaceState(
+            null,
+            "",
+            window.location.pathname +
+              `?fromChain=${Number(
+                connectedWalletSwapChainStorage,
+              )}&toChain=${Number(connectedWalletSwapChainStorage)}${
+                fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
+              }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
+                refAddress ? `&refAddress=${refAddress}` : ""
+              }`,
+          );
+        }
       } else {
         setParamsChain(ChainId.MOVE);
         setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
@@ -370,29 +372,31 @@ function App() {
   }, []);
 
   const handleUpdateChain = async () => {
-    if (paramsTokenInfo && Object.keys(paramsTokenInfo).length !== 0) {
-      window.history.replaceState(
-        null,
-        "",
-        window.location.pathname +
-          `?fromChain=${paramsChain}&fromToken=${
-            paramsTokenInfo?.fromToken
-          }&toChain=${paramsChain}&toToken=${paramsTokenInfo?.toToken}${
-            refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`,
-      );
-    } else {
-      await wait(200);
-      window.history.replaceState(
-        null,
-        "",
-        window.location.pathname +
-          `?fromChain=${paramsChain}&toChain=${paramsChain}${
-            fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
-          }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
-            refAddressParam ? `&refAddress=${refAddressParam}` : ""
-          }`,
-      );
+    if (Number(paramsChain) !== 0) {
+      if (paramsTokenInfo && Object.keys(paramsTokenInfo).length !== 0) {
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname +
+            `?fromChain=${paramsChain}&fromToken=${
+              paramsTokenInfo?.fromToken
+            }&toChain=${paramsChain}&toToken=${paramsTokenInfo?.toToken}${
+              refAddressParam ? `&refAddress=${refAddressParam}` : ""
+            }`,
+        );
+      } else {
+        await wait(200);
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname +
+            `?fromChain=${paramsChain}&toChain=${paramsChain}${
+              fromTokenParam ? `&fromToken=${fromTokenParam}` : ""
+            }${toTokenParam ? `&toToken=${toTokenParam}` : ""}${
+              refAddressParam ? `&refAddress=${refAddressParam}` : ""
+            }`,
+        );
+      }
     }
   };
 
