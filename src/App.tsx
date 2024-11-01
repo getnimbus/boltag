@@ -138,6 +138,13 @@ const tokenAnimation = (index: number) => {
   `;
 };
 
+const AnimatedDiv = styled.div<{ $index: number }>`
+  animation: ${(props) => {
+      return tokenAnimation(props.$index);
+    }}
+    5522.1ms infinite linear;
+`;
+
 const listDefaultTokenPosition = listDefaultToken.map((item, index) => {
   const randomSize = Math.round(Math.random() * (120 - 60) + 60);
 
@@ -447,16 +454,11 @@ function App() {
   };
 
   const handleSelectedToken = (token: any) => {
-    setToTokenParam(token.address);
-    setAddressChart(token.address);
+    if (token) {
+      setToTokenParam(token.address);
+      setAddressChart(token.address);
+    }
   };
-
-  const AnimatedDiv = styled.div<{ $index: number }>`
-    animation: ${(props) => {
-        return tokenAnimation(props.$index);
-      }}
-      5522.1ms infinite linear;
-  `;
 
   return (
     <div className="relative overflow-hidden lg:pt-20 pt-[104px] pb-[144px] min-h-screen flex justify-center items-center">
