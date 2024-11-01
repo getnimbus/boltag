@@ -401,6 +401,8 @@ function App() {
     }?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=light`;
   }, [addressChart]);
 
+  console.log("HELLO");
+
   const handleSwapBonus = async (data: Route & any) => {
     const now = dayjs().valueOf();
 
