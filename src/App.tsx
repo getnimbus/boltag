@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { nimbus } from "./lib/network";
 import {
   HiddenUI,
-  NimbusSwapWidget,
+  // NimbusSwapWidget,
   type Route,
   type WidgetConfig,
   WidgetEvent,
