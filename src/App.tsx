@@ -1,10 +1,10 @@
 import { useState, useEffect, useMemo } from "react";
 import { nimbus } from "./lib/network";
 import {
-  // HiddenUI,
-  // NimbusSwapWidget,
+  HiddenUI,
+  NimbusSwapWidget,
   type Route,
-  // type WidgetConfig,
+  type WidgetConfig,
   WidgetEvent,
   widgetEvents,
 } from "nimbus-universal-swap";
@@ -95,12 +95,12 @@ const listDefaultToken = [
   },
 ];
 
-// enum ChainType {
-//   EVM = "EVM",
-//   SVM = "SVM",
-//   TVM = "TVM",
-//   MVM = "MVM",
-// }
+enum ChainType {
+  EVM = "EVM",
+  SVM = "SVM",
+  TVM = "TVM",
+  MVM = "MVM",
+}
 
 enum ChainId {
   TON = 2251111081099710,
@@ -167,60 +167,60 @@ function App() {
   const [paramsChain, setParamsChain] = useState<number>(0);
   const [paramsTokenInfo, setParamsTokenInfo] = useState<any>({});
 
-  // const widgetConfig: WidgetConfig = {
-  //   appearance: "light",
-  //   theme: {
-  //     palette: {
-  //       background: {
-  //         default: "#fff",
-  //       },
-  //       primary: {
-  //         main: "#1e96fc",
-  //       },
-  //     },
-  //     typography: {
-  //       fontFamily: "Golos Text",
-  //     },
-  //     container: {
-  //       height: "auto",
-  //       width: "auto",
-  //       padding: "0",
-  //       borderRadius: "20px",
-  //     },
-  //   },
-  //   integrator: "Nimbus",
-  //   hiddenUI: [
-  //     HiddenUI.ToAddress,
-  //     HiddenUI.Language,
-  //     HiddenUI.Appearance,
-  //     HiddenUI.History,
-  //   ],
-  //   brandingLogo: "https://getnimbus.io/nimbusFavicon.svg",
-  //   variant: "compact",
-  //   subvariant: "split",
-  //   subvariantOptions: {
-  //     split: "swap",
-  //   },
-  //   chains: {
-  //     types: {
-  //       allow: [ChainType.MVM],
-  //       deny: [ChainType.SVM, ChainType.EVM, ChainType.TVM],
-  //     },
-  //   },
-  //   commissionBps: {
-  //     [ChainId.MOVE]: 0,
-  //   },
-  //   commissionBpsSDK: {
-  //     [ChainId.MOVE]: 0,
-  //   },
-  //   sdkConfig: {
-  //     rpcUrls: {
-  //       [ChainId.SOL]: [
-  //         "https://rpc-aggregator.service.getnimbus.io/solana_das?key=28ad52be-5b89-4c0a-8ce9-e053c053466b",
-  //       ],
-  //     },
-  //   },
-  // };
+  const widgetConfig: WidgetConfig = {
+    appearance: "light",
+    theme: {
+      palette: {
+        background: {
+          default: "#fff",
+        },
+        primary: {
+          main: "#1e96fc",
+        },
+      },
+      typography: {
+        fontFamily: "Golos Text",
+      },
+      container: {
+        height: "auto",
+        width: "auto",
+        padding: "0",
+        borderRadius: "20px",
+      },
+    },
+    integrator: "Nimbus",
+    hiddenUI: [
+      HiddenUI.ToAddress,
+      HiddenUI.Language,
+      HiddenUI.Appearance,
+      HiddenUI.History,
+    ],
+    brandingLogo: "https://getnimbus.io/nimbusFavicon.svg",
+    variant: "compact",
+    subvariant: "split",
+    subvariantOptions: {
+      split: "swap",
+    },
+    chains: {
+      types: {
+        allow: [ChainType.MVM],
+        deny: [ChainType.SVM, ChainType.EVM, ChainType.TVM],
+      },
+    },
+    commissionBps: {
+      [ChainId.MOVE]: 0,
+    },
+    commissionBpsSDK: {
+      [ChainId.MOVE]: 0,
+    },
+    sdkConfig: {
+      rpcUrls: {
+        [ChainId.SOL]: [
+          "https://rpc-aggregator.service.getnimbus.io/solana_das?key=28ad52be-5b89-4c0a-8ce9-e053c053466b",
+        ],
+      },
+    },
+  };
 
   const handleChangeAddressChart = () => {
     if (paramsTokenInfo && Object.keys(paramsTokenInfo)?.length !== 0) {
@@ -534,39 +534,39 @@ function App() {
               style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)" }}
             >
               {Number(paramsChain) !== 0 ? (
-                // <NimbusSwapWidget
-                //   config={{
-                //     ...widgetConfig,
-                //     fromChain: paramsChain,
-                //     toChain: paramsChain,
-                //     fromToken: fromTokenParam,
-                //     toToken: toTokenParam,
-                //     handleSwapBonus,
-                //     handleSelectChainId,
-                //     handleSelectToken,
-                //     isUniversalSwap: true,
-                //     commissionBpsSDK: {
-                //       [ChainId.MOVE]:
-                //         refAddressParam.length !== 0 ? 0.3 * 100 : 0, // 0.3% swap fee when referral address is provided
-                //     },
-                //     isShowChartCandles: isShowChart,
-                //     handleToggleChartCandles,
-                //   }}
-                //   integrator="nimbus-swap"
-                // />
-                <div
-                  onClick={() => {
-                    handleChangeAddressChart();
-                    setParamsTokenInfo({});
-                    handleSwapBonus({});
-                    handleToggleChartCandles(false);
-                    handleSelectToken({});
-                    handleSelectChainId(0);
+                <NimbusSwapWidget
+                  config={{
+                    ...widgetConfig,
+                    fromChain: paramsChain,
+                    toChain: paramsChain,
+                    fromToken: fromTokenParam,
+                    toToken: toTokenParam,
+                    handleSwapBonus,
+                    handleSelectChainId,
+                    handleSelectToken,
+                    isUniversalSwap: true,
+                    commissionBpsSDK: {
+                      [ChainId.MOVE]:
+                        refAddressParam.length !== 0 ? 0.3 * 100 : 0, // 0.3% swap fee when referral address is provided
+                    },
+                    isShowChartCandles: isShowChart,
+                    handleToggleChartCandles,
                   }}
-                >
-                  hello world
-                </div>
-              ) : null}
+                  integrator="nimbus-swap"
+                />
+              ) : // <div
+              //   onClick={() => {
+              //     handleChangeAddressChart();
+              //     setParamsTokenInfo({});
+              //     handleSwapBonus({});
+              //     handleToggleChartCandles(false);
+              //     handleSelectToken({});
+              //     handleSelectChainId(0);
+              //   }}
+              // >
+              //   hello world
+              // </div>
+              null}
             </div>
           </div>
         </div>
