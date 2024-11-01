@@ -528,26 +528,27 @@ function App() {
               style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)" }}
             >
               {Number(paramsChain) !== 0 ? (
-                <NimbusSwapWidget
-                  config={{
-                    ...widgetConfig,
-                    fromChain: paramsChain,
-                    toChain: paramsChain,
-                    fromToken: fromTokenParam,
-                    toToken: toTokenParam,
-                    handleSwapBonus,
-                    handleSelectChainId,
-                    handleSelectToken,
-                    isUniversalSwap: true,
-                    commissionBpsSDK: {
-                      [ChainId.MOVE]:
-                        refAddressParam.length !== 0 ? 0.3 * 100 : 0, // 0.3% swap fee when referral address is provided
-                    },
-                    isShowChartCandles: isShowChart,
-                    handleToggleChartCandles,
-                  }}
-                  integrator="nimbus-swap"
-                />
+                // <NimbusSwapWidget
+                //   config={{
+                //     ...widgetConfig,
+                //     fromChain: paramsChain,
+                //     toChain: paramsChain,
+                //     fromToken: fromTokenParam,
+                //     toToken: toTokenParam,
+                //     handleSwapBonus,
+                //     handleSelectChainId,
+                //     handleSelectToken,
+                //     isUniversalSwap: true,
+                //     commissionBpsSDK: {
+                //       [ChainId.MOVE]:
+                //         refAddressParam.length !== 0 ? 0.3 * 100 : 0, // 0.3% swap fee when referral address is provided
+                //     },
+                //     isShowChartCandles: isShowChart,
+                //     handleToggleChartCandles,
+                //   }}
+                //   integrator="nimbus-swap"
+                // />
+                <div>hello world</div>
               ) : null}
             </div>
           </div>
