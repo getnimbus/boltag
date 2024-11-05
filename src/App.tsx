@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useContext } from "react";
 import { nimbus } from "./lib/network";
 import {
   HiddenUI,
@@ -13,6 +13,8 @@ import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 import dayjs from "dayjs";
 import hmac from "js-crypto-hmac";
+import { GlobalStateContext } from "./providers/ContextProvider";
+import type { WalletState } from "nimbus-sui-kit";
 
 const listDefaultToken = [
   {
@@ -157,6 +159,8 @@ const listDefaultTokenPosition = listDefaultToken.map((item, index) => {
 });
 
 function App() {
+  const { suiWalletInstance, handleSetSuiWalletInstance } =
+    useContext(GlobalStateContext);
   const [isShowChart, setIsShowChart] = useState<boolean>(false);
   const [addressChart, setAddressChart] = useState<string>(SUIAddress);
   const [refAddressParam, setRefAddressParam] = useState<string>("");
@@ -245,11 +249,11 @@ function App() {
     );
     const refAddressSwapStorage = localStorage.getItem("refAddressSwap");
 
-    if (refAddressSwapStorage) {
+    if (refAddressSwapStorage && refAddressSwapStorage !== null) {
       setRefAddressParam(refAddressSwapStorage);
     }
 
-    if (showCandleChartSwapStorage) {
+    if (showCandleChartSwapStorage && showCandleChartSwapStorage !== null) {
       setIsShowChart(showCandleChartSwapStorage === "true");
     }
   }, []);
@@ -312,14 +316,14 @@ function App() {
     handleChangeAddressChart();
   };
 
-  useEffect(() => {
+  const handleCheckParams = () => {
     const urlParams = new URLSearchParams(window.location.search);
     const chainParams = urlParams.get("fromChain");
     const fromTokenParams = urlParams.get("fromToken");
     const toTokenParams = urlParams.get("toToken");
     const refAddress = urlParams.get("refAddress");
 
-    if (refAddress) {
+    if (refAddress && refAddress !== undefined) {
       setRefAddressParam(refAddress);
       localStorage.setItem("refAddressSwap", refAddress.toString());
     }
@@ -369,6 +373,10 @@ function App() {
         );
       }
     }
+  };
+
+  useEffect(() => {
+    handleCheckParams();
   }, []);
 
   const handleUpdateChain = async () => {
@@ -464,6 +472,21 @@ function App() {
     }
   };
 
+  const handleChangeSUIWalletInstance = (value: any) => {
+    if (value) {
+      if (value.status === "disconnected") {
+        if (
+          (suiWalletInstance as WalletState) &&
+          (suiWalletInstance as WalletState).connected
+        ) {
+          (suiWalletInstance as WalletState).disconnect();
+        }
+      } else {
+        handleSetSuiWalletInstance(value);
+      }
+    }
+  };
+
   return (
     <div className="relative overflow-hidden lg:pt-20 pt-[104px] pb-[144px] min-h-screen flex justify-center items-center">
       <div
@@ -551,6 +574,7 @@ function App() {
                     },
                     isShowChartCandles: isShowChart,
                     handleToggleChartCandles,
+                    handleChangeSUIWalletInstance,
                   }}
                   integrator="nimbus-swap"
                 />

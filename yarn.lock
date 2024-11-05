@@ -2020,6 +2020,24 @@
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
+"@mysten/sui@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.14.0.tgz#557b8970774dcdf2bc776088dd60c4ab8bcf35e1"
+  integrity sha512-dVndFXe1YaiJdNMfO5ZqmcrKxqWaR8TLBd5PT7M3OQeud3wo1EXFSZhT2b2FUsLMa04t+kOYph7kKgqUrfWZyA==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.2.0"
+    "@mysten/bcs" "1.1.0"
+    "@noble/curves" "^1.4.2"
+    "@noble/hashes" "^1.4.0"
+    "@scure/bip32" "^1.4.0"
+    "@scure/bip39" "^1.3.0"
+    "@suchipi/femver" "^1.0.0"
+    bech32 "^2.0.0"
+    gql.tada "^1.8.2"
+    graphql "^16.9.0"
+    tweetnacl "^1.0.3"
+    valibot "^0.36.0"
+
 "@mysten/wallet-standard@0.13.7":
   version "0.13.7"
   resolved "https://registry.yarnpkg.com/@mysten/wallet-standard/-/wallet-standard-0.13.7.tgz#1317be402a58712e940a08140b18fa56ce203657"
@@ -2903,7 +2921,7 @@
   resolved "https://registry.yarnpkg.com/@suchipi/femver/-/femver-1.0.0.tgz#4909dcc069695e07bd23a64c4bfe411d11d9692f"
   integrity sha512-bprE8+K5V+DPX7q2e2K57ImqNBdfGHDIWaGI5xHxZoxbKOuQZn4wzPiUxOAHnsUr3w3xHrWXwN7gnG/iIuEMIg==
 
-"@suiet/wallet-kit@^0.3.2":
+"@suiet/wallet-kit@^0.3.1", "@suiet/wallet-kit@^0.3.2":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@suiet/wallet-kit/-/wallet-kit-0.3.3.tgz#72c94ec1dc80a123e9091b4ced0210fecfc678c9"
   integrity sha512-LEfyzt1vUBSQPXDmoCIQnry64gDUYxG8V0n/Nngjw7EZg/9dslgXhTiB9DHpCDvH31WrZVyz69jFRAiAfUQFTg==
@@ -3240,7 +3258,7 @@
   resolved "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.13.tgz"
   integrity sha512-hCZTSvwbzWGvhqxp/RqVqwU999pBf2vp7hzIjiYOsl8wqOmUxkQ6ddw1cV3l8811+kdUFus/q4d1Y3E3SyEifA==
 
-"@types/react-dom@^18.3.0":
+"@types/react-dom@^18.2.19", "@types/react-dom@^18.3.0":
   version "18.3.1"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-18.3.1.tgz"
   integrity sha512-qW1Mfv8taImTthu4KoXgDfLuk4bydU6Q/TkADnDWWHwi4NX4BR+LWfTp2sVmTqRrsHvyDDTelgelxJ+SsejKKQ==
@@ -3258,6 +3276,14 @@
   version "18.3.11"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.3.11.tgz"
   integrity sha512-r6QZ069rFTjrEYgFdOck1gK7FLVsgJE7tTz0pQBczlBNUhBNk0MQH4UbnFSwjpQLMkLzgqvBBa+qGpLje16eTQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
+
+"@types/react@^18.2.58":
+  version "18.3.12"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.3.12.tgz#99419f182ccd69151813b7ee24b792fe08774f60"
+  integrity sha512-D2wOSq/d6Agt28q7rSI3jhU7G6aiuzljDGZ2hTZHIkrTLUI+AF3WMeKkEZ9nN2fkBAlcktT6vcZjDFiIhMYEQw==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -3916,7 +3942,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.7.7:
+axios@^1.6.7, axios@^1.7.7:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.7.tgz#2f554296f9892a72ac8d8e4c5b79c14a91d0a47f"
   integrity sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==
@@ -6803,10 +6829,26 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-nimbus-universal-swap@^4.39.0:
-  version "4.39.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.39.0.tgz#af4aba39757f3181971a08d52f0614bd4fcb1908"
-  integrity sha512-bC3jaX3hhh/qGkW14PFZd6aMY1WFz9PtCk3yiGdHdWCq3I60v7fMtyMtqnvWDMLJWdBbmWEQ56Y2LcTuqH5TMw==
+nimbus-sui-kit@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-0.0.9.tgz#e5bd520665356730d78b3d4887b2c943a06e37b1"
+  integrity sha512-TffKGNSxwvBkWtyygPpL/7uN/lqC/2d2huLu9dphxQvPGMeaYKAwe4KhtftX6J2fZHxEXsuSyteGiPE7WptfHQ==
+  dependencies:
+    "@mysten/sui.js" "^0.54.1"
+    "@suiet/wallet-kit" "^0.3.1"
+    "@types/react" "^18.2.58"
+    "@types/react-dom" "^18.2.19"
+    axios "^1.6.7"
+    react "18.3.1"
+    react-dom "18.3.1"
+    react-i18next "^14.0.1"
+    react-intersection-observer "^9.6.0"
+    react-router-dom "^6.22.0"
+
+nimbus-universal-swap@^4.40.0:
+  version "4.40.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.40.0.tgz#4a5f772df3aaddf1e2b89da379ebd91f036598ea"
+  integrity sha512-DdY5D1gvVJwAwNRJ7bm/d5MZ6OCPFCcQ2Cmk8AlQxmmDTw91L0mY8OXc45UErzg47XcLLZp2zmKbOdWakVXPAQ==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.4"
     "@emotion/react" "^11.13.3"
@@ -7544,13 +7586,21 @@ randomfill@^1.0.3:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
 
-react-dom@^18.3.1:
+react-dom@18.3.1, react-dom@^18.3.1:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.3.1.tgz"
   integrity sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
+
+react-i18next@^14.0.1:
+  version "14.1.3"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-14.1.3.tgz#85525c4294ef870ddd3f5d184e793cae362f47cb"
+  integrity sha512-wZnpfunU6UIAiJ+bxwOiTmBOAaB14ha97MjOEnLGac2RJ+h/maIYXZuTHlmyqQVX1UVHmU1YDTQ5vxLmwfXTjw==
+  dependencies:
+    "@babel/runtime" "^7.23.9"
+    html-parse-stringify "^3.0.1"
 
 react-i18next@^15.0.2, react-i18next@^15.0.3:
   version "15.0.3"
@@ -7560,7 +7610,7 @@ react-i18next@^15.0.2, react-i18next@^15.0.3:
     "@babel/runtime" "^7.25.0"
     html-parse-stringify "^3.0.1"
 
-react-intersection-observer@^9.13.1:
+react-intersection-observer@^9.13.1, react-intersection-observer@^9.6.0:
   version "9.13.1"
   resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.13.1.tgz#6c61a75801162491c6348bad09967f2caf445584"
   integrity sha512-tSzDaTy0qwNPLJHg8XZhlyHTgGW6drFKTtvjdL+p6um12rcnp8Z5XstE+QNBJ7c64n5o0Lj4ilUleA41bmDoMw==
@@ -7623,7 +7673,7 @@ react-remove-scroll@2.6.0:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
-react-router-dom@^6.26.2, react-router-dom@^6.27.0:
+react-router-dom@^6.22.0, react-router-dom@^6.26.2, react-router-dom@^6.27.0:
   version "6.27.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.27.0.tgz#8d7972a425fd75f91c1e1ff67e47240c5752dc3f"
   integrity sha512-+bvtFWMC0DgAFrfKXKG9Fc+BcXWRUO1aJIihbB79xaeq0v5UzfvnM5houGUm1Y461WVRcgAQ+Clh5rdb1eCx4g==
@@ -7657,7 +7707,7 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@^18.3.1:
+react@18.3.1, react@^18.3.1:
   version "18.3.1"
   resolved "https://registry.npmjs.org/react/-/react-18.3.1.tgz"
   integrity sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==
