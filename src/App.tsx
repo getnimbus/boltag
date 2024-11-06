@@ -220,6 +220,7 @@ function App() {
         ],
       },
     },
+    suiWalletInstance: null,
   };
 
   const handleChangeAddressChart = () => {
