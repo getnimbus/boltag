@@ -2020,10 +2020,10 @@
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.14.0.tgz#557b8970774dcdf2bc776088dd60c4ab8bcf35e1"
-  integrity sha512-dVndFXe1YaiJdNMfO5ZqmcrKxqWaR8TLBd5PT7M3OQeud3wo1EXFSZhT2b2FUsLMa04t+kOYph7kKgqUrfWZyA==
+"@mysten/sui@^1.14.1":
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.14.1.tgz#d2747da37e9295c2f1cf7c8ed92626ccf7b97fa0"
+  integrity sha512-RWXmJboYHzIzIqSeXrjTQWYL4ZLhdUkwvd/oOiNjAA2GkYxxur3BpMRGf2F5/j6DDZoUSC0So2P6ELe4LbsmLQ==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.1.0"
@@ -2921,7 +2921,7 @@
   resolved "https://registry.yarnpkg.com/@suchipi/femver/-/femver-1.0.0.tgz#4909dcc069695e07bd23a64c4bfe411d11d9692f"
   integrity sha512-bprE8+K5V+DPX7q2e2K57ImqNBdfGHDIWaGI5xHxZoxbKOuQZn4wzPiUxOAHnsUr3w3xHrWXwN7gnG/iIuEMIg==
 
-"@suiet/wallet-kit@^0.3.1", "@suiet/wallet-kit@^0.3.2":
+"@suiet/wallet-kit@^0.3.2", "@suiet/wallet-kit@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@suiet/wallet-kit/-/wallet-kit-0.3.3.tgz#72c94ec1dc80a123e9091b4ced0210fecfc678c9"
   integrity sha512-LEfyzt1vUBSQPXDmoCIQnry64gDUYxG8V0n/Nngjw7EZg/9dslgXhTiB9DHpCDvH31WrZVyz69jFRAiAfUQFTg==
@@ -6829,13 +6829,13 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-nimbus-sui-kit@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-0.0.9.tgz#e5bd520665356730d78b3d4887b2c943a06e37b1"
-  integrity sha512-TffKGNSxwvBkWtyygPpL/7uN/lqC/2d2huLu9dphxQvPGMeaYKAwe4KhtftX6J2fZHxEXsuSyteGiPE7WptfHQ==
+nimbus-sui-kit@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-0.0.10.tgz#3dcdae3e9a58fd10e83be2385a357e551538ef12"
+  integrity sha512-linnpqJy/Sn8g97FC15z9jczGx4EDl+xCY3pUgyI6sWzzyTNvE35ZY9BdaT1RC8EJXTODd0Jicwp1l4rwcs68g==
   dependencies:
     "@mysten/sui.js" "^0.54.1"
-    "@suiet/wallet-kit" "^0.3.1"
+    "@suiet/wallet-kit" "^0.3.3"
     "@types/react" "^18.2.58"
     "@types/react-dom" "^18.2.19"
     axios "^1.6.7"
@@ -6845,10 +6845,10 @@ nimbus-sui-kit@^0.0.9:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@^4.40.0:
-  version "4.40.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.40.0.tgz#4a5f772df3aaddf1e2b89da379ebd91f036598ea"
-  integrity sha512-DdY5D1gvVJwAwNRJ7bm/d5MZ6OCPFCcQ2Cmk8AlQxmmDTw91L0mY8OXc45UErzg47XcLLZp2zmKbOdWakVXPAQ==
+nimbus-universal-swap@^4.46.0:
+  version "4.46.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.46.0.tgz#6a61cfede78dbf27a23fd793164a1cd06d7b32a9"
+  integrity sha512-tyrpas9D6htroMIY30WLLqMCYAisOZ8mhS30iLN0ycT7fG6NrQwdFF//uFEi8mu6sFM4zOsjwgXR36vYVjgEUg==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.4"
     "@emotion/react" "^11.13.3"

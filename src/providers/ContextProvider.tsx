@@ -1,21 +1,23 @@
 import { createContext, useState } from "react";
-import type { WalletState } from "nimbus-sui-kit";
 
 export const GlobalStateContext = createContext({
   suiWalletInstance: null,
-  handleSetSuiWalletInstance: (wallet: WalletState) => {},
+  handleSetSuiWalletInstance: (wallet: any) => {},
 });
 
 function ContextProvider({ children }: React.PropsWithChildren) {
-  const [suiWalletInstance, setSuiWalletInstance] = useState<WalletState>(null);
+  const [suiWalletInstance, setSuiWalletInstance] = useState<any>(null);
 
-  const handleSetSuiWalletInstance = (wallet: WalletState) => {
+  const handleSetSuiWalletInstance = (wallet: any) => {
     setSuiWalletInstance(wallet);
   };
 
   return (
     <GlobalStateContext.Provider
-      value={{ suiWalletInstance, handleSetSuiWalletInstance }}
+      value={{
+        suiWalletInstance,
+        handleSetSuiWalletInstance,
+      }}
     >
       {children}
     </GlobalStateContext.Provider>

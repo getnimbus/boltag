@@ -5,6 +5,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import ReactQueryProvider from "./providers/ReactQueryProvider.tsx";
 import ContextProvider from "./providers/ContextProvider.tsx";
+import SUIWalletProvider from "./providers/SUIWalletProvider.tsx";
 
 import { Footer } from "./components/Footer.tsx";
 import { Header } from "./components/Header.tsx";
@@ -22,9 +23,15 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ReactQueryProvider>
       <ContextProvider>
-        <Header />
+        <SUIWalletProvider>
+          <Header />
+          <App />
+          <Footer />
+        </SUIWalletProvider>
+
+        {/* <Header />
         <App />
-        <Footer />
+        <Footer /> */}
       </ContextProvider>
     </ReactQueryProvider>
   </StrictMode>,
