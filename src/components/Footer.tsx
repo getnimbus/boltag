@@ -4,7 +4,7 @@ import Bolt from "../assets/bolt.png";
 export const Footer = () => {
   return (
     <div
-      className="left-0 z-30 w-full pt-4 pb-6 bg-white md:fixed md:bottom-0 md:py-2"
+      className="w-full pt-4 pb-6 bg-white md:py-2"
       style={{ boxShadow: "rgba(0, 0, 0, 0.1) 0px 0px 40px" }}
     >
       <div className="flex md:flex-row flex-col gap-6 md:items-center justify-between max-w-[1600px] m-auto xl:w-[88%] w-[90%]">
