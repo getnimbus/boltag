@@ -22,9 +22,12 @@ const shorterAddress = (string: string) => {
 };
 
 export const Auth = () => {
-  const { suiWalletInstance, handleSetSuiWalletInstance } = useContext(
-    SuiInstanceStateContext,
-  );
+  const {
+    suiWalletInstance,
+    handleSetSuiWalletInstance,
+    isTriggerLogout,
+    toggleTriggerLogout,
+  } = useContext(SuiInstanceStateContext);
 
   const [openPopover, setOpenPopover] = useState<boolean>(false);
 
@@ -48,6 +51,14 @@ export const Auth = () => {
       (suiWalletInstance as WalletState).toggleSelect();
     }
   };
+
+  useEffect(() => {
+    if (isTriggerLogout) {
+      toggleTriggerLogout();
+      setToken("");
+      setIsTriggerNonceOnce(false);
+    }
+  }, [isTriggerLogout]);
 
   const widgetConfig = {
     walletFn: (wallet: WalletState) => {
@@ -162,6 +173,7 @@ export const Auth = () => {
       const res: any = await nimbus.post("/auth/sui", data);
       if (res && res?.data?.result) {
         localStorage.setItem("token", res?.data?.result);
+        setToken(res?.data?.result);
         toast.success("Connect wallet successfully!");
       } else {
         toast.error(res?.error);
@@ -174,6 +186,7 @@ export const Auth = () => {
     } finally {
       setOpenModalSignMsgStashed(false);
       setIsLoading(false);
+      setIsTriggerNonceOnce(false);
     }
   };
 
@@ -185,6 +198,7 @@ export const Auth = () => {
     ) {
       (suiWalletInstance as WalletState)?.disconnect();
     }
+    setIsTriggerNonceOnce(false);
     setOpenPopover(false);
     setNonce("");
     localStorage.removeItem("token");

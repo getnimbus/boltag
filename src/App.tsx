@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useContext } from "react";
 import { nimbus } from "./lib/network";
 import {
   HiddenUI,
@@ -13,6 +13,8 @@ import { motion } from "framer-motion";
 import dayjs from "dayjs";
 import hmac from "js-crypto-hmac";
 import { BubbleAnimateBg } from "./components/BubbleAnimateBg";
+import { SuiInstanceStateContext } from "./providers/SuiInstanceProvider";
+import type { WalletState } from "nimbus-sui-kit";
 
 enum ChainType {
   EVM = "EVM",
@@ -39,6 +41,9 @@ const USDCAddress =
   "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC";
 
 function App() {
+  const { suiWalletInstance, toggleTriggerLogout } = useContext(
+    SuiInstanceStateContext,
+  );
   const [isShowChart, setIsShowChart] = useState<boolean>(false);
   const [addressChart, setAddressChart] = useState<string>(SUIAddress);
   const [refAddressParam, setRefAddressParam] = useState<string>("");
@@ -145,6 +150,15 @@ function App() {
       );
     } else {
       localStorage.setItem("connectedWalletSwapChain", "0");
+      localStorage.removeItem("token");
+      if (
+        suiWalletInstance !== null &&
+        (suiWalletInstance as WalletState) &&
+        (suiWalletInstance as WalletState)?.connected
+      ) {
+        (suiWalletInstance as WalletState)?.disconnect();
+        toggleTriggerLogout();
+      }
     }
   });
 
