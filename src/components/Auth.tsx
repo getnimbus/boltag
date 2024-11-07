@@ -1,10 +1,12 @@
 import type { WalletState } from "nimbus-sui-kit";
 import { SuiConnector } from "nimbus-sui-kit";
 import { useContext, useEffect, useState } from "react";
-import { GlobalStateContext } from "../providers/ContextProvider";
+import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
 import { nimbus } from "../lib/network";
 import { toast } from "sonner";
 import { Modal } from "./Modal";
+
+import Arrow from "../assets/arrow.svg";
 
 const chains = [
   {
@@ -20,19 +22,21 @@ const shorterAddress = (string: string) => {
 };
 
 export const Auth = () => {
-  const { suiWalletInstance, handleSetSuiWalletInstance } =
-    useContext(GlobalStateContext);
+  const { suiWalletInstance, handleSetSuiWalletInstance } = useContext(
+    SuiInstanceStateContext,
+  );
 
   const [openPopover, setOpenPopover] = useState<boolean>(false);
 
-  const [isTrigger, setIsTrigger] = useState<boolean>(false);
   const [openModalSignMsgStashed, setOpenModalSignMsgStashed] =
     useState<boolean>(false);
   const [nonce, setNonce] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [token, setToken] = useState<string>("");
+  const [isTriggerNonceOnce, setIsTriggerNonceOnce] = useState<boolean>(false);
 
   const onConnectSuccess = (msg: any) => {
-    console.log("Success connect: ", msg);
+    console.error("Success connect", msg);
     if (suiWalletInstance) {
       (suiWalletInstance as WalletState).toggleSelect();
     }
@@ -54,7 +58,7 @@ export const Auth = () => {
   };
 
   const handleSignAddressMessage = async (nonce: string) => {
-    const msg = await (suiWalletInstance !== null &&
+    return await (suiWalletInstance !== null &&
       (suiWalletInstance as WalletState) &&
       (suiWalletInstance as WalletState)?.connected &&
       (suiWalletInstance as WalletState)?.signPersonalMessage({
@@ -62,23 +66,37 @@ export const Auth = () => {
           `I am signing my one-time nonce: ${nonce}`,
         ),
       }));
-    return msg;
   };
 
   useEffect(() => {
     const tokenStorage = localStorage.getItem("token");
+    if (tokenStorage !== null) {
+      setToken(tokenStorage);
+    }
+  }, []);
+
+  const handleTriggerSignNonce = () => {
+    setIsTriggerNonceOnce(true);
+    handleGetNonce(
+      (suiWalletInstance !== null &&
+        (suiWalletInstance as WalletState) &&
+        (suiWalletInstance as WalletState)?.connected &&
+        (suiWalletInstance as WalletState)?.account?.address) ||
+        "",
+    );
+  };
+
+  useEffect(() => {
     if (
-      !tokenStorage &&
       suiWalletInstance !== null &&
       (suiWalletInstance as WalletState) &&
-      (suiWalletInstance as WalletState)?.connected &&
-      isTrigger
+      (suiWalletInstance as WalletState)?.connected
     ) {
-      handleGetNonce(
-        (suiWalletInstance as WalletState)?.account?.address || "",
-      );
+      if (token.length === 0 && !isTriggerNonceOnce) {
+        handleTriggerSignNonce();
+      }
     }
-  }, [suiWalletInstance, isTrigger]);
+  }, [suiWalletInstance, isTriggerNonceOnce, token]);
 
   const handleSignMsgFromStashed = async () => {
     const address =
@@ -135,7 +153,6 @@ export const Auth = () => {
       ) {
         (suiWalletInstance as WalletState).disconnect();
       }
-      setIsTrigger(false);
       setIsLoading(false);
     }
   };
@@ -155,10 +172,24 @@ export const Auth = () => {
         "There are some problem when login Sui account. Please try again!",
       );
     } finally {
-      setIsTrigger(false);
       setOpenModalSignMsgStashed(false);
       setIsLoading(false);
     }
+  };
+
+  const handleLogout = () => {
+    if (
+      suiWalletInstance !== null &&
+      (suiWalletInstance as WalletState) &&
+      (suiWalletInstance as WalletState)?.connected
+    ) {
+      (suiWalletInstance as WalletState)?.disconnect();
+    }
+    setOpenPopover(false);
+    setNonce("");
+    localStorage.removeItem("token");
+    setIsLoading(false);
+    window.location.reload();
   };
 
   return (
@@ -177,48 +208,29 @@ export const Auth = () => {
                 ) {
                   setOpenPopover(!openPopover);
                 } else {
-                  setIsTrigger(true);
                   (suiWalletInstance as WalletState)?.toggleSelect();
                 }
               }
             }
           }}
         >
-          {suiWalletInstance !== null &&
-          (suiWalletInstance as WalletState) &&
-          (suiWalletInstance as WalletState)?.status === "connected" &&
-          !isLoading ? (
-            <div className="flex items-center gap-2">
-              {shorterAddress(
-                (suiWalletInstance as WalletState)?.account?.address || "",
-              )}
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0_1790_28273)">
-                  <path
-                    d="M9.99989 10.9766L14.1249 6.85156L15.3032 8.0299L9.99989 13.3332L4.69656 8.0299L5.87489 6.85156L9.99989 10.9766Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_1790_28273">
-                    <rect
-                      width="20"
-                      height="20"
-                      fill="white"
-                      transform="translate(20) rotate(90)"
-                    ></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
+          {isLoading ? (
+            "Loading..."
           ) : (
-            <>{isLoading ? "Loading..." : "Connect wallet"}</>
+            <>
+              {suiWalletInstance !== null &&
+              (suiWalletInstance as WalletState) &&
+              (suiWalletInstance as WalletState)?.status === "connected" ? (
+                <div className="flex items-center gap-2">
+                  {shorterAddress(
+                    (suiWalletInstance as WalletState)?.account?.address || "",
+                  )}
+                  <img src={Arrow} alt="" />
+                </div>
+              ) : (
+                <>Connect wallet</>
+              )}
+            </>
           )}
         </div>
 
@@ -227,18 +239,7 @@ export const Auth = () => {
             <div
               className="popover_content"
               onClick={() => {
-                if (
-                  suiWalletInstance !== null &&
-                  (suiWalletInstance as WalletState) &&
-                  (suiWalletInstance as WalletState)?.connected
-                ) {
-                  (suiWalletInstance as WalletState)?.disconnect();
-                  setOpenPopover(false);
-                  setNonce("");
-                  setIsTrigger(false);
-                  localStorage.removeItem("token");
-                  setIsLoading(false);
-                }
+                handleLogout();
               }}
             >
               <div className="text-base font-medium text-black">Disconnect</div>
@@ -249,7 +250,7 @@ export const Auth = () => {
         )}
       </div>
 
-      <SuiConnector config={widgetConfig} autoConnect={false} chains={chains} />
+      <SuiConnector config={widgetConfig} autoConnect={true} chains={chains} />
 
       <Modal
         isOpen={openModalSignMsgStashed}

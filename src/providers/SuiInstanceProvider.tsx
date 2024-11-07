@@ -1,11 +1,11 @@
 import { createContext, useState } from "react";
 
-export const GlobalStateContext = createContext({
+export const SuiInstanceStateContext = createContext({
   suiWalletInstance: null,
   handleSetSuiWalletInstance: (wallet: any) => {},
 });
 
-function ContextProvider({ children }: React.PropsWithChildren) {
+function SuiInstanceProvider({ children }: React.PropsWithChildren) {
   const [suiWalletInstance, setSuiWalletInstance] = useState<any>(null);
 
   const handleSetSuiWalletInstance = (wallet: any) => {
@@ -13,15 +13,15 @@ function ContextProvider({ children }: React.PropsWithChildren) {
   };
 
   return (
-    <GlobalStateContext.Provider
+    <SuiInstanceStateContext.Provider
       value={{
         suiWalletInstance,
         handleSetSuiWalletInstance,
       }}
     >
       {children}
-    </GlobalStateContext.Provider>
+    </SuiInstanceStateContext.Provider>
   );
 }
 
-export default ContextProvider;
+export default SuiInstanceProvider;

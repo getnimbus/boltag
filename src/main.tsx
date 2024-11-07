@@ -5,8 +5,7 @@ import { Toaster } from "sonner";
 
 import App from "./App.tsx";
 import ReactQueryProvider from "./providers/ReactQueryProvider.tsx";
-import ContextProvider from "./providers/ContextProvider.tsx";
-// import SUIWalletProvider from "./providers/SUIWalletProvider.tsx";
+import SuiInstanceProvider from "./providers/SuiInstanceProvider.tsx";
 
 import { Footer } from "./components/Footer.tsx";
 import { Header } from "./components/Header.tsx";
@@ -23,7 +22,7 @@ import "./index.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ReactQueryProvider>
-      <ContextProvider>
+      <SuiInstanceProvider>
         <Toaster
           expand={true}
           position="top-center"
@@ -31,24 +30,18 @@ createRoot(document.getElementById("root")!).render(
           toastOptions={{
             unstyled: false,
             classNames: {
-              error: "text-red-400 border-red-400",
-              success: "text-green-400 border-green-400",
-              warning: "text-yellow-400 border-yellow-400",
-              info: "text-blue-400 border-blue-400",
-              default: "text-white border-[#BCFD4F]",
+              error: "text-[#f87171] border border-[#f87171]",
+              success: "text-[#4ade80] border border-[#4ade80]",
+              warning: "text-[#facc15] border border-[#facc15]",
+              info: "text-[#60a5fa] border border-[#60a5fa]",
+              default: "text-white border border-[#BCFD4F]",
             },
           }}
         />
-
-        {/* <SUIWalletProvider>
-          <Header />
-          <App />
-          <Footer />
-        </SUIWalletProvider> */}
         <Header />
         <App />
         <Footer />
-      </ContextProvider>
+      </SuiInstanceProvider>
     </ReactQueryProvider>
   </StrictMode>,
 );
