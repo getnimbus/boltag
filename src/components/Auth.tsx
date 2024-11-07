@@ -187,6 +187,7 @@ export const Auth = () => {
       setOpenModalSignMsgStashed(false);
       setIsLoading(false);
       setIsTriggerNonceOnce(false);
+      setNonce("");
     }
   };
 

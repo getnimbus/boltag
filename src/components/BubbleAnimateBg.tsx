@@ -129,8 +129,10 @@ const listDefaultTokenPosition = listDefaultToken.map((item, index) => {
 
 export const BubbleAnimateBg = ({
   handleSelectedToken,
+  isMainPage,
 }: {
-  handleSelectedToken: (token: any) => void;
+  handleSelectedToken?: (token: any) => void;
+  isMainPage: boolean;
 }) => {
   return (
     <div className="absolute inset-0 z-10 w-full h-full backdrop-blur-sm bg-white/30">
@@ -157,12 +159,16 @@ export const BubbleAnimateBg = ({
             >
               <AnimatedDiv $index={index + 1}>
                 <div
-                  className="flex items-center justify-center w-full h-full p-4 transition-all rounded-full cursor-pointer hover:border group"
+                  className={`flex items-center justify-center w-full h-full p-4 transition-all rounded-full hover:border group ${
+                    isMainPage ? "cursor-pointer" : ""
+                  }`}
                   style={{
                     borderColor: "rgba(30, 150, 252, 0.2)",
                   }}
                   onClick={() => {
-                    handleSelectedToken(token);
+                    if (isMainPage) {
+                      handleSelectedToken(token);
+                    }
                   }}
                 >
                   <img
