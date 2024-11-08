@@ -107,7 +107,6 @@ function Main() {
         ],
       },
     },
-    suiWalletInstance: null,
   };
 
   const handleChangeAddressChart = () => {
