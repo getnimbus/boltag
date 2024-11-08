@@ -15,7 +15,7 @@ export const TradingVolume = ({ userAddress }: { userAddress: string }) => {
   });
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-5">
       <div className="text-xl font-medium">Trading Volume with Ref</div>
       <div>chart</div>
     </div>
