@@ -5,6 +5,7 @@ import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
 import { nimbus } from "../lib/network";
 import { toast } from "sonner";
 import { Modal } from "./Modal";
+import { shorterAddress } from "../utils";
 
 import Arrow from "../assets/arrow.svg";
 
@@ -16,10 +17,6 @@ const chains = [
       "https://api.zan.top/node/v1/sui/mainnet/98df431c14ad4b579e025d19e920689b",
   },
 ];
-
-const shorterAddress = (string: string) => {
-  return string ? string.slice(0, 6) + "..." + string.substr(-4) : string;
-};
 
 export const Auth = () => {
   const {
