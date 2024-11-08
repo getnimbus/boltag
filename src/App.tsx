@@ -1,13 +1,20 @@
 import React, { Suspense } from "react";
 import { Toaster } from "sonner";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { TailSpin } from "react-loader-spinner";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
 
-import { Footer } from "./components/Footer.tsx";
-import { Header } from "./components/Header.tsx";
+// Import the generated route tree
+import { routeTree } from "./routeTree.gen";
 
-const MainLoadable = React.lazy(() => import("./pages/Main.tsx"));
-const DashboardLoadable = React.lazy(() => import("./pages/Dashboard.tsx"));
+// Create a new router instance
+const router = createRouter({ routeTree });
+
+// Register the router instance for type safety
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router;
+  }
+}
 
 function App() {
   return (
@@ -29,15 +36,7 @@ function App() {
         }
       >
         <Toaster expand={true} position="top-center" theme="light" />
-        <Router>
-          <Header />
-          <Routes>
-            <Route path="/dashboard" element={<DashboardLoadable />} />
-            <Route path="/" element={<MainLoadable />} />
-            <Route path="*" element={<MainLoadable />} />
-          </Routes>
-          <Footer />
-        </Router>
+        <RouterProvider router={router} />
       </Suspense>
     </React.Fragment>
   );

@@ -144,17 +144,19 @@ function Main() {
 
   widgetEvents.on(WidgetEvent.WalletConnected, async (data) => {
     if (Number(data.chainId) !== 0) {
+      localStorage.setItem("publicAddress", data.address || "");
       localStorage.setItem(
         "connectedWalletSwapChain",
         (data.chainId || 0)?.toString(),
       );
     } else {
+      localStorage.setItem("publicAddress", "");
       localStorage.setItem("connectedWalletSwapChain", "0");
     }
   });
 
   const handleLogout = async () => {
-    await wait(4000);
+    await wait(3000);
     if (
       localStorage.getItem("connectedWalletSwapChain") &&
       localStorage.getItem("connectedWalletSwapChain") === "0"
@@ -167,6 +169,7 @@ function Main() {
         localStorage.removeItem("token");
         (suiWalletInstance as WalletState)?.disconnect();
         toggleTriggerLogout();
+        window.location.reload();
       }
     }
   };
