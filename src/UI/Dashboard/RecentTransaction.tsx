@@ -48,13 +48,19 @@ const formatAggregator = (aggregator: string) => {
   return info;
 };
 
-export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
+export const RecentTransaction = ({
+  userAddress,
+  token,
+}: {
+  userAddress: string;
+  token: string;
+}) => {
   const [page, setPage] = useState<number>(1);
   const [dataRecentTrx, setDataRecentTrx] = useState<any[]>([]);
 
   // query recent trx
   const { isLoading, isError, data } = useQuery({
-    queryKey: ["recent-tx", userAddress, page],
+    queryKey: ["recent-tx", userAddress, page, token],
     queryFn: () => getRecentTrx(userAddress, page),
     enabled: Boolean(userAddress.length !== 0 && page > 0),
   });

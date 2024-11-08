@@ -31,7 +31,7 @@ export const Header = () => {
               </div>
             </Link>
           ) : (
-            <div className="rounded-[10px] py-2 px-3 text-sm opacity-45 font-medium transition-all cursor-pointer bg-black/10 hover:bg-black/15">
+            <div className="rounded-[10px] py-2 px-3 text-sm font-medium transition-all cursor-pointer bg-gray-200 text-gray-400">
               Dashboard
             </div>
           )}

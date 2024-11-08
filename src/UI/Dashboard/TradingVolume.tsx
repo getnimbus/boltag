@@ -30,7 +30,13 @@ const getTradingVolume = async (address: string, timeRange: string) => {
   return response;
 };
 
-export const TradingVolume = ({ userAddress }: { userAddress: string }) => {
+export const TradingVolume = ({
+  userAddress,
+  token,
+}: {
+  userAddress: string;
+  token: string;
+}) => {
   const { handleSetTotalTradeVol } = useContext(GlobalStateContext);
   const [selectedTimeRange, setSelectedTimeRange] = useState<string>("day");
   const [chartOptions, setChartOptions] = useState<EChartsOption>({
@@ -121,7 +127,7 @@ export const TradingVolume = ({ userAddress }: { userAddress: string }) => {
 
   // query user profile
   const { isLoading, isError, data } = useQuery({
-    queryKey: ["trading-volume", userAddress, selectedTimeRange],
+    queryKey: ["trading-volume", userAddress, selectedTimeRange, token],
     queryFn: () => getTradingVolume(userAddress, selectedTimeRange),
     enabled: Boolean(userAddress.length !== 0),
   });

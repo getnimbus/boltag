@@ -2,10 +2,10 @@ import type { WalletState } from "nimbus-sui-kit";
 import { SuiConnector } from "nimbus-sui-kit";
 import { useContext, useEffect, useState } from "react";
 import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
-import { nimbus } from "../lib/network";
-import { toast } from "sonner";
-import { Modal } from "./Modal";
 import { shorterAddress } from "../utils";
+// import { nimbus } from "../lib/network";
+// import { toast } from "sonner";
+// import { Modal } from "./Modal";
 
 import Arrow from "../assets/arrow.svg";
 
@@ -28,12 +28,12 @@ export const Auth = () => {
 
   const [openPopover, setOpenPopover] = useState<boolean>(false);
 
-  const [openModalSignMsgStashed, setOpenModalSignMsgStashed] =
-    useState<boolean>(false);
-  const [nonce, setNonce] = useState<string>("");
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [token, setToken] = useState<string>("");
-  const [isTriggerNonceOnce, setIsTriggerNonceOnce] = useState<boolean>(false);
+  // const [openModalSignMsgStashed, setOpenModalSignMsgStashed] =
+  //   useState<boolean>(false);
+  // const [nonce, setNonce] = useState<string>("");
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const [token, setToken] = useState<string>("");
+  // const [isTriggerNonceOnce, setIsTriggerNonceOnce] = useState<boolean>(false);
 
   const onConnectSuccess = (msg: any) => {
     console.error("Success connect", msg);
@@ -52,8 +52,8 @@ export const Auth = () => {
   useEffect(() => {
     if (isTriggerLogout) {
       toggleTriggerLogout();
-      setToken("");
-      setIsTriggerNonceOnce(false);
+      // setToken("");
+      // setIsTriggerNonceOnce(false);
     }
   }, [isTriggerLogout]);
 
@@ -65,128 +65,128 @@ export const Auth = () => {
     onConnectError,
   };
 
-  const handleSignAddressMessage = async (nonce: string) => {
-    return await (suiWalletInstance !== null &&
-      (suiWalletInstance as WalletState) &&
-      (suiWalletInstance as WalletState)?.connected &&
-      (suiWalletInstance as WalletState)?.signPersonalMessage({
-        message: new TextEncoder().encode(
-          `I am signing my one-time nonce: ${nonce}`,
-        ),
-      }));
-  };
+  // const handleSignAddressMessage = async (nonce: string) => {
+  //   return await (suiWalletInstance !== null &&
+  //     (suiWalletInstance as WalletState) &&
+  //     (suiWalletInstance as WalletState)?.connected &&
+  //     (suiWalletInstance as WalletState)?.signPersonalMessage({
+  //       message: new TextEncoder().encode(
+  //         `I am signing my one-time nonce: ${nonce}`,
+  //       ),
+  //     }));
+  // };
 
-  useEffect(() => {
-    const tokenStorage = localStorage.getItem("token");
-    if (tokenStorage !== null) {
-      setToken(tokenStorage);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const tokenStorage = localStorage.getItem("token");
+  //   if (tokenStorage !== null) {
+  //     setToken(tokenStorage);
+  //   }
+  // }, []);
 
-  const handleTriggerSignNonce = () => {
-    setIsTriggerNonceOnce(true);
-    handleGetNonce(
-      (suiWalletInstance !== null &&
-        (suiWalletInstance as WalletState) &&
-        (suiWalletInstance as WalletState)?.connected &&
-        (suiWalletInstance as WalletState)?.account?.address) ||
-        "",
-    );
-  };
+  // const handleTriggerSignNonce = () => {
+  //   setIsTriggerNonceOnce(true);
+  //   handleGetNonce(
+  //     (suiWalletInstance !== null &&
+  //       (suiWalletInstance as WalletState) &&
+  //       (suiWalletInstance as WalletState)?.connected &&
+  //       (suiWalletInstance as WalletState)?.account?.address) ||
+  //       "",
+  //   );
+  // };
 
-  useEffect(() => {
-    if (
-      suiWalletInstance !== null &&
-      (suiWalletInstance as WalletState) &&
-      (suiWalletInstance as WalletState)?.connected
-    ) {
-      if (token.length === 0 && !isTriggerNonceOnce) {
-        handleTriggerSignNonce();
-      }
-    }
-  }, [suiWalletInstance, isTriggerNonceOnce, token]);
+  // useEffect(() => {
+  //   if (
+  //     suiWalletInstance !== null &&
+  //     (suiWalletInstance as WalletState) &&
+  //     (suiWalletInstance as WalletState)?.connected
+  //   ) {
+  //     if (token.length === 0 && !isTriggerNonceOnce) {
+  //       handleTriggerSignNonce();
+  //     }
+  //   }
+  // }, [suiWalletInstance, isTriggerNonceOnce, token]);
 
-  const handleSignMsgFromStashed = async () => {
-    const address =
-      (suiWalletInstance !== null &&
-        (suiWalletInstance as WalletState) &&
-        (suiWalletInstance as WalletState)?.account?.address) ||
-      "";
+  // const handleSignMsgFromStashed = async () => {
+  //   const address =
+  //     (suiWalletInstance !== null &&
+  //       (suiWalletInstance as WalletState) &&
+  //       (suiWalletInstance as WalletState)?.account?.address) ||
+  //     "";
 
-    const signature = await handleSignAddressMessage(nonce);
+  //   const signature = await handleSignAddressMessage(nonce);
 
-    if (signature && address) {
-      const payload = {
-        signature: signature.signature,
-        publicAddress: address?.toLowerCase(),
-      };
-      handleGetSUIToken(payload);
-    }
-  };
+  //   if (signature && address) {
+  //     const payload = {
+  //       signature: signature.signature,
+  //       publicAddress: address?.toLowerCase(),
+  //     };
+  //     handleGetSUIToken(payload);
+  //   }
+  // };
 
-  const handleGetNonce = async (address: string) => {
-    setIsLoading(true);
-    try {
-      const res: any = await nimbus.post("/users/nonce", {
-        publicAddress: address,
-        referrer: undefined,
-      });
-      if (res && res.data) {
-        setNonce(res.data.nonce);
-        if (
-          suiWalletInstance !== null &&
-          (suiWalletInstance as WalletState) &&
-          (suiWalletInstance as WalletState).name === "Stashed"
-        ) {
-          setOpenModalSignMsgStashed(true);
-        } else {
-          const signature = await handleSignAddressMessage(
-            res.data.nonce as string,
-          );
-          if (signature) {
-            const payload = {
-              signature: signature.signature,
-              publicAddress: address?.toLowerCase(),
-            };
-            handleGetSUIToken(payload);
-          }
-        }
-      }
-    } catch (e) {
-      console.error("error: ", e);
-      if (
-        suiWalletInstance !== null &&
-        (suiWalletInstance as WalletState) &&
-        (suiWalletInstance as WalletState)?.connected
-      ) {
-        (suiWalletInstance as WalletState).disconnect();
-      }
-      setIsLoading(false);
-    }
-  };
+  // const handleGetNonce = async (address: string) => {
+  //   setIsLoading(true);
+  //   try {
+  //     const res: any = await nimbus.post("/users/nonce", {
+  //       publicAddress: address,
+  //       referrer: undefined,
+  //     });
+  //     if (res && res.data) {
+  //       setNonce(res.data.nonce);
+  //       if (
+  //         suiWalletInstance !== null &&
+  //         (suiWalletInstance as WalletState) &&
+  //         (suiWalletInstance as WalletState).name === "Stashed"
+  //       ) {
+  //         setOpenModalSignMsgStashed(true);
+  //       } else {
+  //         const signature = await handleSignAddressMessage(
+  //           res.data.nonce as string,
+  //         );
+  //         if (signature) {
+  //           const payload = {
+  //             signature: signature.signature,
+  //             publicAddress: address?.toLowerCase(),
+  //           };
+  //           handleGetSUIToken(payload);
+  //         }
+  //       }
+  //     }
+  //   } catch (e) {
+  //     console.error("error: ", e);
+  //     if (
+  //       suiWalletInstance !== null &&
+  //       (suiWalletInstance as WalletState) &&
+  //       (suiWalletInstance as WalletState)?.connected
+  //     ) {
+  //       (suiWalletInstance as WalletState).disconnect();
+  //     }
+  //     setIsLoading(false);
+  //   }
+  // };
 
-  const handleGetSUIToken = async (data: any) => {
-    try {
-      const res: any = await nimbus.post("/auth/sui", data);
-      if (res && res?.data?.result) {
-        localStorage.setItem("token", res?.data?.result);
-        setToken(res?.data?.result);
-        toast.success("Connect wallet successfully!");
-      } else {
-        toast.error(res?.error);
-      }
-    } catch (e) {
-      console.error("error: ", e);
-      toast.error(
-        "There are some problem when login Sui account. Please try again!",
-      );
-    } finally {
-      setOpenModalSignMsgStashed(false);
-      setIsLoading(false);
-      setIsTriggerNonceOnce(false);
-      setNonce("");
-    }
-  };
+  // const handleGetSUIToken = async (data: any) => {
+  //   try {
+  //     const res: any = await nimbus.post("/auth/sui", data);
+  //     if (res && res?.data?.result) {
+  //       localStorage.setItem("token", res?.data?.result);
+  //       setToken(res?.data?.result);
+  //       toast.success("Connect wallet successfully!");
+  //     } else {
+  //       toast.error(res?.error);
+  //     }
+  //   } catch (e) {
+  //     console.error("error: ", e);
+  //     toast.error(
+  //       "There are some problem when login Sui account. Please try again!",
+  //     );
+  //   } finally {
+  //     setOpenModalSignMsgStashed(false);
+  //     setIsLoading(false);
+  //     setIsTriggerNonceOnce(false);
+  //     setNonce("");
+  //   }
+  // };
 
   const handleLogout = () => {
     if (
@@ -196,11 +196,11 @@ export const Auth = () => {
     ) {
       (suiWalletInstance as WalletState)?.disconnect();
     }
-    setIsTriggerNonceOnce(false);
+    // setIsTriggerNonceOnce(false);
     setOpenPopover(false);
-    setNonce("");
+    // setNonce("");
     localStorage.removeItem("token");
-    setIsLoading(false);
+    // setIsLoading(false);
     window.location.reload();
   };
 
@@ -210,23 +210,34 @@ export const Auth = () => {
         <div
           className="rounded-[10px] py-2 px-3 text-white bg-[#1e96fc] text-sm font-medium cursor-pointer hover:bg-[#1878c9] transition-all"
           onClick={() => {
-            if (!isLoading) {
-              if (
-                suiWalletInstance !== null &&
-                (suiWalletInstance as WalletState)
-              ) {
-                if (
-                  (suiWalletInstance as WalletState)?.status === "connected"
-                ) {
-                  setOpenPopover(!openPopover);
-                } else {
-                  (suiWalletInstance as WalletState)?.toggleSelect();
-                }
+            // if (!isLoading) {
+            //   if (
+            //     suiWalletInstance !== null &&
+            //     (suiWalletInstance as WalletState)
+            //   ) {
+            //     if (
+            //       (suiWalletInstance as WalletState)?.status === "connected"
+            //     ) {
+            //       setOpenPopover(!openPopover);
+            //     } else {
+            //       (suiWalletInstance as WalletState)?.toggleSelect();
+            //     }
+            //   }
+            // }
+
+            if (
+              suiWalletInstance !== null &&
+              (suiWalletInstance as WalletState)
+            ) {
+              if ((suiWalletInstance as WalletState)?.status === "connected") {
+                setOpenPopover(!openPopover);
+              } else {
+                (suiWalletInstance as WalletState)?.toggleSelect();
               }
             }
           }}
         >
-          {isLoading ? (
+          {/* {isLoading ? (
             "Loading..."
           ) : (
             <>
@@ -243,7 +254,21 @@ export const Auth = () => {
                 <>Connect wallet</>
               )}
             </>
-          )}
+          )} */}
+          <>
+            {suiWalletInstance !== null &&
+            (suiWalletInstance as WalletState) &&
+            (suiWalletInstance as WalletState)?.status === "connected" ? (
+              <div className="flex items-center gap-2">
+                {shorterAddress(
+                  (suiWalletInstance as WalletState)?.account?.address || "",
+                )}
+                <img src={Arrow} alt="" />
+              </div>
+            ) : (
+              <>Connect wallet</>
+            )}
+          </>
         </div>
 
         {openPopover ? (
@@ -264,7 +289,7 @@ export const Auth = () => {
 
       <SuiConnector config={widgetConfig} autoConnect={true} chains={chains} />
 
-      <Modal
+      {/* <Modal
         isOpen={openModalSignMsgStashed}
         handleCloseModal={() => {
           setOpenModalSignMsgStashed(false);
@@ -293,7 +318,7 @@ export const Auth = () => {
             </div>
           </div>
         </div>
-      </Modal>
+      </Modal> */}
     </>
   );
 };
