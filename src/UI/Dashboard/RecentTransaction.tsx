@@ -77,7 +77,7 @@ export const RecentTransaction = ({
   }, [data]);
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       <div className="text-xl font-medium">Recent Transactions with Ref</div>
       <div className="flex flex-col gap-4">
         <div className="xl:block hidden w-full overflow-hidden rounded-[10px] border border-[#0000000d] bg-white">
@@ -102,7 +102,7 @@ export const RecentTransaction = ({
               </tr>
             </thead>
             <tbody className="h-full">
-              {isError && !isLoading ? (
+              {(isError || token.length === 0) && !isLoading ? (
                 <tr>
                   <td colSpan={3}>
                     <div className="flex items-center justify-center h-full px-3 py-4 text-base text-gray-400">
@@ -121,14 +121,14 @@ export const RecentTransaction = ({
                         <td className="py-3 pl-3 bg-white group-hover:bg-gray-100">
                           <a
                             href={`https://suiscan.xyz/mainnet/tx/${item.txHash}`}
-                            className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc]"
+                            className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc] text-[#00000099]"
                           >
                             {item.txHash}
                           </a>
                         </td>
 
                         <td className="py-3 bg-white group-hover:bg-gray-100">
-                          <div className="text-sm">
+                          <div className="text-sm text-[#00000099]">
                             {item.aggregator ? (
                               <div className="flex items-center gap-2">
                                 <img
@@ -145,7 +145,7 @@ export const RecentTransaction = ({
                         </td>
 
                         <td className="py-3 pr-3 bg-white group-hover:bg-gray-100">
-                          <div className="flex justify-end text-sm">
+                          <div className="flex justify-end text-sm text-[#00000099]">
                             <FormatNumber
                               number={Number(item.trade_vol)}
                               type="value"
@@ -202,7 +202,7 @@ export const RecentTransaction = ({
                       <div className="text-sm w-max">
                         <a
                           href={`https://suiscan.xyz/mainnet/tx/${item.txHash}`}
-                          className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc]"
+                          className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc] text-[#00000099]"
                         >
                           {shorterAddress(item.txHash)}
                         </a>
@@ -213,7 +213,7 @@ export const RecentTransaction = ({
                       <div className="text-sm text-right uppercase">
                         Aggregator
                       </div>
-                      <div className="text-sm w-max">
+                      <div className="text-sm w-max text-[#00000099]">
                         {item.aggregator ? (
                           <div className="flex items-center gap-2">
                             <img
@@ -233,7 +233,7 @@ export const RecentTransaction = ({
                       <div className="text-sm font-medium text-right uppercase">
                         Trade Volume
                       </div>
-                      <div className="text-sm w-max">
+                      <div className="text-sm w-max text-[#00000099]">
                         <FormatNumber
                           number={Number(item.trade_vol)}
                           type="value"
@@ -268,13 +268,29 @@ export const RecentTransaction = ({
               page < data?.data?.result?.page ? "" : "opacity-45"
             }`}
             onClick={() => {
+              if (isLoading) {
+                return;
+              }
               if (page < data?.data?.result?.page) {
                 const nextPage = page + 1;
                 setPage(nextPage);
               }
             }}
           >
-            Load more
+            {isLoading ? (
+              <TailSpin
+                visible={true}
+                height="30"
+                width="30"
+                color="#1e96fc"
+                ariaLabel="tail-spin-loading"
+                radius="1"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+            ) : (
+              "Load more"
+            )}
           </div>
         </div>
       </div>
