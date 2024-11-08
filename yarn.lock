@@ -7317,11 +7317,11 @@ nimbus-sui-kit@^0.0.10:
     react-i18next "^14.0.1"
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
-
-nimbus-universal-swap@^4.46.0:
-  version "4.46.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.46.0.tgz#6a61cfede78dbf27a23fd793164a1cd06d7b32a9"
-  integrity sha512-tyrpas9D6htroMIY30WLLqMCYAisOZ8mhS30iLN0ycT7fG6NrQwdFF//uFEi8mu6sFM4zOsjwgXR36vYVjgEUg==
+    
+nimbus-universal-swap@^4.47.0:
+  version "4.47.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.47.0.tgz#606266501b7b91ab1c8da3530ade76e6809fbb80"
+  integrity sha512-lpmxzZYqsRJH8/+lREIvKXJ3qnvA8gAW/RzOegNnIFm+jTiUByilOMpizllK3kbjdZwHb8oRKNOHvnVUdzVUvg==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.4"
     "@emotion/react" "^11.13.3"
