@@ -72,7 +72,7 @@ export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="text-xl font-medium">Recent Transaction with Ref</div>
+      <div className="text-xl font-medium">Recent Transactions with Ref</div>
       <div className="flex flex-col gap-4">
         <div className="xl:block hidden w-full overflow-hidden rounded-[10px] border border-[#0000000d] bg-white">
           <table className="relative w-full h-full table-auto">
@@ -115,14 +115,14 @@ export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
                         <td className="py-3 pl-3 bg-white group-hover:bg-gray-100">
                           <a
                             href={`https://suiscan.xyz/mainnet/tx/${item.txHash}`}
-                            className="text-sm font-medium underline cursor-pointer transition-all hover:text-[#1e96fc]"
+                            className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc]"
                           >
                             {item.txHash}
                           </a>
                         </td>
 
                         <td className="py-3 bg-white group-hover:bg-gray-100">
-                          <div className="text-sm font-medium">
+                          <div className="text-sm">
                             {item.aggregator ? (
                               <div className="flex items-center gap-2">
                                 <img
@@ -139,7 +139,7 @@ export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
                         </td>
 
                         <td className="py-3 pr-3 bg-white group-hover:bg-gray-100">
-                          <div className="text-sm font-medium">
+                          <div className="flex justify-end text-sm">
                             <FormatNumber
                               number={Number(item.trade_vol)}
                               type="value"
@@ -196,7 +196,7 @@ export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
                       <div className="text-sm w-max">
                         <a
                           href={`https://suiscan.xyz/mainnet/tx/${item.txHash}`}
-                          className="text-sm font-medium underline cursor-pointer transition-all hover:text-[#1e96fc]"
+                          className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc]"
                         >
                           {shorterAddress(item.txHash)}
                         </a>
@@ -204,10 +204,10 @@ export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
                     </div>
 
                     <div className="flex items-start justify-between">
-                      <div className="text-sm font-medium text-right uppercase">
+                      <div className="text-sm text-right uppercase">
                         Aggregator
                       </div>
-                      <div className="text-sm font-medium w-max">
+                      <div className="text-sm w-max">
                         {item.aggregator ? (
                           <div className="flex items-center gap-2">
                             <img
@@ -227,7 +227,7 @@ export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
                       <div className="text-sm font-medium text-right uppercase">
                         Trade Volume
                       </div>
-                      <div className="text-sm font-medium w-max">
+                      <div className="text-sm w-max">
                         <FormatNumber
                           number={Number(item.trade_vol)}
                           type="value"
@@ -258,7 +258,7 @@ export const RecentTransaction = ({ userAddress }: { userAddress: string }) => {
 
         <div className="flex items-center justify-center">
           <div
-            className={`w-[140px] border border-[#1e96fc] text-[#1e96fc] rounded-[10px] py-1 px-3 cursor-pointer flex items-center justify-center ${
+            className={`w-[140px] border border-[#1e96fc] text-[#1e96fc] rounded-[10px] py-1 px-3 cursor-pointer flex items-center justify-center text-sm ${
               page < data?.data?.result?.page ? "" : "opacity-45"
             }`}
             onClick={() => {
