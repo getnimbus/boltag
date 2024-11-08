@@ -60,8 +60,8 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4">
-            <div className="h-full col-span-2">
+          <div className="grid grid-cols-1 gap-4 xl:grid-col-3">
+            <div className="h-full col-span-1 xl:col-span-2">
               <div className="h-full border px-3 py-2 rounded-[8px] flex justify-between items-center gap-4">
                 <div className="w-full overflow-hidden text-ellipsis whitespace-nowrap">
                   {link}
@@ -74,17 +74,17 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center col-span-1 gap-4">
-              <div className="flex-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
-                <div className="text-[#00000099] xl:text-base md:text-lg text-base">
+            <div className="grid grid-cols-1 col-span-1 gap-4 md:grid-cols-2">
+              <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+                <div className="text-[#00000099] md:text-base text-sm">
                   Total Volume
                 </div>
                 <div className="text-2xl xl:text-3xl">
                   <FormatNumber number={Number(totalTradeVol)} type="value" />
                 </div>
               </div>
-              <div className="flex-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
-                <div className="text-[#00000099] xl:text-base md:text-lg text-base">
+              <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+                <div className="text-[#00000099] md:text-base text-sm">
                   Current Commission
                 </div>
                 <div className="text-2xl xl:text-3xl">
