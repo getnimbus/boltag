@@ -72,7 +72,7 @@ function Dashboard() {
       if (res && res?.data?.result) {
         localStorage.setItem("token", res?.data?.result);
         setToken(res?.data?.result);
-        toast.success("Connect wallet successfully!");
+        toast.success("Sign your wallet successfully!");
       } else {
         toast.error(res?.error);
       }
@@ -183,16 +183,16 @@ function Dashboard() {
           className="relative z-20 max-w-[1600px] m-auto xl:w-[88%] w-[90%] flex flex-col gap-8 bg-white rounded-[20px] p-6"
           style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)" }}
         >
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-1">
               <div className="text-xl font-medium">My Ref Link</div>
-              <div className="text-base text-gray-500">
+              <div className="text-base text-gray-500/75">
                 Share ref link to your fans/friends to earn up to 80%
                 commission.
                 <a
                   href="https://getnimbus.notion.site/Bolt-ag-36f90f9ec9e4437bb03ce05d222674fd"
                   target="_blank"
-                  className="ml-1 underline cursor-pointer transition-all hover:text-[#1e96fc] text-black"
+                  className="ml-1 underline cursor-pointer transition-all hover:text-[#1e96fc] text-[#00000099]"
                 >
                   Detail
                 </a>
@@ -201,16 +201,18 @@ function Dashboard() {
 
             <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
               <div className="h-full col-span-1 xl:col-span-2">
-                <div className="h-full border px-3 py-2 rounded-[8px] flex justify-between items-center gap-4">
-                  <div className="w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                <div className="h-full border px-3 py-2 rounded-[8px] flex justify-between items-center gap-1">
+                  <div className="w-full overflow-hidden text-ellipsis whitespace-nowrap text-[#00000099]">
                     {link}
                   </div>
-                  <div
-                    className="flex-1 cursor-pointer"
-                    onClick={() => handleCopy(link)}
-                  >
-                    {copied ? <CheckOutlined /> : <CopyOutlined />}
-                  </div>
+                  {token.length !== 0 && (
+                    <div
+                      className="flex-1 cursor-pointer text-[#00000099]"
+                      onClick={() => handleCopy(link)}
+                    >
+                      {copied ? <CheckOutlined /> : <CopyOutlined />}
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="grid grid-cols-1 col-span-1 gap-4 md:grid-cols-2">
