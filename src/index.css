@@ -37,3 +37,34 @@ select:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
+.popover {
+  overflow-y: overlay;
+  position: absolute;
+  z-index: 100;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.popover::-webkit-scrollbar {
+  display: none;
+}
+
+.popover_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popover_content:hover {
+  background: #eff0f4;
+}

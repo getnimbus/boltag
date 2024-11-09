@@ -1,27 +1,22 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import ReactQueryProvider from "./providers/ReactQueryProvider.tsx";
+import SuiInstanceProvider from "./providers/SuiInstanceProvider.tsx";
+import ContextProvider from "./providers/ContextProvider.tsx";
 
 import App from "./App.tsx";
-import ReactQueryProvider from "./providers/ReactQueryProvider.tsx";
-import { Footer } from "./components/Footer.tsx";
-import { Header } from "./components/Header.tsx";
 
 import "./index.css";
-
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <App />,
-//   },
-// ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ReactQueryProvider>
-      <Header />
-      <App />
-      <Footer />
+      <SuiInstanceProvider>
+        <ContextProvider>
+          <App />
+        </ContextProvider>
+      </SuiInstanceProvider>
     </ReactQueryProvider>
   </StrictMode>,
 );
