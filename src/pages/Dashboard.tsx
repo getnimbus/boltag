@@ -151,7 +151,6 @@ function Dashboard() {
         userAddress.length !== 0
       ) {
         handleTriggerSignNonce();
-        console.log("HELLO WORLD");
       }
     }
   }, [isTriggerNonceOnce, token, suiWalletInstance]);

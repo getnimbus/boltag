@@ -181,7 +181,7 @@ export const TradingVolume = ({
       </div>
 
       {isLoading ? (
-        <div className="flex items-center justify-center h-full px-3 py-3">
+        <div className="flex items-center justify-center h-[300px] px-3 py-3">
           <TailSpin
             visible={true}
             height="40"
