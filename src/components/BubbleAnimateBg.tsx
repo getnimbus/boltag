@@ -91,22 +91,22 @@ const random = () => {
 };
 
 const tokenAnimation = (_index: number) => {
-  // return keyframes`
-  //   0%, 100% {
-  //     transform: translateY(${-random().token * index}px);
-  //   }
-  //   50% {
-  //     transform: translateY(${random().token * index}px);
-  //   }
-  // `;
   return keyframes`
     0%, 100% {
-      transform: translateY(-12px);
+      transform: translateY(${-random().token * _index}px);
     }
     50% {
-      transform: translateY(12px);
+      transform: translateY(${random().token * _index}px);
     }
   `;
+  // return keyframes`
+  //   0%, 100% {
+  //     transform: translateY(-12px);
+  //   }
+  //   50% {
+  //     transform: translateY(12px);
+  //   }
+  // `;
 };
 
 const AnimatedDiv = styled.div<{ $index: number }>`

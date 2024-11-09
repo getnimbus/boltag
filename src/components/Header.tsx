@@ -1,19 +1,24 @@
-import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
-import type { WalletState } from "nimbus-sui-kit";
-import { useContext } from "react";
-import { Link } from "@tanstack/react-router";
+// import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
+// import type { WalletState } from "nimbus-sui-kit";
+// import { useContext } from "react";
+// import { Link } from "@tanstack/react-router";
 
-import { Auth } from "./Auth";
+// import { Auth } from "./Auth";
 
 import Bolt from "../assets/bolt.png";
 
 export const Header = () => {
-  const { suiWalletInstance } = useContext(SuiInstanceStateContext);
+  // const { suiWalletInstance } = useContext(SuiInstanceStateContext);
 
   return (
     <div className="fixed top-0 left-0 z-30 w-full backdrop-blur-sm bg-white/30">
       <div className="max-w-[1600px] m-auto xl:w-[88%] w-[90%] py-2 flex justify-between items-center">
-        <Link to="/">
+        <div className="flex items-center -ml-4 cursor-pointer">
+          <img src={Bolt} alt="logo" className="w-12 h-12" />
+          <div className="-ml-2 font-medium">Bolt</div>
+        </div>
+
+        {/* <Link to="/">
           <div className="flex items-center -ml-4 cursor-pointer">
             <img src={Bolt} alt="logo" className="w-12 h-12" />
             <div className="-ml-2 font-medium">Bolt</div>
@@ -37,7 +42,7 @@ export const Header = () => {
           )}
 
           <Auth />
-        </div>
+        </div> */}
       </div>
     </div>
   );
