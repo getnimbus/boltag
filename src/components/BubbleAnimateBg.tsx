@@ -93,10 +93,10 @@ const random = () => {
 const tokenAnimation = (_index: number) => {
   // return keyframes`
   //   0%, 100% {
-  //     transform: translateY(${-random().token * index}px);
+  //     transform: translateY(${-random().token * _index}px);
   //   }
   //   50% {
-  //     transform: translateY(${random().token * index}px);
+  //     transform: translateY(${random().token * _index}px);
   //   }
   // `;
   return keyframes`
