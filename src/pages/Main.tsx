@@ -41,9 +41,7 @@ const USDCAddress =
   "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC";
 
 function Main() {
-  const { suiWalletInstance, toggleTriggerLogout } = useContext(
-    SuiInstanceStateContext,
-  );
+  const { suiWalletInstance } = useContext(SuiInstanceStateContext);
   const [isShowChart, setIsShowChart] = useState<boolean>(false);
   const [addressChart, setAddressChart] = useState<string>(SUIAddress);
   const [refAddressParam, setRefAddressParam] = useState<string>("");
@@ -167,7 +165,6 @@ function Main() {
       ) {
         localStorage.removeItem("token");
         (suiWalletInstance as WalletState)?.disconnect();
-        toggleTriggerLogout();
         window.location.reload();
       }
     }
