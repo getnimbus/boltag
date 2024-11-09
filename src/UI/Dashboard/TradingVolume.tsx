@@ -26,7 +26,7 @@ const listTimeRange = [
 const getTradingVolume = async (address: string, timeRange: string) => {
   const response = await nimbus
     .get(`/swap/${address}/trading-volume-ref?timeRange=${timeRange}`)
-    .then((res) => res?.data);
+    .then((res: any) => res?.data);
   return response;
 };
 
@@ -138,7 +138,7 @@ export const TradingVolume = ({
         ...chartOptions,
         series: [
           {
-            ...chartOptions.series[0],
+            ...((chartOptions as any)?.series[0] || {}),
             data:
               (data || [])?.map((item: any) => [item.date, item.trade_vol]) ||
               [],
