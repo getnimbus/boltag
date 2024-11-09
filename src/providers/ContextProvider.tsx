@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const GlobalStateContext = createContext({
   totalTradeVol: 0,
-  handleSetTotalTradeVol: (value: number) => {},
+  handleSetTotalTradeVol: (_value: number) => {},
 });
 
 function ContextProvider({ children }: React.PropsWithChildren) {

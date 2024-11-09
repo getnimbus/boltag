@@ -90,7 +90,7 @@ const random = () => {
   };
 };
 
-const tokenAnimation = (index: number) => {
+const tokenAnimation = (_index: number) => {
   // return keyframes`
   //   0%, 100% {
   //     transform: translateY(${-random().token * index}px);
@@ -167,7 +167,9 @@ export const BubbleAnimateBg = ({
                   }}
                   onClick={() => {
                     if (isMainPage) {
-                      handleSelectedToken(token);
+                      if (handleSelectedToken) {
+                        handleSelectedToken(token);
+                      }
                     }
                   }}
                 >

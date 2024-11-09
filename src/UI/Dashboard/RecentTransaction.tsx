@@ -59,7 +59,7 @@ export const RecentTransaction = ({
   const [dataRecentTrx, setDataRecentTrx] = useState<any[]>([]);
 
   // query recent trx
-  const { isLoading, isError, data } = useQuery({
+  const { isLoading, isError, data } = useQuery<any>({
     queryKey: ["recent-tx", userAddress, page, token],
     queryFn: () => getRecentTrx(userAddress, page),
     enabled: Boolean(userAddress.length !== 0 && page > 0),
@@ -72,7 +72,10 @@ export const RecentTransaction = ({
       data?.data?.result &&
       data?.data?.result?.length !== 0
     ) {
-      setDataRecentTrx((prev) => [...prev, ...data?.data?.result?.data]);
+      setDataRecentTrx((prev) => [
+        ...prev,
+        ...(data?.data?.result?.data || []),
+      ]);
     }
   }, [data]);
 

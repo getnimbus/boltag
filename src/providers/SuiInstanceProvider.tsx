@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 export const SuiInstanceStateContext = createContext({
   suiWalletInstance: null,
-  handleSetSuiWalletInstance: (wallet: any) => {},
+  handleSetSuiWalletInstance: (_wallet: any) => {},
 
   isTriggerLogout: false,
   toggleTriggerLogout: () => {},
