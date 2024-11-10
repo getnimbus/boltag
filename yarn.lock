@@ -2328,10 +2328,10 @@
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.14.1":
-  version "1.14.1"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.14.1.tgz#d2747da37e9295c2f1cf7c8ed92626ccf7b97fa0"
-  integrity sha512-RWXmJboYHzIzIqSeXrjTQWYL4ZLhdUkwvd/oOiNjAA2GkYxxur3BpMRGf2F5/j6DDZoUSC0So2P6ELe4LbsmLQ==
+"@mysten/sui@^1.14.2":
+  version "1.14.2"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.14.2.tgz#cc7eed6b0157bc5c1b8ec26c3b6bdf3ef130cb94"
+  integrity sha512-WkkVLoP9SXhcZYh/yqtXaM8zX8KPdCTfMUY9oNjHBIFBN3K0s6M5mFRPekZdG8+PVGyRLZI1mFQOs7cRyx4xKg==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.1.0"
@@ -7317,7 +7317,7 @@ nimbus-sui-kit@^0.0.10:
     react-i18next "^14.0.1"
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
-    
+
 nimbus-universal-swap@^4.47.0:
   version "4.47.0"
   resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.47.0.tgz#606266501b7b91ab1c8da3530ade76e6809fbb80"
