@@ -38,6 +38,10 @@ select:focus {
   box-shadow: none !important;
 }
 
+.wkit-connected-container {
+  width: max-content !important;
+}
+
 .wkit-button {
   padding: 9px 12px;
   height: max-content;
@@ -58,4 +62,12 @@ select:focus {
   padding: 12px 12px;
   border-radius: 10px !important;
   font-size: 14px;
+}
+
+.wkit-address-select {
+  font-size: 14px !important;
+}
+
+.wkit-connected-button__balance {
+  display: none;
 }
