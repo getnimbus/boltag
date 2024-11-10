@@ -39,5 +39,5 @@ export const Auth = () => {
     }
   }, [wallet]);
 
-  return <ConnectButton />;
+  return <ConnectButton>Connect wallet</ConnectButton>;
 };
