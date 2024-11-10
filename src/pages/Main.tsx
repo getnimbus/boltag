@@ -41,9 +41,7 @@ const USDCAddress =
   "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC";
 
 function Main() {
-  const { suiWalletInstance, toggleTriggerLogout } = useContext(
-    SuiInstanceStateContext,
-  );
+  const { suiWalletInstance } = useContext(SuiInstanceStateContext);
   const [isShowChart, setIsShowChart] = useState<boolean>(false);
   const [addressChart, setAddressChart] = useState<string>(SUIAddress);
   const [refAddressParam, setRefAddressParam] = useState<string>("");
@@ -151,31 +149,24 @@ function Main() {
     } else {
       localStorage.setItem("publicAddress", "");
       localStorage.setItem("connectedWalletSwapChain", "0");
+      handleLogout();
     }
   });
 
   const handleLogout = async () => {
-    await wait(3000);
+    await wait(2000);
     if (
       localStorage.getItem("connectedWalletSwapChain") &&
-      localStorage.getItem("connectedWalletSwapChain") === "0"
+      localStorage.getItem("connectedWalletSwapChain") === "0" &&
+      suiWalletInstance !== null &&
+      (suiWalletInstance as WalletState) &&
+      (suiWalletInstance as WalletState)?.connected
     ) {
-      if (
-        suiWalletInstance !== null &&
-        (suiWalletInstance as WalletState) &&
-        (suiWalletInstance as WalletState)?.connected
-      ) {
-        localStorage.removeItem("token");
-        (suiWalletInstance as WalletState)?.disconnect();
-        toggleTriggerLogout();
-        window.location.reload();
-      }
+      localStorage.removeItem("token");
+      (suiWalletInstance as WalletState)?.disconnect();
+      window.location.reload();
     }
   };
-
-  useEffect(() => {
-    handleLogout();
-  }, [localStorage.getItem("connectedWalletSwapChain")]);
 
   const handleSelectChainId = (chainId: number) => {
     if (paramsChain !== chainId && paramsChain !== 0) {

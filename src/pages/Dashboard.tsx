@@ -140,21 +140,18 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    if (
-      suiWalletInstance !== null &&
-      (suiWalletInstance as WalletState) &&
-      (suiWalletInstance as WalletState)?.connected
-    ) {
+    if (!isTriggerNonceOnce) {
       if (
-        token.length === 0 &&
-        !isTriggerNonceOnce &&
-        userAddress.length !== 0
+        suiWalletInstance !== null &&
+        (suiWalletInstance as WalletState) &&
+        (suiWalletInstance as WalletState)?.connected
       ) {
-        handleTriggerSignNonce();
-        console.log("HELLO WORLD");
+        if (token.length === 0 && userAddress.length !== 0) {
+          handleTriggerSignNonce();
+        }
       }
     }
-  }, [isTriggerNonceOnce, token, suiWalletInstance]);
+  }, [isTriggerNonceOnce, suiWalletInstance, token, userAddress]);
 
   const handleSignMsgFromStashed = async () => {
     const address =
