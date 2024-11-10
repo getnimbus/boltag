@@ -48,12 +48,12 @@ export const Header = () => {
               (suiWalletInstance as WalletState)?.status === "connected") ||
             localStorage.getItem("token") ? (
               <Link to="/dashboard">
-                <div className="rounded-[10px] py-2 px-3 text-sm font-medium transition-all cursor-pointer bg-black/10 hover:bg-black/15">
+                <div className="rounded-[10px] py-3 px-3 text-sm font-medium transition-all cursor-pointer bg-[#f3f3f4] hover:bg-[#eeeeef]">
                   Dashboard
                 </div>
               </Link>
             ) : (
-              <div className="rounded-[10px] py-2 px-3 text-sm font-medium transition-all cursor-pointer bg-gray-200 text-gray-400">
+              <div className="rounded-[10px] py-[10px] px-3 text-sm font-medium transition-all cursor-pointer bg-gray-200 text-gray-400">
                 Dashboard
               </div>
             )}
