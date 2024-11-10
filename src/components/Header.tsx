@@ -1,6 +1,6 @@
 import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   WalletProvider,
@@ -8,6 +8,7 @@ import {
   AllDefaultWallets,
 } from "@suiet/wallet-kit";
 import { Auth } from "./Auth";
+import HamburgerMenu from "./HamburgerMenu";
 
 import Bolt from "../assets/bolt.png";
 
@@ -26,6 +27,11 @@ const stashedWalletConfig = defineStashedWallet({
 
 export const Header = () => {
   const { suiWalletInstance } = useContext(SuiInstanceStateContext);
+  const [navigationOpen, setNavigationOpen] = useState<boolean>(false);
+
+  const handleNavigationOpen = () => {
+    setNavigationOpen(!navigationOpen);
+  };
 
   return (
     <WalletProvider
@@ -33,7 +39,9 @@ export const Header = () => {
       chains={chains}
       defaultWallets={[stashedWalletConfig, ...AllDefaultWallets]}
     >
-      <div className="fixed top-0 left-0 z-30 w-full backdrop-blur-sm bg-white/30">
+      <div
+        className={`fixed top-0 left-0 z-30 shadow w-full ${navigationOpen ? "bg-white" : "backdrop-blur-sm bg-white/30"}`}
+      >
         <div className="max-w-[1600px] m-auto xl:w-[88%] w-[90%] py-2 flex justify-between items-center">
           <Link to="/">
             <div className="flex items-center -ml-4 cursor-pointer">
@@ -43,23 +51,56 @@ export const Header = () => {
           </Link>
 
           <div className="flex items-center gap-4">
+            <div className="hidden md:block">
+              {(suiWalletInstance !== null &&
+                (suiWalletInstance as WalletState) &&
+                (suiWalletInstance as WalletState)?.status === "connected") ||
+              localStorage.getItem("token") ? (
+                <Link to="/dashboard">
+                  <div className="rounded-[10px] py-3 px-3 text-sm font-medium transition-all cursor-pointer bg-[#f3f3f4] hover:bg-[#eeeeef]">
+                    Dashboard
+                  </div>
+                </Link>
+              ) : (
+                <div className="rounded-[10px] py-[10px] px-3 text-sm font-medium transition-all cursor-pointer bg-gray-200 text-gray-400">
+                  Dashboard
+                </div>
+              )}
+            </div>
+
+            <Auth />
+
+            <HamburgerMenu
+              handleNavigationOpen={handleNavigationOpen}
+              navigationOpen={navigationOpen}
+            />
+          </div>
+        </div>
+
+        <div
+          className={
+            navigationOpen ? "visible shadow pt-3 pb-4" : "w-full h-0 invisible"
+          }
+        >
+          <ul className="flex flex-col gap-4 px-4 py-2 bg-white h-auto max-h-[200px] overflow-y-auto shadow mx-5 rounded">
             {(suiWalletInstance !== null &&
               (suiWalletInstance as WalletState) &&
               (suiWalletInstance as WalletState)?.status === "connected") ||
             localStorage.getItem("token") ? (
               <Link to="/dashboard">
-                <div className="rounded-[10px] py-3 px-3 text-sm font-medium transition-all cursor-pointer bg-[#f3f3f4] hover:bg-[#eeeeef]">
+                <div
+                  className="text-base font-medium"
+                  onClick={() => {
+                    setNavigationOpen(false);
+                  }}
+                >
                   Dashboard
                 </div>
               </Link>
             ) : (
-              <div className="rounded-[10px] py-[10px] px-3 text-sm font-medium transition-all cursor-pointer bg-gray-200 text-gray-400">
-                Dashboard
-              </div>
+              <div className="text-base font-medium">Dashboard</div>
             )}
-
-            <Auth />
-          </div>
+          </ul>
         </div>
       </div>
     </WalletProvider>
