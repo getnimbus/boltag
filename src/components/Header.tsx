@@ -40,7 +40,7 @@ export const Header = () => {
       defaultWallets={[stashedWalletConfig, ...AllDefaultWallets]}
     >
       <div
-        className={`fixed top-0 left-0 z-30 shadow w-full ${navigationOpen ? "bg-white" : "backdrop-blur-sm bg-white/30"}`}
+        className={`fixed top-0 left-0 z-30 md:shadow-none shadow-sm w-full ${navigationOpen ? "bg-white" : "backdrop-blur-sm bg-white/30"}`}
       >
         <div className="max-w-[1600px] m-auto xl:w-[88%] w-[90%] py-2 flex justify-between items-center">
           <Link to="/">
@@ -79,7 +79,9 @@ export const Header = () => {
 
         <div
           className={
-            navigationOpen ? "visible shadow pt-3 pb-4" : "w-full h-0 invisible"
+            navigationOpen
+              ? "visible shadow-sm pt-1 pb-4"
+              : "w-full h-0 invisible"
           }
         >
           <ul className="flex flex-col gap-4 px-4 py-2 bg-white h-auto max-h-[200px] overflow-y-auto shadow mx-5 rounded">
