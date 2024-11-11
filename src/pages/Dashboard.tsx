@@ -205,7 +205,7 @@ function Dashboard() {
           className="relative z-20 max-w-[1600px] m-auto xl:w-[88%] w-[90%] flex flex-col gap-8 bg-white rounded-[20px] p-6"
           style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)" }}
         >
-          <div className="grid grid-cols-1 gap-4 xl:col-span-4 col-span-full lg:grid-cols-2 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 xl:col-span-4 col-span-full lg:grid-cols-4 md:grid-cols-2">
             <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
               <div className="text-[#00000099] md:text-base text-sm">
                 Total Volume
