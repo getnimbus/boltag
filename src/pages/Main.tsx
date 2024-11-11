@@ -374,7 +374,7 @@ function Main() {
   return (
     <div className="relative overflow-hidden lg:pt-20 pt-[104px] pb-[144px] min-h-screen flex justify-center items-center">
       <div
-        className={`relative z-20 m-auto flex items-center justify-center ${
+        className={`relative z-20 m-auto flex items-center justify-center md:px-0 px-5 ${
           isShowChart
             ? "max-w-[1600px] xl:w-[82%] lg:w-[90%] md:w-max"
             : "w-max"
