@@ -155,7 +155,7 @@ export const TradingVolume = ({
   }, [data]);
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col">
       <div className="flex flex-col items-start justify-between gap-3 md:gap-4 md:flex-row md:items-center">
         <div className="text-xl font-medium">Trading Volume with Ref</div>
         <div className="flex items-center">
@@ -194,7 +194,7 @@ export const TradingVolume = ({
           />
         </div>
       ) : (
-        <div className="flex items-center justify-center h-full px-3 pb-12">
+        <div className="flex items-center justify-center h-full">
           <ReactECharts
             option={chartOptions}
             notMerge={true}

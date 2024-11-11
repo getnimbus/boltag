@@ -241,10 +241,9 @@ function Dashboard() {
             </div>
           </div>
 
-          <div className="flex flex-col">
-            <TradingVolume userAddress={userAddress} token={token} />
-            <RecentTransaction userAddress={userAddress} token={token} />
-          </div>
+          <TradingVolume userAddress={userAddress} token={token} />
+
+          <RecentTransaction userAddress={userAddress} token={token} />
         </div>
 
         <BubbleAnimateBg isMainPage={false} />
