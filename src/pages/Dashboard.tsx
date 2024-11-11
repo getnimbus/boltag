@@ -6,15 +6,21 @@ import { wait } from "../utils";
 import { toast } from "sonner";
 import { CheckOutlined, CopyOutlined } from "@ant-design/icons";
 import { FormatNumber } from "../components/FormatNumber";
-import { GlobalStateContext } from "../providers/ContextProvider";
 import { nimbus } from "../lib/network";
 import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { Modal } from "../components/Modal";
+import { useQuery } from "@tanstack/react-query";
+
+const getUserStats = async (address: string) => {
+  const response = await nimbus
+    .get(`/swap/${address}/stats`)
+    .then((res: any) => res?.data);
+  return response;
+};
 
 function Dashboard() {
   const { suiWalletInstance } = useContext(SuiInstanceStateContext);
-  const { totalTradeVol } = useContext(GlobalStateContext);
   const [userAddress, setUserAddress] = useState<string>("");
   const [copied, setCopied] = useState<boolean>(false);
 
@@ -23,6 +29,9 @@ function Dashboard() {
   const [isTriggerNonceOnce, setIsTriggerNonceOnce] = useState<boolean>(false);
   const [openModalSignMsgStashed, setOpenModalSignMsgStashed] =
     useState<boolean>(false);
+
+  const [totalTradeVol, setTotalTradeVol] = useState<number>(0);
+  const [totalRefShare, setTotalRefShare] = useState<number>(0);
 
   const handleCopy = async (text: string) => {
     if (!navigator?.clipboard) {
@@ -171,6 +180,20 @@ function Dashboard() {
     }
   };
 
+  // query user stats
+  const { isLoading, isError, data } = useQuery({
+    queryKey: ["user-stats", userAddress, token],
+    queryFn: () => getUserStats(userAddress),
+    enabled: Boolean(userAddress.length !== 0),
+  });
+
+  useEffect(() => {
+    if (!isLoading && !isError && data && Object.keys(data).length !== 0) {
+      setTotalTradeVol(Number(data?.total_vol || 0));
+      setTotalRefShare(Number(data?.ref_friends || 0));
+    }
+  }, [data]);
+
   const link = `https://bolt.ag/?refAddress=${token ? userAddress : ""}`;
 
   return (
@@ -196,8 +219,8 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
-              <div className="h-full col-span-1 xl:col-span-2">
+            <div className="grid grid-cols-1 gap-4 xl:grid-cols-5">
+              <div className="h-full xl:col-span-2 col-span-full">
                 <div className="h-full border px-3 py-2 rounded-[8px] flex justify-between items-center gap-1">
                   <div className="w-full overflow-hidden text-ellipsis whitespace-nowrap text-[#00000099]">
                     {link}
@@ -212,7 +235,8 @@ function Dashboard() {
                   )}
                 </div>
               </div>
-              <div className="grid grid-cols-1 col-span-1 gap-4 md:grid-cols-2">
+
+              <div className="grid grid-cols-1 gap-4 xl:col-span-3 col-span-full md:grid-cols-3">
                 <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
                   <div className="text-[#00000099] md:text-base text-sm">
                     Total Volume
@@ -221,6 +245,7 @@ function Dashboard() {
                     <FormatNumber number={Number(totalTradeVol)} type="value" />
                   </div>
                 </div>
+
                 <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
                   <div className="text-[#00000099] md:text-base text-sm">
                     Current Commission
@@ -235,6 +260,15 @@ function Dashboard() {
                           : 80
                       : 0}
                     %
+                  </div>
+                </div>
+
+                <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+                  <div className="text-[#00000099] md:text-base text-sm">
+                    Total Ref Share
+                  </div>
+                  <div className="text-2xl xl:text-3xl">
+                    {Number(totalRefShare)}
                   </div>
                 </div>
               </div>
