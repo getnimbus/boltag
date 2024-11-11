@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { nimbus } from "../../lib/network";
 import { useQuery } from "@tanstack/react-query";
 import { TailSpin } from "react-loader-spinner";
@@ -6,7 +6,6 @@ import { EChartsOption } from "echarts";
 import dayjs from "dayjs";
 import ReactECharts from "echarts-for-react";
 import { formatValue } from "../../utils";
-import { GlobalStateContext } from "../../providers/ContextProvider";
 
 const listTimeRange = [
   {
@@ -37,7 +36,6 @@ export const TradingVolume = ({
   userAddress: string;
   token: string;
 }) => {
-  const { handleSetTotalTradeVol } = useContext(GlobalStateContext);
   const [selectedTimeRange, setSelectedTimeRange] = useState<string>("day");
   const [chartOptions, setChartOptions] = useState<EChartsOption>({
     tooltip: {
@@ -145,12 +143,6 @@ export const TradingVolume = ({
           },
         ],
       });
-
-      const totalVolume = data.reduce((total: number, item: any) => {
-        return total + Number(item?.trade_vol || 0);
-      }, 0);
-
-      handleSetTotalTradeVol(totalVolume);
     }
   }, [data]);
 
