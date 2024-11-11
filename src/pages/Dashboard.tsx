@@ -32,6 +32,7 @@ function Dashboard() {
 
   const [totalTradeVol, setTotalTradeVol] = useState<number>(0);
   const [totalRefShare, setTotalRefShare] = useState<number>(0);
+  const [totalCommission, setTotalCommission] = useState<number>(0);
 
   const handleCopy = async (text: string) => {
     if (!navigator?.clipboard) {
@@ -191,6 +192,7 @@ function Dashboard() {
     if (!isLoading && !isError && data && Object.keys(data).length !== 0) {
       setTotalTradeVol(Number(data?.total_vol || 0));
       setTotalRefShare(Number(data?.ref_friends || 0));
+      setTotalCommission(Number(data?.commission || 0));
     }
   }, [data]);
 
@@ -203,6 +205,52 @@ function Dashboard() {
           className="relative z-20 max-w-[1600px] m-auto xl:w-[88%] w-[90%] flex flex-col gap-8 bg-white rounded-[20px] p-6"
           style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)" }}
         >
+          <div className="grid grid-cols-1 gap-4 xl:col-span-4 col-span-full lg:grid-cols-2 md:grid-cols-2">
+            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+              <div className="text-[#00000099] md:text-base text-sm">
+                Total Volume
+              </div>
+              <div className="text-2xl xl:text-3xl">
+                <FormatNumber number={Number(totalTradeVol)} type="value" />
+              </div>
+            </div>
+
+            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+              <div className="text-[#00000099] md:text-base text-sm">
+                Current Commission
+              </div>
+              <div className="text-2xl xl:text-3xl">
+                {Number(totalTradeVol) !== 0
+                  ? Number(totalTradeVol) < 100000
+                    ? 60
+                    : Number(totalTradeVol) >= 100000 &&
+                        Number(totalTradeVol) < 500000
+                      ? 70
+                      : 80
+                  : 0}
+                %
+              </div>
+            </div>
+
+            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+              <div className="text-[#00000099] md:text-base text-sm">
+                Total Friends Referred
+              </div>
+              <div className="text-2xl xl:text-3xl">
+                {Number(totalRefShare)}
+              </div>
+            </div>
+
+            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+              <div className="text-[#00000099] md:text-base text-sm">
+                Revenue Sharing
+              </div>
+              <div className="text-2xl xl:text-3xl">
+                <FormatNumber number={Number(totalCommission)} type="value" />
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-1">
               <div className="text-xl font-medium">My Ref Link</div>
@@ -219,59 +267,18 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 xl:grid-cols-5">
-              <div className="h-full xl:col-span-2 col-span-full">
-                <div className="h-full border px-3 py-2 rounded-[8px] flex justify-between items-center gap-1">
-                  <div className="w-full overflow-hidden text-ellipsis whitespace-nowrap text-[#00000099]">
-                    {link}
-                  </div>
-                  {token.length !== 0 && (
-                    <div
-                      className="flex-1 cursor-pointer text-[#00000099]"
-                      onClick={() => handleCopy(link)}
-                    >
-                      {copied ? <CheckOutlined /> : <CopyOutlined />}
-                    </div>
-                  )}
-                </div>
+            <div className="h-full border px-3 py-2 rounded-[8px] flex justify-between items-center gap-1">
+              <div className="w-full overflow-hidden text-ellipsis whitespace-nowrap text-[#00000099]">
+                {link}
               </div>
-
-              <div className="grid grid-cols-1 gap-4 xl:col-span-3 col-span-full md:grid-cols-3">
-                <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
-                  <div className="text-[#00000099] md:text-base text-sm">
-                    Total Volume
-                  </div>
-                  <div className="text-2xl xl:text-3xl">
-                    <FormatNumber number={Number(totalTradeVol)} type="value" />
-                  </div>
+              {token.length !== 0 && (
+                <div
+                  className="flex-1 cursor-pointer text-[#00000099]"
+                  onClick={() => handleCopy(link)}
+                >
+                  {copied ? <CheckOutlined /> : <CopyOutlined />}
                 </div>
-
-                <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
-                  <div className="text-[#00000099] md:text-base text-sm">
-                    Current Commission
-                  </div>
-                  <div className="text-2xl xl:text-3xl">
-                    {Number(totalTradeVol) !== 0
-                      ? Number(totalTradeVol) < 100000
-                        ? 60
-                        : Number(totalTradeVol) >= 100000 &&
-                            Number(totalTradeVol) < 500000
-                          ? 70
-                          : 80
-                      : 0}
-                    %
-                  </div>
-                </div>
-
-                <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
-                  <div className="text-[#00000099] md:text-base text-sm">
-                    Total Ref Share
-                  </div>
-                  <div className="text-2xl xl:text-3xl">
-                    {Number(totalRefShare)}
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
           </div>
 
