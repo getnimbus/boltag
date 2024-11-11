@@ -33,6 +33,7 @@ function Dashboard() {
   const [totalTradeVol, setTotalTradeVol] = useState<number>(0);
   const [totalRefShare, setTotalRefShare] = useState<number>(0);
   const [totalCommission, setTotalCommission] = useState<number>(0);
+  const [commissionRate, setCommissionRate] = useState<number>(0);
 
   const handleCopy = async (text: string) => {
     if (!navigator?.clipboard) {
@@ -190,6 +191,7 @@ function Dashboard() {
 
   useEffect(() => {
     if (!isLoading && !isError && data && Object.keys(data).length !== 0) {
+      setCommissionRate(Number(data?.commission_rate || 0));
       setTotalTradeVol(Number(data?.total_vol || 0));
       setTotalRefShare(Number(data?.ref_friends || 0));
       setTotalCommission(Number(data?.commission || 0));
@@ -219,17 +221,7 @@ function Dashboard() {
               <div className="text-[#00000099] md:text-base text-sm">
                 Current Commission
               </div>
-              <div className="text-2xl xl:text-3xl">
-                {Number(totalTradeVol) !== 0
-                  ? Number(totalTradeVol) < 100000
-                    ? 60
-                    : Number(totalTradeVol) >= 100000 &&
-                        Number(totalTradeVol) < 500000
-                      ? 70
-                      : 80
-                  : 0}
-                %
-              </div>
+              <div className="text-2xl xl:text-3xl">{commissionRate}%</div>
             </div>
 
             <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
