@@ -382,7 +382,8 @@ function Main() {
       >
         <div className="flex flex-col w-full h-full gap-10">
           <div className="text-3xl font-semibold text-center">
-            Get the best swap routes <br /> from Hop, FlowX and 7K
+            Get the best swap routes <br /> from Hop, FlowX, Cetus, Aftermath
+            and 7K
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 lg:items-start lg:gap-8 lg:flex-row">
