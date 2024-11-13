@@ -4019,6 +4019,11 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.20.0.tgz#03554155b45d8b529adf635b2f6ad1165d70d8b4"
   integrity sha512-mUnk8rPJBI9loFDZ+YzPGdeniYK+FTmRD1TMCz7ev2SNIozyKKpnGgsxO34u6Z4z/t0ITuu7voi/AshfsGsgFg==
 
+"@rnw-community/shared@^0.74.0":
+  version "0.74.0"
+  resolved "https://registry.yarnpkg.com/@rnw-community/shared/-/shared-0.74.0.tgz#57ec5c93935e7547f0ef8132e9ba7c51a0bd1539"
+  integrity sha512-PxEuyL6jKrNF8bDxGYRG+NEqEKtkanMahr6YSGLwmWDd57XenpwETz6LUvSoVTJGGwndwu5pwWJhsz4jqa1bDQ==
+
 "@rollup/plugin-inject@^5.0.5":
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-inject/-/plugin-inject-5.0.5.tgz#616f3a73fe075765f91c5bec90176608bed277a3"
@@ -10460,10 +10465,10 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@^4.50.0:
-  version "4.50.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.50.0.tgz#80378a5251086e9dcd7c69cf43ff1e0f03e9389e"
-  integrity sha512-Nq+R3dgJgNM14gnLMT8xRQTmu7eTgNwNg5Vk+GtKi6DJFBfjo2qR3lYfyekIpZrk7WMGwweMgI++nJl2/WGEhw==
+nimbus-universal-swap@^4.51.0:
+  version "4.51.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.51.0.tgz#413dbc8b7dd54029dff904da881f1d1b97096ebc"
+  integrity sha512-je7iCWMeAlxutN44s41g+50B0sOHGdPdXpHtBJQtJNA9lyIQPAArRzfsY29Pwr5lssQ6jN35ByEjI6jOtdL0JA==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.4"
     "@cetusprotocol/aggregator-sdk" "^0.3.5"
@@ -10495,6 +10500,7 @@ nimbus-universal-swap@^4.50.0:
     mitt "^3.0.1"
     navi-aggregator-sdk "^1.0.8"
     nimbus-wallet-management "^3.3.1"
+    rainbow-swap-sdk "^1.4.14"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-i18next "^15.0.2"
@@ -11567,6 +11573,14 @@ radix3@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.1.2.tgz#fd27d2af3896c6bf4bcdfab6427c69c2afc69ec0"
   integrity sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==
+
+rainbow-swap-sdk@^1.4.14:
+  version "1.4.14"
+  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.4.14.tgz#810a3a22450a1dd48423a98c1e77dbee9b3bc989"
+  integrity sha512-k0Qpb30D2FMJS6aIeROhIo+6tonQ0hve+OpfQbjikt9U8pyO9UTYGg34IM1s9C7plP7gMJb6/RmZmtRlDM9MjA==
+  dependencies:
+    "@rnw-community/shared" "^0.74.0"
+    axios "^1.7.7"
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
