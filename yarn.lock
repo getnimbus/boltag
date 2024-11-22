@@ -2518,10 +2518,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.8.tgz#21a907684723bbbaa5f0974cf7730bd797eb8e62"
   integrity sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==
 
-"@flowx-finance/sdk@^1.9.2":
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.9.2.tgz#1b56ccf0f6ff1191c6860892332ef987e3e5d154"
-  integrity sha512-QlLZf/Bc4OSDNEwHy3Ap3HU8CCWlVE2y3gnB7TdK2Jz9KZvlFAVZp2Xo0eSyd21ft0ovQNPrFJgzGRveuNFdmw==
+"@flowx-finance/sdk@^1.9.5":
+  version "1.9.5"
+  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.9.5.tgz#904274cdca1763b749c16e9789417faa5f90ac0e"
+  integrity sha512-AxheMo1R8xrJz8roKgzlcN8PWTzKCPyAIaeSVQcxpe3jO+D4HBFo3smjOGHxE3XO4V2Xa1GOKLmXTVEdZ0Qv6g==
   dependencies:
     "@mysten/sui" "^1.14.2"
     "@mysten/sui.js" "^0.54.1"
@@ -10441,16 +10441,16 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@^4.54.1:
-  version "4.54.1"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.54.1.tgz#081e898117cad43c16f404ffbea5068255750389"
-  integrity sha512-sLqNkziyPLCrgaInUsLI9jcE7s/rFyCw15iVtLJZJl54ffYAzXco2xS1UBbKBgy7tn/rp8S4ubJk0VvN1ecb6w==
+nimbus-universal-swap@^4.55.0:
+  version "4.55.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.55.0.tgz#11a1226913c2aaab3647a87c826581003dad5900"
+  integrity sha512-RRxUY+3nKVoUYqore9E5mMh5g3Il2VNn5dB5Hlc5xfdGmi4FRtVVim3+cKuaA/Xv1nciqJQCGuln8DYGse4iSg==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.5"
     "@cetusprotocol/aggregator-sdk" "^0.3.6"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
-    "@flowx-finance/sdk" "^1.9.2"
+    "@flowx-finance/sdk" "^1.9.5"
     "@hop.ag/sdk" "^4.0.3"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"

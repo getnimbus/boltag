@@ -15,7 +15,19 @@ import { useQuery } from "@tanstack/react-query";
 const getUserStats = async (address: string) => {
   const response = await nimbus
     .get(`/swap/${address}/stats`)
-    .then((res: any) => res?.data);
+    .then((res: any) => {
+      if (res.error) {
+        if (
+          res.error?.message &&
+          (res.error?.message?.toString()?.includes("Token expired") ||
+            res.error?.message?.toString()?.includes("Unauthorized access"))
+        ) {
+          localStorage.removeItem("token");
+        }
+        throw new Error(res.error);
+      }
+      return res?.data;
+    });
   return response;
 };
 
