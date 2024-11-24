@@ -3422,10 +3422,28 @@
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.13.0", "@mysten/sui@^1.14.2", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
+"@mysten/sui@^1.14.2", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
   version "1.14.2"
   resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.14.2.tgz#cc7eed6b0157bc5c1b8ec26c3b6bdf3ef130cb94"
   integrity sha512-WkkVLoP9SXhcZYh/yqtXaM8zX8KPdCTfMUY9oNjHBIFBN3K0s6M5mFRPekZdG8+PVGyRLZI1mFQOs7cRyx4xKg==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.2.0"
+    "@mysten/bcs" "1.1.0"
+    "@noble/curves" "^1.4.2"
+    "@noble/hashes" "^1.4.0"
+    "@scure/bip32" "^1.4.0"
+    "@scure/bip39" "^1.3.0"
+    "@suchipi/femver" "^1.0.0"
+    bech32 "^2.0.0"
+    gql.tada "^1.8.2"
+    graphql "^16.9.0"
+    tweetnacl "^1.0.3"
+    valibot "^0.36.0"
+
+"@mysten/sui@^1.14.3":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.15.0.tgz#b0c19ed711513e2a1c07b9f927234679fb37ab4c"
+  integrity sha512-vuyKtb3dY3X6HYzSz/DjoNMQs0zqIWscR2W0lbcYyPOFQZ4lHpzLZszgQor+OGb6uMr7M4COIWKVaIJ82Bbt8w==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.1.0"
@@ -5065,13 +5083,6 @@
   dependencies:
     undici-types "~6.19.2"
 
-"@types/node@^22.7.5":
-  version "22.9.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.9.0.tgz#b7f16e5c3384788542c72dc3d561a7ceae2c0365"
-  integrity sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==
-  dependencies:
-    undici-types "~6.19.8"
-
 "@types/numeral@^2.0.5":
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@types/numeral/-/numeral-2.0.5.tgz#388e5c4ff4b0e1787f130753cbbe83d3ba770858"
@@ -6423,11 +6434,6 @@ bufferutil@^4.0.1, bufferutil@^4.0.8:
   dependencies:
     node-gyp-build "^4.3.0"
 
-builtin-modules@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
-  integrity sha512-wxXCdllwGhI2kCC0MnvTGYTMvnVZTvqgypkiTI8Pa5tcz2i6VqsqwYGgqwXji+4RgCzms6EajE4IxiUH6HH8nQ==
-
 builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
@@ -6549,7 +6555,7 @@ chai@^4.3.10:
     pathval "^1.1.1"
     type-detect "^4.1.0"
 
-chalk@^2.3.0, chalk@^2.4.2:
+chalk@^2.4.2:
   version "2.4.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz"
   integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -6783,7 +6789,7 @@ commander@7, commander@^7.2.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
   integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
-commander@^2.12.1, commander@^2.20.3:
+commander@^2.20.3:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -7441,11 +7447,6 @@ diff-sequences@^29.6.3:
   version "29.6.3"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-29.6.3.tgz#4deaf894d11407c51efc8418012f9e70b84ea921"
   integrity sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==
-
-diff@^4.0.1:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
-  integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
 diff@^5.1.0:
   version "5.2.0"
@@ -8442,7 +8443,7 @@ glob@^10.2.2, glob@^10.3.10:
     package-json-from-dist "^1.0.0"
     path-scurry "^1.11.1"
 
-glob@^7.1.1, glob@^7.1.3, glob@^7.1.4:
+glob@^7.1.3, glob@^7.1.4:
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.3.tgz#b8df0fb802bbfa8e89bd1d938b4e16578ed44f2b"
   integrity sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==
@@ -10291,13 +10292,6 @@ mixpanel-browser@^2.55.1:
   dependencies:
     rrweb "2.0.0-alpha.13"
 
-mkdirp@^0.5.3:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.6.tgz#7def03d2432dcae4ba1d611445c48396062255f6"
-  integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
-  dependencies:
-    minimist "^1.2.6"
-
 mkdirp@^1.0.3, mkdirp@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
@@ -10396,27 +10390,17 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-aggregator-sdk@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/navi-aggregator-sdk/-/navi-aggregator-sdk-1.0.8.tgz#163f1e3fbb50b52c337e796feaaa336cf23e01ea"
-  integrity sha512-3L128AK/rZajn2p+8KxZb60DHmx3tzYhHpqUdT8ip/aGDKrIVK6L5MCg4XBsKh8j1xwZzGLvdp5vC5T7Om8zSA==
+navi-sdk@^1.3.10, navi-sdk@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.4.3.tgz#33987212ff5f9807972d343ed57a823c65b87c80"
+  integrity sha512-ZFOpoP4wOLwJGpX00i7sKoBMl4P62KzaKEXS6/goRHVxs7+0RE1t2gDk35ZFyU3V4cmd4yvNW+zbSL3p7OTvhQ==
   dependencies:
-    "@mysten/sui" "^1.13.0"
-    "@types/node" "^22.7.5"
-    dotenv "^16.4.5"
-    navi-sdk "^1.3.9"
-    tslint "^6.1.3"
-
-navi-sdk@^1.3.9:
-  version "1.3.9"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.3.9.tgz#3fee6ec7b3e672296a9009c12dd7da04811c55cc"
-  integrity sha512-6gF8BoP3NSce1I83CDEOkgNNAtQ9ss5585ys2WbWbIbj2kUDgp//ot32FHHyaUcKe130LGKYx42IVTGYHjMf9Q==
-  dependencies:
-    "@mysten/sui" "^1.13.0"
+    "@mysten/sui" "^1.14.3"
     "@mysten/sui.js" "^0.54.1"
     "@pythnetwork/pyth-sui-js" "^2.1.0"
     axios "^1.7.7"
     esrun "^3.2.26"
+    navi-sdk "^1.3.10"
     tsconfig-paths "^4.2.0"
     vitest "^1.6.0"
 
@@ -10441,10 +10425,10 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@^4.56.0:
-  version "4.56.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.56.0.tgz#cbbfb2ff99f3c04567b1b30a1d7d10f0ae4a883e"
-  integrity sha512-0hMMxPP6lh9txU4eIRLuPVxvSLPbxfCvq0Fsz+dJ5VGiJTeFZrMaa0wZYX1P51k1DT9Tq+dhq2buKg85gWZ7ow==
+nimbus-universal-swap@^4.56.1:
+  version "4.56.1"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.56.1.tgz#fd1d150c96e8cd66f2bbedc7bd05885498b1d32c"
+  integrity sha512-B/ycDr3YAFRrZ1MfANsAjSizX0HcRTdY15NsmNPqyekYmVc4LGqEEEekJ3OulZYPUCOi6IK5+JtOt12t9QjN1w==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.5"
     "@cetusprotocol/aggregator-sdk" "^0.3.6"
@@ -10474,8 +10458,8 @@ nimbus-universal-swap@^4.56.0:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-aggregator-sdk "^1.0.8"
-    nimbus-wallet-management "^3.4.0"
+    navi-sdk "^1.4.3"
+    nimbus-wallet-management "^3.5.0"
     rainbow-swap-sdk "^1.4.14"
     react "^18.3.1"
     react-dom "^18.3.1"
@@ -10488,15 +10472,15 @@ nimbus-universal-swap@^4.56.0:
     wagmi "^2.12.16"
     zustand "^4.5.5"
 
-nimbus-wallet-management@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/nimbus-wallet-management/-/nimbus-wallet-management-3.4.0.tgz#1693060412938d9e6fa22fff110bec72967b0f13"
-  integrity sha512-bUgn/68nJxXF7BK2kqbk8XptOvf/zC2neFD1gu30p3I8HzgnWvoGdyzHcUSwGKM5vlLMo9H2nXu4iQTzfiOqOg==
+nimbus-wallet-management@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/nimbus-wallet-management/-/nimbus-wallet-management-3.5.0.tgz#e2bb0df46c99ffdf84f8e0707bbe9e23197aef3e"
+  integrity sha512-0GF+rEGgyDrUxRjEjcHvhQYBze7j/J+b/80Txz3JXxugtL+Z2P4o43ZNaUDuMOzl6cin0q4/oHUcvqLXQRVP/g==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.5"
     "@lifi/sdk" "^3.2.3"
     "@solana/wallet-adapter-base" "^0.9.23"
-    navi-aggregator-sdk "^1.0.8"
+    navi-sdk "^1.4.3"
     react "^18.3.1"
     viem "^2.21.16"
     wagmi "^2.12.16"
@@ -11896,7 +11880,7 @@ resolve.exports@^2.0.0:
   resolved "https://registry.yarnpkg.com/resolve.exports/-/resolve.exports-2.0.2.tgz#f8c934b8e6a13f539e38b7098e2e36134f01e800"
   integrity sha512-X2UW6Nw3n/aMgDVy+0rSqgHlv39WZAlZrXCdnbyEiKm17DSqHX4MmQMaST3FbeWR5FTuRcUwYAziZajji0Y7mg==
 
-resolve@^1.1.7, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.19.0, resolve@^1.20.0, resolve@^1.22.2, resolve@^1.3.2:
+resolve@^1.1.7, resolve@^1.14.2, resolve@^1.17.0, resolve@^1.19.0, resolve@^1.20.0, resolve@^1.22.2:
   version "1.22.8"
   resolved "https://registry.npmjs.org/resolve/-/resolve-1.22.8.tgz"
   integrity sha512-oKWePCxqpd6FlLvGV1VU0x7bkPmmCNolxzjMf4NczoDnQcIWrAF+cPtZn5i6n+RfD2d9i0tzpKnG6Yk168yIyw==
@@ -12068,11 +12052,6 @@ secp256k1@^5.0.0:
     elliptic "^6.5.7"
     node-addon-api "^5.0.0"
     node-gyp-build "^4.2.0"
-
-semver@^5.3.0:
-  version "5.7.2"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.2.tgz#48d55db737c3287cd4835e17fa13feace1c41ef8"
-  integrity sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==
 
 semver@^6.3.0, semver@^6.3.1:
   version "6.3.1"
@@ -12806,7 +12785,7 @@ tsconfig-paths@^4.2.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@1.14.1, tslib@^1.13.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@1.14.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
@@ -12825,32 +12804,6 @@ tslib@^2.0.0, tslib@^2.1.0, tslib@^2.3.1, tslib@^2.4.0, tslib@^2.6.1, tslib@^2.6
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.8.0.tgz#d124c86c3c05a40a91e6fdea4021bd31d377971b"
   integrity sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==
-
-tslint@^6.1.3:
-  version "6.1.3"
-  resolved "https://registry.yarnpkg.com/tslint/-/tslint-6.1.3.tgz#5c23b2eccc32487d5523bd3a470e9aa31789d904"
-  integrity sha512-IbR4nkT96EQOvKE2PW/djGz8iGNeJ4rF2mBfiYaR/nvUWYKJhLwimoJKgjIFEIDibBtOevj7BqCRL4oHeWWUCg==
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    builtin-modules "^1.1.1"
-    chalk "^2.3.0"
-    commander "^2.12.1"
-    diff "^4.0.1"
-    glob "^7.1.1"
-    js-yaml "^3.13.1"
-    minimatch "^3.0.4"
-    mkdirp "^0.5.3"
-    resolve "^1.3.2"
-    semver "^5.3.0"
-    tslib "^1.13.0"
-    tsutils "^2.29.0"
-
-tsutils@^2.29.0:
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.29.0.tgz#32b488501467acbedd4b85498673a0812aca0b99"
-  integrity sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  dependencies:
-    tslib "^1.8.1"
 
 tsx@^4.19.2:
   version "4.19.2"
@@ -12961,7 +12914,7 @@ uncrypto@^0.1.3:
   resolved "https://registry.yarnpkg.com/uncrypto/-/uncrypto-0.1.3.tgz#e1288d609226f2d02d8d69ee861fa20d8348ef2b"
   integrity sha512-Ql87qFHB3s/De2ClA9e0gsnS6zXG27SkTiSJwjCc9MebbfapQfuPzumMIUMi38ezPZVNFcHI9sUIepeQfw8J8Q==
 
-undici-types@~6.19.2, undici-types@~6.19.8:
+undici-types@~6.19.2:
   version "6.19.8"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.19.8.tgz#35111c9d1437ab83a7cdc0abae2f26d88eda0a02"
   integrity sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==
