@@ -15,6 +15,7 @@ import hmac from "js-crypto-hmac";
 import { BubbleAnimateBg } from "../components/BubbleAnimateBg";
 import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
+import { normalizeSuiAddress } from "@mysten/sui/utils";
 
 enum ChainType {
   EVM = "EVM",
@@ -313,10 +314,28 @@ function Main() {
     }
   }, [paramsChain, paramsTokenInfo]);
 
+  const handleFormatSuiAddress = (address: string) => {
+    if (address === "0x2::sui::SUI") {
+      return address;
+    }
+
+    const regexSymbol = /::(.+)/;
+    const matchSymbol = address.match(regexSymbol);
+
+    const resultSymbol = matchSymbol && matchSymbol[0];
+
+    const regexAddress = /^[^:]+/;
+    const matchAddress = address.match(regexAddress);
+
+    const resultAddress = matchAddress && matchAddress[0];
+
+    return normalizeSuiAddress(resultAddress || "") + resultSymbol;
+  };
+
   const birdeyeChartUrl = useMemo(() => {
-    return `https://birdeye.so/tv-widget/${
-      addressChart || SUIAddress
-    }?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=light`;
+    return `https://birdeye.so/tv-widget/${handleFormatSuiAddress(
+      addressChart || SUIAddress,
+    )}?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=light`;
   }, [addressChart]);
 
   const handleSwapBonus = async (data: Route & any) => {
