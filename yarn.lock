@@ -10425,10 +10425,10 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@^4.60.0:
-  version "4.60.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.60.0.tgz#f4528406a6b9ef546e9ad8cdffc47e5cf734a895"
-  integrity sha512-skkZiXZNizJkFlf36w8qNZEAD0MJ8bw4rri6mzZlNP1j9huk24ympL+Ax7hc71ZN8st+BNWmRevlA1pe5LT1zw==
+nimbus-universal-swap@^4.61.0:
+  version "4.61.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.61.0.tgz#9259d699b355cd13591a960dbe980844a4720927"
+  integrity sha512-JwkETYt/VkB06LrVR8HzpyGIaPEKtGPnfcQc3Usgey0neHmkUftrrw+61sP1cefXHq80RA3aTuI6vIyUaVLU7w==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.1.5"
     "@cetusprotocol/aggregator-sdk" "^0.3.6"
