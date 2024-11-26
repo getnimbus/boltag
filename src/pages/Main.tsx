@@ -401,7 +401,7 @@ function Main() {
       >
         <div className="flex flex-col w-full h-full gap-10">
           <div className="text-3xl font-semibold text-center">
-            Get the best swap routes <br /> from Hop, FlowX, Cetus, Aftermath
+            Get the best swap routes <br /> from Hop, FlowX, Cetus, Aftermath, NAVI
             and 7K.
           </div>
 
