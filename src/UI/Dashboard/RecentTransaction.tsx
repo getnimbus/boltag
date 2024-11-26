@@ -83,10 +83,10 @@ export const RecentTransaction = ({
     <div className="flex flex-col gap-4">
       <div className="text-xl font-medium">Recent Transactions with Ref</div>
       <div className="flex flex-col gap-4">
-        <div className="xl:block hidden w-full overflow-hidden rounded-[10px] border border-[#0000000d] dark:border-[#cdcdcd26] bg-white dark:bg-[#131313]">
+        <div className="xl:block hidden w-full overflow-hidden rounded-[10px] border border-[#0000000d] dark:border-[#cdcdcd26] bg-[#fff] dark:bg-[#131313]">
           <table className="relative w-full h-full table-auto">
             <thead>
-              <tr className="bg-[#f4f5f8] dark:bg-[#131313]">
+              <tr className="bg-[#f4f5f8] dark:bg-[#222222]">
                 <th className="pl-3 py-3 rounded-tl-[10px]">
                   <div className="text-xs font-medium text-left uppercase">
                     Transaction Hash
@@ -117,11 +117,8 @@ export const RecentTransaction = ({
                 <>
                   {dataRecentTrx?.map((item: any, index: number) => {
                     return (
-                      <tr
-                        key={index}
-                        className="group transition-all border-b-[0.5px] border-[#0000000d] last:border-none"
-                      >
-                        <td className="py-3 pl-3 bg-[#f4f5f8] dark:bg-[#131313] group-hover:dark:bg-black/30 group-hover:bg-gray-100">
+                      <tr key={index} className="transition-all group">
+                        <td className="py-3 pl-3 bg-[#fff] dark:bg-[#131313] group-hover:dark:bg-black/30 group-hover:bg-gray-100">
                           <a
                             href={`https://suiscan.xyz/mainnet/tx/${item.txHash}`}
                             className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc] hover:dark:text-[#1e96fc] text-[#00000099] dark:text-gray-400"
@@ -130,7 +127,7 @@ export const RecentTransaction = ({
                           </a>
                         </td>
 
-                        <td className="py-3 bg-[#f4f5f8] dark:bg-[#131313] group-hover:bg-gray-100 group-hover:dark:bg-black/30">
+                        <td className="py-3 bg-[#fff] dark:bg-[#131313] group-hover:bg-gray-100 group-hover:dark:bg-black/30">
                           <div className="text-sm text-[#00000099] dark:text-gray-400">
                             {item.aggregator ? (
                               <div className="flex items-center gap-2">
@@ -147,7 +144,7 @@ export const RecentTransaction = ({
                           </div>
                         </td>
 
-                        <td className="py-3 pr-3 bg-[#f4f5f8] dark:bg-[#131313] group-hover:bg-gray-100 group-hover:dark:bg-black/30">
+                        <td className="py-3 pr-3 bg-[#fff] dark:bg-[#131313] group-hover:bg-gray-100 group-hover:dark:bg-black/30">
                           <div className="flex justify-end text-sm text-[#00000099] dark:text-gray-400">
                             <FormatNumber
                               number={Number(item.trade_vol)}

@@ -57,7 +57,12 @@ function Main() {
 
   const widgetConfig = useMemo(() => {
     return {
-      appearance: theme === "system" ? "dark" : theme,
+      appearance:
+        theme === "system"
+          ? window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light"
+          : theme,
       theme: {
         palette: {
           primary: {
@@ -336,7 +341,13 @@ function Main() {
   const birdeyeChartUrl = useMemo(() => {
     return `https://birdeye.so/tv-widget/${handleFormatSuiAddress(
       addressChart || SUIAddress,
-    )}?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=${["dark", "system"].includes(theme) ? "dark" : theme}`;
+    )}?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=${
+      theme === "system"
+        ? window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light"
+        : theme
+    }`;
   }, [addressChart, theme]);
 
   const handleSwapBonus = async (data: Route & any) => {
