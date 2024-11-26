@@ -89,9 +89,9 @@ export const TradingVolume = ({
         color:
           theme === "system"
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light"
-            : theme
+              ? "#fff"
+              : "#000"
+            : theme === "dark"
               ? "#fff"
               : "#000",
       },
@@ -103,9 +103,9 @@ export const TradingVolume = ({
         color:
           theme === "system"
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light"
-            : theme
+              ? "#fff"
+              : "#000"
+            : theme === "dark"
               ? "#fff"
               : "#000",
       },
@@ -116,9 +116,9 @@ export const TradingVolume = ({
         color:
           theme === "system"
             ? window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light"
-            : theme
+              ? "#fff"
+              : "#000"
+            : theme === "dark"
               ? "#fff"
               : "#000",
       },
@@ -154,9 +154,9 @@ export const TradingVolume = ({
           color:
             theme === "system"
               ? window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? "dark"
-                : "light"
-              : theme
+                ? "#fff"
+                : "#000"
+              : theme === "dark"
                 ? "#fff"
                 : "#000",
         },
@@ -167,9 +167,9 @@ export const TradingVolume = ({
           color:
             theme === "system"
               ? window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? "dark"
-                : "light"
-              : theme
+                ? "#fff"
+                : "#000"
+              : theme === "dark"
                 ? "#fff"
                 : "#000",
         },
@@ -178,9 +178,9 @@ export const TradingVolume = ({
           color:
             theme === "system"
               ? window.matchMedia("(prefers-color-scheme: dark)").matches
-                ? "dark"
-                : "light"
-              : theme
+                ? "#fff"
+                : "#000"
+              : theme === "dark"
                 ? "#fff"
                 : "#000",
         },
