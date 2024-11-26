@@ -99,14 +99,6 @@ const tokenAnimation = (_index: number) => {
       transform: translateY(${random().token * _index}px);
     }
   `;
-  // return keyframes`
-  //   0%, 100% {
-  //     transform: translateY(-12px);
-  //   }
-  //   50% {
-  //     transform: translateY(12px);
-  //   }
-  // `;
 };
 
 const AnimatedDiv = styled.div<{ $index: number }>`
@@ -135,7 +127,7 @@ export const BubbleAnimateBg = ({
   isMainPage: boolean;
 }) => {
   return (
-    <div className="absolute inset-0 z-10 w-full h-full backdrop-blur-sm bg-white/30">
+    <div className="absolute inset-0 z-10 w-full h-full backdrop-blur-sm bg-white/30 dark:bg-black/50">
       <div
         className="relative w-full h-full"
         style={{
@@ -187,7 +179,7 @@ export const BubbleAnimateBg = ({
                   {token.symbol}
                 </div>
 
-                <div className="absolute inset-0 block rounded-full bg-white/30 backdrop-blur-sm group-hover:hidden"></div>
+                <div className="absolute inset-0 block rounded-full bg-white/30 dark:bg-black/10 backdrop-blur-sm group-hover:hidden"></div>
               </AnimatedDiv>
             </motion.div>
           );

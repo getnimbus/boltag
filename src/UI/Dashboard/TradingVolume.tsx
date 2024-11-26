@@ -6,6 +6,7 @@ import { EChartsOption } from "echarts";
 import dayjs from "dayjs";
 import ReactECharts from "echarts-for-react";
 import { formatValue } from "../../utils";
+import { useTheme } from "../../contexts/ThemeContext";
 
 const listTimeRange = [
   {
@@ -36,6 +37,7 @@ export const TradingVolume = ({
   userAddress: string;
   token: string;
 }) => {
+  const { theme } = useTheme();
   const [selectedTimeRange, setSelectedTimeRange] = useState<string>("day");
   const [chartOptions, setChartOptions] = useState<EChartsOption>({
     tooltip: {
@@ -44,7 +46,6 @@ export const TradingVolume = ({
       borderRadius: 12,
       backgroundColor: "#fff",
       borderWidth: 0,
-
       formatter: (params: any) => {
         if (Array.isArray(params) && params.length > 0) {
           const date = dayjs(params[0].axisValue).format("YYYY-MM-DD");
@@ -85,20 +86,20 @@ export const TradingVolume = ({
       type: "time",
       boundaryGap: ["3%", "3%"],
       axisLabel: {
-        color: "#000",
+        color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
       },
     },
     yAxis: {
       type: "value",
       name: "",
       nameTextStyle: {
-        color: "#000",
+        color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
       },
       nameLocation: "middle",
       nameGap: 60,
       axisLabel: {
         formatter: (value: number) => `$${value.toFixed(2)}`,
-        color: "#000",
+        color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
       },
       splitLine: {
         show: true,
@@ -122,6 +123,28 @@ export const TradingVolume = ({
       },
     ],
   });
+
+  useEffect(() => {
+    setChartOptions({
+      ...chartOptions,
+      xAxis: {
+        ...chartOptions.xAxis,
+        axisLabel: {
+          color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+        },
+      },
+      yAxis: {
+        ...chartOptions.yAxis,
+        nameTextStyle: {
+          color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+        },
+        axisLabel: {
+          formatter: (value: number) => `$${value.toFixed(2)}`,
+          color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+        },
+      },
+    });
+  }, [theme]);
 
   // query user profile
   const { isLoading, isError, data } = useQuery({
