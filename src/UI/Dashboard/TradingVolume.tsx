@@ -86,20 +86,41 @@ export const TradingVolume = ({
       type: "time",
       boundaryGap: ["3%", "3%"],
       axisLabel: {
-        color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+        color:
+          theme === "system"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : theme
+              ? "#fff"
+              : "#000",
       },
     },
     yAxis: {
       type: "value",
       name: "",
       nameTextStyle: {
-        color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+        color:
+          theme === "system"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : theme
+              ? "#fff"
+              : "#000",
       },
       nameLocation: "middle",
       nameGap: 60,
       axisLabel: {
         formatter: (value: number) => `$${value.toFixed(2)}`,
-        color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+        color:
+          theme === "system"
+            ? window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light"
+            : theme
+              ? "#fff"
+              : "#000",
       },
       splitLine: {
         show: true,
@@ -130,17 +151,38 @@ export const TradingVolume = ({
       xAxis: {
         ...chartOptions.xAxis,
         axisLabel: {
-          color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+          color:
+            theme === "system"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : theme
+                ? "#fff"
+                : "#000",
         },
       },
       yAxis: {
         ...chartOptions.yAxis,
         nameTextStyle: {
-          color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+          color:
+            theme === "system"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : theme
+                ? "#fff"
+                : "#000",
         },
         axisLabel: {
           formatter: (value: number) => `$${value.toFixed(2)}`,
-          color: ["dark", "system"].includes(theme) ? "#fff" : "#000",
+          color:
+            theme === "system"
+              ? window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light"
+              : theme
+                ? "#fff"
+                : "#000",
         },
       },
     });

@@ -25,7 +25,16 @@ export const Footer = () => {
               <div className="text-xs dark:text-white">Powered by</div>
               <a href="https://getnimbus.io" target="_blank">
                 <img
-                  src={["dark", "system"].includes(theme) ? LogoWhite : Logo}
+                  src={
+                    theme === "system"
+                      ? window.matchMedia("(prefers-color-scheme: dark)")
+                          .matches
+                        ? LogoWhite
+                        : Logo
+                      : theme === "dark"
+                        ? LogoWhite
+                        : Logo
+                  }
                   alt="logo"
                   className="w-[127px] h-[40px] -ml-4"
                 />
