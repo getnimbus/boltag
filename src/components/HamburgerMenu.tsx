@@ -25,17 +25,17 @@ export default function HamburgerMenu({
       <span className="relative block w-[22px] h-[22px] cursor-pointer">
         <span className="absolute block w-full h-full">
           <span
-            className={`block relative top-0 left-0 bg-black rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0] ${
+            className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-[0] ${
               !navigation ? "!w-full delay-300" : ""
             }`}
           />
           <span
-            className={`block relative top-0 left-0 bg-black rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-150 ${
+            className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-150 ${
               !navigation ? "!w-full delay-400" : ""
             }`}
           />
           <span
-            className={`block relative top-0 left-0 bg-black rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-200 ${
+            className={`block relative top-0 left-0 bg-black dark:bg-white rounded-sm w-0 h-0.5 my-1 ease-in-out duration-200 delay-200 ${
               !navigation ? "!w-full delay-500" : ""
             }`}
           />
@@ -47,12 +47,12 @@ export default function HamburgerMenu({
           }`}
         >
           <span
-            className={`block bg-black rounded-sm ease-in-out duration-200 delay-300 absolute left-2.5 top-0 w-0.5 h-full ${
+            className={`block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-300 absolute left-2.5 top-0 w-0.5 h-full ${
               !navigation ? "h-0 delay-200" : ""
             }`}
           />
           <span
-            className={`block bg-black rounded-sm ease-in-out duration-200 delay-400 absolute left-0 top-2.5 w-full h-0.5 ${
+            className={`block bg-black dark:bg-white rounded-sm ease-in-out duration-200 delay-400 absolute left-0 top-2.5 w-full h-0.5 ${
               !navigation ? "h-0 delay-200" : ""
             }`}
           />

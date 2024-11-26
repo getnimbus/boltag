@@ -40,7 +40,7 @@ export const Header = () => {
       defaultWallets={[stashedWalletConfig, ...AllDefaultWallets]}
     >
       <div
-        className={`fixed top-0 left-0 z-30 md:shadow-none shadow-sm w-full ${navigationOpen ? "bg-white" : "backdrop-blur-sm bg-white/30"}`}
+        className={`fixed top-0 left-0 z-30 md:shadow-none shadow-sm w-full ${navigationOpen ? "bg-white dark:bg-black" : "backdrop-blur-sm bg-white/30 dark:bg-black/30"}`}
       >
         <div className="max-w-[1600px] m-auto xl:w-[88%] w-[90%] py-2 flex justify-between items-center">
           <Link to="/">
@@ -57,7 +57,7 @@ export const Header = () => {
                 (suiWalletInstance as WalletState)?.status === "connected") ||
               localStorage.getItem("token") ? (
                 <Link to="/dashboard">
-                  <div className="rounded-[10px] py-3 px-3 text-sm font-medium transition-all cursor-pointer bg-[#f3f3f4] hover:bg-[#eeeeef]">
+                  <div className="rounded-[10px] py-3 px-3 text-sm font-medium transition-all cursor-pointer bg-[#f3f3f4] dark:bg-gray-900 hover:bg-[#eeeeef]">
                     Dashboard
                   </div>
                 </Link>
@@ -84,7 +84,7 @@ export const Header = () => {
               : "w-full h-0 invisible"
           }
         >
-          <ul className="flex flex-col gap-4 px-4 py-2 bg-white h-auto max-h-[200px] overflow-y-auto shadow mx-5 rounded">
+          <ul className="flex flex-col gap-4 px-4 py-2 bg-white dark:bg-[#222222] h-auto max-h-[200px] overflow-y-auto shadow mx-5 rounded">
             {(suiWalletInstance !== null &&
               (suiWalletInstance as WalletState) &&
               (suiWalletInstance as WalletState)?.status === "connected") ||

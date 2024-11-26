@@ -50,14 +50,13 @@ export const Modal = ({
             onClick={(e) => e.stopPropagation()}
           >
             <div
-              className="mx-4 rounded-xl"
+              className="mx-4 rounded-xl bg-white dark:bg-[#121212]"
               style={{
-                background: "#fff",
                 boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)",
               }}
             >
               <div
-                className="absolute text-4xl text-gray-500 cursor-pointer top-2 right-8"
+                className="absolute text-4xl text-gray-500 cursor-pointer dark:text-gray-300 top-2 right-8"
                 onClick={(e) => {
                   e.stopPropagation();
                   handleClose();

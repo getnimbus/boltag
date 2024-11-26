@@ -16,6 +16,7 @@ import { BubbleAnimateBg } from "../components/BubbleAnimateBg";
 import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { normalizeSuiAddress } from "@mysten/sui/utils";
+import { useTheme } from "../contexts/ThemeContext";
 
 enum ChainType {
   EVM = "EVM",
@@ -42,6 +43,7 @@ const USDCAddress =
   "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC";
 
 function Main() {
+  const { theme } = useTheme();
   const { suiWalletInstance } = useContext(SuiInstanceStateContext);
   const [isShowChart, setIsShowChart] = useState<boolean>(false);
   const [addressChart, setAddressChart] = useState<string>(SUIAddress);
@@ -53,60 +55,59 @@ function Main() {
   const [paramsChain, setParamsChain] = useState<number>(0);
   const [paramsTokenInfo, setParamsTokenInfo] = useState<any>({});
 
-  const widgetConfig: WidgetConfig = {
-    appearance: "light",
-    theme: {
-      palette: {
-        background: {
-          default: "#fff",
+  const widgetConfig = useMemo(() => {
+    return {
+      appearance: theme === "system" ? "dark" : theme,
+      theme: {
+        palette: {
+          primary: {
+            main: "#1e96fc",
+          },
         },
-        primary: {
-          main: "#1e96fc",
+        typography: {
+          fontFamily: "Golos Text",
+        },
+        container: {
+          height: "auto",
+          width: "auto",
+          padding: "0",
+          borderRadius: "20px",
         },
       },
-      typography: {
-        fontFamily: "Golos Text",
+      integrator: "Nimbus",
+      hiddenUI: [
+        HiddenUI.ToAddress,
+        HiddenUI.Language,
+        HiddenUI.Appearance,
+        HiddenUI.History,
+      ],
+      brandingLogo: "https://getnimbus.io/nimbusFavicon.svg",
+      variant: "compact",
+      subvariant: "split",
+      subvariantOptions: {
+        split: "swap",
       },
-      container: {
-        height: "auto",
-        width: "auto",
-        padding: "0",
-        borderRadius: "20px",
+      chains: {
+        types: {
+          allow: [ChainType.MVM],
+          deny: [ChainType.SVM, ChainType.EVM, ChainType.TVM],
+        },
       },
-    },
-    integrator: "Nimbus",
-    hiddenUI: [
-      HiddenUI.ToAddress,
-      HiddenUI.Language,
-      HiddenUI.Appearance,
-      HiddenUI.History,
-    ],
-    brandingLogo: "https://getnimbus.io/nimbusFavicon.svg",
-    variant: "compact",
-    subvariant: "split",
-    subvariantOptions: {
-      split: "swap",
-    },
-    chains: {
-      types: {
-        allow: [ChainType.MVM],
-        deny: [ChainType.SVM, ChainType.EVM, ChainType.TVM],
+      commissionBps: {
+        [ChainId.MOVE]: 0,
       },
-    },
-    commissionBps: {
-      [ChainId.MOVE]: 0,
-    },
-    commissionBpsSDK: {
-      [ChainId.MOVE]: 0,
-    },
-    sdkConfig: {
-      rpcUrls: {
-        [ChainId.SOL]: [
-          "https://rpc-aggregator.service.getnimbus.io/solana_das?key=28ad52be-5b89-4c0a-8ce9-e053c053466b",
-        ],
+      commissionBpsSDK: {
+        [ChainId.MOVE]: 0,
       },
-    },
-  };
+      sdkConfig: {
+        rpcUrls: {
+          [ChainId.SOL]: [
+            "https://rpc-aggregator.service.getnimbus.io/solana_das?key=28ad52be-5b89-4c0a-8ce9-e053c053466b",
+          ],
+        },
+      },
+    };
+  }, [theme]) as WidgetConfig;
 
   const handleChangeAddressChart = () => {
     if (paramsTokenInfo && Object.keys(paramsTokenInfo)?.length !== 0) {
@@ -335,8 +336,8 @@ function Main() {
   const birdeyeChartUrl = useMemo(() => {
     return `https://birdeye.so/tv-widget/${handleFormatSuiAddress(
       addressChart || SUIAddress,
-    )}?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=light`;
-  }, [addressChart]);
+    )}?chain=sui&viewMode=pair&chartInterval=5&chartType=CANDLE&chartLeftToolbar=show&theme=${["dark", "system"].includes(theme) ? "dark" : theme}`;
+  }, [addressChart, theme]);
 
   const handleSwapBonus = async (data: Route & any) => {
     const now = dayjs().valueOf();
@@ -401,8 +402,8 @@ function Main() {
       >
         <div className="flex flex-col w-full h-full gap-10">
           <div className="text-3xl font-semibold text-center">
-            Get the best swap routes <br /> from Hop, FlowX, Cetus, Aftermath, NAVI
-            and 7K.
+            Get the best swap routes <br /> from Hop, FlowX, Cetus, Aftermath,
+            NAVI and 7K.
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 lg:items-start lg:gap-8 lg:flex-row">
@@ -416,7 +417,7 @@ function Main() {
                       visible: { x: 0, display: "block" },
                       hidden: { x: 100, display: "none" },
                     }}
-                    className="rounded-[20px] overflow-hidden w-full bg-white"
+                    className="rounded-[20px] overflow-hidden w-full bg-white dark:bg-[#121212]"
                     style={{
                       boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)",
                     }}
@@ -439,7 +440,7 @@ function Main() {
                       visible: { y: 0, display: "block" },
                       hidden: { y: -100, display: "none" },
                     }}
-                    className="rounded-[20px] overflow-hidden w-full bg-white"
+                    className="rounded-[20px] overflow-hidden w-full bg-white dark:bg-[#121212]"
                     style={{
                       boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)",
                     }}
@@ -457,7 +458,7 @@ function Main() {
             ) : null}
 
             <div
-              className="bg-white rounded-[20px] overflow-x-hidden shadow-md h-full md:w-[416px] w-full lg:order-2 order-1"
+              className="bg-white dark:bg-[#121212] rounded-[20px] overflow-x-hidden shadow-md h-full md:w-[416px] w-full lg:order-2 order-1"
               style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)" }}
             >
               {Number(paramsChain) !== 0 ? (
