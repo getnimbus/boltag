@@ -1,4 +1,4 @@
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeProvider";
 import Theme from "./Theme";
 
 import Logo from "../assets/logo.svg";

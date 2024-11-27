@@ -9,7 +9,19 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (context === undefined) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+}
+
+export default function ThemeProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const [theme, setTheme] = useState<Theme>(() => {
     const savedTheme = localStorage.getItem("theme") as Theme;
     return savedTheme || "system";
@@ -25,7 +37,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         ? "dark"
         : "light";
 
-      console.log("systemTheme: ", systemTheme);
       root.classList.remove("light", "dark");
       root.classList.add(systemTheme);
     } else {
@@ -39,12 +50,4 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       {children}
     </ThemeContext.Provider>
   );
-}
-
-export function useTheme() {
-  const context = useContext(ThemeContext);
-  if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
 }
