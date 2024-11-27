@@ -16,7 +16,7 @@ import { BubbleAnimateBg } from "../components/BubbleAnimateBg";
 import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { normalizeSuiAddress } from "@mysten/sui/utils";
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeProvider";
 
 enum ChainType {
   EVM = "EVM",

@@ -6,7 +6,7 @@ import { EChartsOption } from "echarts";
 import dayjs from "dayjs";
 import ReactECharts from "echarts-for-react";
 import { formatValue } from "../../utils";
-import { useTheme } from "../../contexts/ThemeContext";
+import { useTheme } from "../../contexts/ThemeProvider";
 
 const listTimeRange = [
   {

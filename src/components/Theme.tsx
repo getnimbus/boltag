@@ -1,4 +1,4 @@
-import { useTheme } from "../contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeProvider";
 
 export default function Theme() {
   const { theme, setTheme } = useTheme();

@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import ReactQueryProvider from "./contexts/ReactQueryProvider.tsx";
 import SuiInstanceProvider from "./contexts/SuiInstanceProvider.tsx";
+import ThemeProvider from "./contexts/ThemeProvider.tsx";
 
 import App from "./App.tsx";
 
@@ -13,7 +14,9 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ReactQueryProvider>
       <SuiInstanceProvider>
-        <App />
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
       </SuiInstanceProvider>
     </ReactQueryProvider>
   </StrictMode>,
