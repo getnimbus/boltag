@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 import dayjs from "dayjs";
 import hmac from "js-crypto-hmac";
 import { BubbleAnimateBg } from "../components/BubbleAnimateBg";
-import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
+import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { normalizeSuiAddress } from "@mysten/sui/utils";
 import { useTheme } from "../contexts/ThemeContext";

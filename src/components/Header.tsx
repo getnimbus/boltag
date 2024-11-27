@@ -1,4 +1,4 @@
-import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
+import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { useContext, useState } from "react";
 import { Link } from "@tanstack/react-router";

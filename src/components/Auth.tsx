@@ -1,6 +1,6 @@
 import type { WalletState } from "nimbus-sui-kit";
 import { useContext, useEffect } from "react";
-import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
+import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 
 import { ConnectButton, useWallet } from "@suiet/wallet-kit";
 

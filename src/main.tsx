@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import ReactQueryProvider from "./providers/ReactQueryProvider.tsx";
-import SuiInstanceProvider from "./providers/SuiInstanceProvider.tsx";
+import ReactQueryProvider from "./contexts/ReactQueryProvider.tsx";
+import SuiInstanceProvider from "./contexts/SuiInstanceProvider.tsx";
 
 import App from "./App.tsx";
 

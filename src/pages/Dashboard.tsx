@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { CheckOutlined, CopyOutlined } from "@ant-design/icons";
 import { FormatNumber } from "../components/FormatNumber";
 import { nimbus } from "../lib/network";
-import { SuiInstanceStateContext } from "../providers/SuiInstanceProvider";
+import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { Modal } from "../components/Modal";
 import { useQuery } from "@tanstack/react-query";
