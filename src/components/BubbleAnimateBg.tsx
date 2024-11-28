@@ -57,10 +57,10 @@ const listDefaultToken = [
       "0x6dae8ca14311574fdfe555524ea48558e3d1360d1607d1c7f98af867e3b7976c::flx::FLX",
   },
   {
-    logo: "https://gateway.pinata.cloud/ipfs/QmQv4usd5eMQYMp93E5pASEWyQP9JCi7QM3bAaWhVfz4pn",
-    symbol: "HOPI",
+    logo: "https://strapi-dev.scand.app/uploads/Aptos_Coin_Logo_30be6df869.png",
+    symbol: "APT",
     address:
-      "0xc9e497ea76280864615dc97dce4479585ac9b767a014428448df3b8f95310e3f::hopi::HOPI",
+      "0x3a5143bb1196e3bcdfab6203d1683ae29edd26294fc8bfeafe4aaa9d2704df37::coin::COIN",
   },
   {
     logo: "https://pntvpw2m7uxvx7j4roojxy3sb2lrc57jqzwo66kafwdjaj5v3oea.arweave.net/e2dX20z9L1v9PIucm-NyDpcRd-mGbO95QC2GkCe124g",
