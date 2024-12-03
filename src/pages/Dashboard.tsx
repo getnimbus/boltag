@@ -18,9 +18,9 @@ const getUserStats = async (address: string) => {
     .then((res: any) => {
       if (res.error) {
         if (
-          res.error?.message &&
-          (res.error?.message?.toString()?.includes("Token expired") ||
-            res.error?.message?.toString()?.includes("Unauthorized access"))
+          res.error &&
+          (res.error?.toString()?.includes("Token expired") ||
+            res.error?.toString()?.includes("Unauthorized access"))
         ) {
           localStorage.removeItem("token");
         }
