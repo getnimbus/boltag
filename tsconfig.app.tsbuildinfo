@@ -16,7 +16,7 @@
     "./src/components/theme.tsx",
     "./src/contexts/reactqueryprovider.tsx",
     "./src/contexts/suiinstanceprovider.tsx",
-    "./src/contexts/themecontext.tsx",
+    "./src/contexts/themeprovider.tsx",
     "./src/lib/network.ts",
     "./src/pages/dashboard.tsx",
     "./src/pages/main.tsx",
@@ -25,5 +25,5 @@
     "./src/routes/index.tsx",
     "./src/utils/index.ts"
   ],
-  "version": "5.6.3"
+  "version": "5.7.2"
 }
