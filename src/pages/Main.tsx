@@ -350,44 +350,40 @@ function Main() {
   }, [addressChart, theme]);
 
   const handleSwapBonus = async (data: any) => {
-    const txHash = data?.steps?.[0]?.execution?.process?.[0]?.txHash;
-    const volume = Number(data?.fromAmountUSD || 0);
-
-    const connectedAddressSwap = data?.account?.address;
-
-    const aggregator = data?.steps?.[0]?.integrator?.toLowerCase();
-
-    const payload = {
-      txHash,
-      owner: connectedAddressSwap,
-      token0: data?.fromToken?.address,
-      amount0: Number(
-        data?.fromAmount * 10 ** data?.fromToken?.decimals,
-      ).toString(),
-      token1: data?.toToken?.address,
-      amount1: Number(
-        data?.toAmount * 10 ** data?.toToken?.decimals,
-      ).toString(),
-      referrer: refAddressParam.length !== 0 ? refAddressParam : undefined,
-      trade_vol: volume,
-      aggregator,
-    };
-
-    handleTrackingLog(payload);
-  };
-
-  const handleTrackingLog = async (payload: any) => {
-    const now = dayjs().valueOf();
-
-    const computed = await hmac.compute(
-      Buffer.from(import.meta.env.VITE_TRADE_REQUEST_KEY),
-      Buffer.from(`${now}:${JSON.stringify(payload)}`),
-      "SHA-256",
-    );
-
-    const sig = Buffer.from(computed.buffer).toString("base64");
-
     try {
+      const txHash = data?.steps?.[0]?.execution?.process?.[0]?.txHash;
+      const volume = Number(data?.fromAmountUSD || 0);
+
+      const connectedAddressSwap = data?.account?.address;
+
+      const aggregator = data?.steps?.[0]?.integrator?.toLowerCase();
+
+      const payload = {
+        txHash,
+        owner: connectedAddressSwap,
+        token0: data?.fromToken?.address,
+        amount0: Number(
+          Number(data?.fromAmount) / 10 ** data?.fromToken?.decimals,
+        )?.toString(),
+        token1: data?.toToken?.address,
+        amount1: Number(
+          Number(data?.toAmount) / 10 ** data?.toToken?.decimals,
+        )?.toString(),
+        referrer: refAddressParam.length !== 0 ? refAddressParam : undefined,
+        trade_vol: volume,
+        aggregator,
+      };
+
+      const now = dayjs().valueOf();
+
+      const computed = await hmac.compute(
+        Buffer.from(import.meta.env.VITE_TRADE_REQUEST_KEY),
+        Buffer.from(`${now}:${JSON.stringify(payload)}`),
+        "SHA-256",
+      );
+
+      const sig = Buffer.from(computed.buffer).toString("base64");
+
       const response: any = await nimbus.post("/swap/logs", payload, {
         headers: {
           "x-signature": sig,
