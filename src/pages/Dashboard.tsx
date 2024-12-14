@@ -241,7 +241,7 @@ function Dashboard() {
                 Total Friends Referred
               </div>
               <div className="text-2xl xl:text-3xl">
-                {Number(totalRefShare)}
+                {Number(totalRefShare || 0)}
               </div>
             </div>
 
