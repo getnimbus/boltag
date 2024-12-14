@@ -38,8 +38,8 @@ const listNativeToken = [
 ];
 
 const SUIAddress = "0x2::sui::SUI";
-const USDCAddress =
-  "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC";
+const USDTAddress =
+  "0xc060006111016b8a020ad5b33834984a437aaa7d3c74c18e09a95d48aceab08c::coin::COIN";
 
 function Main() {
   const { theme } = useTheme();
@@ -236,7 +236,7 @@ function Main() {
     if (chainParams && chainParams !== undefined && Number(chainParams) !== 0) {
       setParamsChain(Number(chainParams));
       setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
-      setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
+      setToTokenParam(toTokenParams ? toTokenParams : USDTAddress);
     } else {
       const connectedWalletSwapChainStorage = localStorage.getItem(
         "connectedWalletSwapChain",
@@ -247,7 +247,7 @@ function Main() {
       ) {
         setParamsChain(Number(connectedWalletSwapChainStorage));
         setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
-        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDTAddress);
         if (Number(connectedWalletSwapChainStorage) !== 0) {
           window.history.replaceState(
             null,
@@ -265,7 +265,7 @@ function Main() {
       } else {
         setParamsChain(ChainId.MOVE);
         setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
-        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDTAddress);
         window.history.replaceState(
           null,
           "",
