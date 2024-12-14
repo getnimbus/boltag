@@ -26,11 +26,12 @@
     "js-crypto-hmac": "^1.0.7",
     "mixpanel-browser": "^2.55.1",
     "nimbus-sui-kit": "^0.0.10",
-    "nimbus-universal-swap": "4.64.0",
+    "nimbus-universal-swap": "4.64.1",
     "numeral": "^2.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-loader-spinner": "^6.1.6",
+    "send-discord-webhook": "0.0.9",
     "sonner": "^1.7.0",
     "styled-components": "^6.1.13",
     "vite-plugin-node-polyfills": "^0.22.0"

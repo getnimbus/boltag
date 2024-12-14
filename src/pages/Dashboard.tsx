@@ -11,6 +11,7 @@ import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { Modal } from "../components/Modal";
 import { useQuery } from "@tanstack/react-query";
+import { sendDiscordWebhook } from "send-discord-webhook";
 
 const getUserStats = async (address: string) => {
   const response = await nimbus
@@ -99,11 +100,22 @@ function Dashboard() {
       } else {
         toast.error(res?.error);
       }
-    } catch (e) {
-      console.error("error: ", e);
+    } catch (error: any) {
+      console.error("Error when login with SUI:", error);
       toast.error(
         "There are some problem when login Sui account. Please try again!",
       );
+      await sendDiscordWebhook({
+        url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
+        title: "🚨 Error when login SUI",
+        description: error.message,
+        fields: [
+          {
+            name: "payload auth sui",
+            value: data,
+          },
+        ],
+      });
     } finally {
       setOpenModalSignMsgStashed(false);
 
@@ -241,7 +253,7 @@ function Dashboard() {
                 Total Friends Referred
               </div>
               <div className="text-2xl xl:text-3xl">
-                {Number(totalRefShare)}
+                {Number(totalRefShare || 0)}
               </div>
             </div>
 
