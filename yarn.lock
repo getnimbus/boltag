@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^2.1.6":
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.1.6.tgz#ae75eae043c5931af11015480ab8c4e1b29493d0"
-  integrity sha512-tP+vECoK3ah0vZ5eS8lZyTXcLpt6OzgmbKQ2JCp8Sq0S7i4gnOu8ZMzUVbc6i4hvaFlrzn8EM26nji4sHf1ilA==
+"@7kprotocol/sdk-ts@^2.1.7":
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.1.7.tgz#526a5f4a5c9dd29a662a008ffa5f84d48a383049"
+  integrity sha512-dUKOnHMLws4If1I+hTGdntb4yfIoPrOVd1JIIobB9G7QEBu7+0vxgxPCm5JgUdbvVExIo7HGp4iYKNqKsjgG5Q==
 
 "@adraffy/ens-normalize@^1.10.1":
   version "1.11.0"
@@ -1089,10 +1089,10 @@
     viem "^2.21.35"
     wagmi "^2.12.25"
 
-"@cetusprotocol/aggregator-sdk@^0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.3.8.tgz#b51a10205798e99bea4e3dffaa23842a2f861ef2"
-  integrity sha512-QYoX73fbShJGoWl7+P24QHJXapq5NgP32V4P+KvZQv7k/LDqEZ0YFkwk8RWqHwh3JVwO0pQFHho7jQRdKu7uFQ==
+"@cetusprotocol/aggregator-sdk@^0.3.11":
+  version "0.3.11"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.3.11.tgz#d3a984815e176de7829513956dc9aea661bba5d7"
+  integrity sha512-uGlVQIMJPu/CmYpccNiCDsiSUU+Jog3lg3cgn1vIDB3vJmMKFr0K/jZbp4wvmkmkOY65+AL8dNPE3kMXl5K2xw==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -2565,6 +2565,13 @@
   dependencies:
     bs58 "^6.0.0"
 
+"@mysten/bcs@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@mysten/bcs/-/bcs-1.2.0.tgz#75d98fab9a97fee6ff8d48b13411dc28b909063b"
+  integrity sha512-LuKonrGdGW7dq/EM6U2L9/as7dFwnhZnsnINzB/vu08Xfrj0qzWwpLOiXagAa5yZOPLK7anRZydMonczFkUPzA==
+  dependencies:
+    bs58 "^6.0.0"
+
 "@mysten/sui.js@^0.37.1":
   version "0.37.1"
   resolved "https://registry.yarnpkg.com/@mysten/sui.js/-/sui.js-0.37.1.tgz#b6a0c7312d979bec6903683d7db07fc33ff7d9ea"
@@ -2635,7 +2642,7 @@
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.14.2", "@mysten/sui@^1.14.3", "@mysten/sui@^1.2.0", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
+"@mysten/sui@^1.14.2", "@mysten/sui@^1.2.0", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
   version "1.15.1"
   resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.15.1.tgz#24c23f37e2975ea5e83183257d631aae483a4b12"
   integrity sha512-q8m+xtuh//rHEwEmk6pr7Dguw6/2ySNye2Oy1w6ivbkeRFgqoEE64+fYuMK+lX/SEPhOTEZtN7fp/Trno0KMnw==
@@ -2650,6 +2657,27 @@
     bech32 "^2.0.0"
     gql.tada "^1.8.2"
     graphql "^16.9.0"
+    tweetnacl "^1.0.3"
+    valibot "^0.36.0"
+
+"@mysten/sui@^1.16.0":
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.17.0.tgz#af0ce6b72380c4e939e4dd72617a35a5d80831b9"
+  integrity sha512-vL6QrH3l10dTatimPmz/feqMbYfEjvh8MPf3Xwn5tjuwDwBCS0ha1kdN+4vUpu6t0aCFviK+Df/vanORS8cbGQ==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.2.0"
+    "@mysten/bcs" "1.2.0"
+    "@noble/curves" "^1.4.2"
+    "@noble/hashes" "^1.4.0"
+    "@scure/bip32" "^1.4.0"
+    "@scure/bip39" "^1.3.0"
+    "@simplewebauthn/typescript-types" "^7.4.0"
+    "@suchipi/femver" "^1.0.0"
+    bech32 "^2.0.0"
+    gql.tada "^1.8.2"
+    graphql "^16.9.0"
+    jose "^5.6.3"
+    poseidon-lite "^0.2.0"
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
@@ -3547,6 +3575,11 @@
   dependencies:
     "@sigstore/protobuf-specs" "^0.2.0"
     tuf-js "^1.1.7"
+
+"@simplewebauthn/typescript-types@^7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@simplewebauthn/typescript-types/-/typescript-types-7.4.0.tgz#1f5d55e187cbd30727a75543caf1bade747625ce"
+  integrity sha512-8/ZjHeUPe210Bt5oyaOIGx4h8lHdsQs19BiOT44gi/jBEgK7uBGA0Fy7NRsyh777al3m6WM0mBf0UR7xd4R7WQ==
 
 "@sinclair/typebox@^0.27.8":
   version "0.27.8"
@@ -4959,10 +4992,10 @@ acorn@^8.11.0, acorn@^8.14.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.14.0.tgz#063e2c70cac5fb4f6467f0b11152e04c682795b0"
   integrity sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==
 
-aftermath-ts-sdk@^1.2.41:
-  version "1.2.41"
-  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.41.tgz#7e720cb3d66da45f8bbad94090d6a37f1c14b40c"
-  integrity sha512-LlrGRzoMEBTxlaYeYzvbjvQldvHViz4Hv0N8MfLoNmbXJu9P/+IpRJKksedWUvJZ42TRQgWTynYhNE4cibEySQ==
+aftermath-ts-sdk@^1.2.43:
+  version "1.2.43"
+  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.43.tgz#a9251decf51ccdae51f714d9608b5e23b9ed1ba3"
+  integrity sha512-ApTUDpj6ure31+efRpAyjDtWo98Ypmpn2c2yi7kLEbOniLNbp9bKPENHs1m0dCV0pq1ulFLRdcHHOAx6Uvo0dw==
   dependencies:
     "@pythnetwork/pyth-sui-js" "^1.2.3"
     bn.js "^5.2.1"
@@ -6746,6 +6779,11 @@ dotenv@^16.4.5:
   version "16.4.5"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.5.tgz#cdd3b3b604cb327e286b4762e13502f717cb099f"
   integrity sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==
+
+dotenv@^16.4.7:
+  version "16.4.7"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.4.7.tgz#0e20c5b82950140aa99be360a8a5f52335f53c26"
+  integrity sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==
 
 duplexify@^4.1.2:
   version "4.1.3"
@@ -8705,6 +8743,11 @@ jiti@^2.1.2:
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-2.4.0.tgz#393d595fb6031a11d11171b5e4fc0b989ba3e053"
   integrity sha512-H5UpaUI+aHOqZXlYOaFP/8AzKsg+guWu+Pr3Y8i7+Y3zr1aXAvCvTAQ1RxSc6oVD8R8c7brgNtTVP91E7upH/g==
 
+jose@^5.6.3:
+  version "5.9.6"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-5.9.6.tgz#77f1f901d88ebdc405e57cce08d2a91f47521883"
+  integrity sha512-AMlnetc9+CV9asI19zHmrgS/WYsWUwCn2R7RzlbJWD7F9eWYUTGyBmU9o6PxngtLGOiDGPRu+Uc4fhKzbpteZQ==
+
 js-base64@^3.7.5:
   version "3.7.7"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-3.7.7.tgz#e51b84bf78fbf5702b9541e2cb7bfcb893b43e79"
@@ -9556,17 +9599,18 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.3.10, navi-sdk@^1.4.4:
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.4.4.tgz#935b76c03f0e2a661bb3a2c758b99ee5c2894f17"
-  integrity sha512-ixam9+OTc6lE8NbM3isL+9vFpYSgZOo5OBDZlUimWZvmdLMmvqyEg/hy+nWHLLyCbwo5rPx9iPIJrLrt6DdjOQ==
+navi-sdk@^1.4.11, navi-sdk@^1.4.5:
+  version "1.4.11"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.4.11.tgz#9db08d2d249cdd1ff0aaccbcc1f07d8d1c7044dc"
+  integrity sha512-zX76AIDyBuUhGAPCtPvaougOSJKnwoRnZ6eyFv9pVop/8pRKbvrIOCP0b+IckELHLLgTLxyIcKjwd4v7ss82hQ==
   dependencies:
-    "@mysten/sui" "^1.14.3"
+    "@mysten/sui" "^1.16.0"
     "@mysten/sui.js" "^0.54.1"
     "@pythnetwork/pyth-sui-js" "^2.1.0"
     axios "^1.7.7"
+    dotenv "^16.4.7"
     esrun "^3.2.26"
-    navi-sdk "^1.3.10"
+    navi-sdk "^1.4.5"
     tsconfig-paths "^4.2.0"
     vitest "^1.6.0"
 
@@ -9591,13 +9635,13 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@4.64.0:
-  version "4.64.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.64.0.tgz#5d213def439e74f44a6bb46f6289bcbd18c107a3"
-  integrity sha512-1O+tqhqgMJsS3P741Znw7mtmQ9GaOPKn2FL8fYJpnsZgRyN0OfacLupq2A/dGnbf08Kpwp4UG3+h9Z94urNrGw==
+nimbus-universal-swap@4.64.1:
+  version "4.64.1"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.64.1.tgz#afcf33a3d08a7d5764ea3f6d2b79b69cff169a18"
+  integrity sha512-UPTGwl4Yl1gD8FNkbsCJ++W/EScVt63PQlZj7ukwKVXm6LMRJ96MIHQX3xqmOlXznschZ5nHNe1qNINFFv+CkQ==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.1.6"
-    "@cetusprotocol/aggregator-sdk" "^0.3.8"
+    "@7kprotocol/sdk-ts" "^2.1.7"
+    "@cetusprotocol/aggregator-sdk" "^0.3.11"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.9.7"
@@ -9620,12 +9664,12 @@ nimbus-universal-swap@4.64.0:
     "@ton/crypto" "^3.2.0"
     "@tonconnect/sdk" "^3.0.3"
     "@tonconnect/ui" "^2.0.6"
-    aftermath-ts-sdk "^1.2.41"
+    aftermath-ts-sdk "^1.2.43"
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.4.4"
-    nimbus-wallet-management "^3.6.0"
+    navi-sdk "^1.4.11"
+    nimbus-wallet-management "^3.7.0"
     rainbow-swap-sdk "^1.5.1"
     react "^18.3.1"
     react-dom "^18.3.1"
@@ -9638,15 +9682,15 @@ nimbus-universal-swap@4.64.0:
     wagmi "^2.12.16"
     zustand "^4.5.5"
 
-nimbus-wallet-management@^3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/nimbus-wallet-management/-/nimbus-wallet-management-3.6.0.tgz#7b277d2f3cb7d1dc563fe682fd2c79d4f486f8f4"
-  integrity sha512-w+4McqXbahMGWJtg6BpLsAXlrV+Qu05duwZHybGchf+kK90ojAoYBQTZi6fFb4CdzY6CTLJ3b8ko7eF+Z1qiEQ==
+nimbus-wallet-management@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/nimbus-wallet-management/-/nimbus-wallet-management-3.7.0.tgz#aee26fe603c907053364d0489654bbde64e10eb4"
+  integrity sha512-pPN/DEEMeJmho1tBRSlD+ZoqRfNidOrs3k6j2pxqfYZMRVxvTorO6sJ1QgtdRVoRRlN3/IFvzUa3DMYUnb5V/w==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.1.6"
+    "@7kprotocol/sdk-ts" "^2.1.7"
     "@lifi/sdk" "^3.2.3"
     "@solana/wallet-adapter-base" "^0.9.23"
-    navi-sdk "^1.4.4"
+    navi-sdk "^1.4.11"
     react "^18.3.1"
     viem "^2.21.16"
     wagmi "^2.12.16"
@@ -10414,6 +10458,11 @@ pony-cause@^2.1.10:
   version "2.1.11"
   resolved "https://registry.yarnpkg.com/pony-cause/-/pony-cause-2.1.11.tgz#d69a20aaccdb3bdb8f74dd59e5c68d8e6772e4bd"
   integrity sha512-M7LhCsdNbNgiLYiP4WjsfLUuFmCfnjdF6jKe2R9NKl4WFN+HZPGHJZ9lnLP7f9ZnKe3U9nuWD0szirmj+migUg==
+
+poseidon-lite@^0.2.0:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/poseidon-lite/-/poseidon-lite-0.2.1.tgz#7ad98e3a3aa5b91a1fd3a61a87460e9e46fd76d6"
+  integrity sha512-xIr+G6HeYfOhCuswdqcFpSX47SPhm0EpisWJ6h7fHlWwaVIvH3dLnejpatrtw6Xc6HaLrpq05y7VRfvDmDGIog==
 
 possible-typed-array-names@^1.0.0:
   version "1.0.0"
