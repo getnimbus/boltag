@@ -398,12 +398,48 @@ function Main() {
       console.error("Error submitting trade log:", error);
       await sendDiscordWebhook({
         url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
-        title: "🚨 Emergency Alert",
-        description: `You're sending a Discord webhook without remembering any syntax`,
+        title: "🚨 Error when tracking log swap",
+        description: error.message,
         fields: [
           {
-            name: "Error when tracking swap log",
-            value: error.toString(),
+            name: "tx hash",
+            value: data?.steps?.[0]?.execution?.process?.[0]?.txHash,
+          },
+          {
+            name: "connected address",
+            value: data?.account?.address,
+          },
+          {
+            name: "aggregator",
+            value: data?.steps?.[0]?.integrator?.toLowerCase(),
+          },
+          {
+            name: "token0",
+            value: data?.fromToken?.address,
+          },
+          {
+            name: "amount0",
+            value: Number(
+              Number(data?.fromAmount) / 10 ** data?.fromToken?.decimals,
+            )?.toString(),
+          },
+          {
+            name: "token1",
+            value: data?.toToken?.address,
+          },
+          {
+            name: "amount1",
+            value: Number(
+              Number(data?.toAmount) / 10 ** data?.toToken?.decimals,
+            )?.toString(),
+          },
+          {
+            name: "trade volume",
+            value: Number(data?.fromAmountUSD || 0),
+          },
+          {
+            name: "ref address",
+            value: refAddressParam,
           },
         ],
       });

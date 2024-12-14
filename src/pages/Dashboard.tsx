@@ -107,12 +107,12 @@ function Dashboard() {
       );
       await sendDiscordWebhook({
         url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
-        title: "🚨 Emergency Alert",
-        description: `You're sending a Discord webhook without remembering any syntax`,
+        title: "🚨 Error when login SUI",
+        description: error.message,
         fields: [
           {
-            name: "Error when when login with SUI",
-            value: error.toString(),
+            name: "payload auth sui",
+            value: data,
           },
         ],
       });
