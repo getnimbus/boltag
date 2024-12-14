@@ -11249,6 +11249,13 @@ semver@^7.1.1, semver@^7.3.5, semver@^7.3.7, semver@^7.3.8, semver@^7.5.3, semve
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.3.tgz#980f7b5550bc175fb4dc09403085627f9eb33143"
   integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
 
+send-discord-webhook@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/send-discord-webhook/-/send-discord-webhook-0.0.9.tgz#5126a032dc143c67d7d61d97ed184f04b42e7634"
+  integrity sha512-mctHajchKIajuIiyyedliO0RQ6XfHBFckbhj67fxmZk8mqDss1BrOwV8XFnvCXJ97j00Ca3KaltcNCAd98Buhg==
+  dependencies:
+    axios "^1.7.9"
+
 set-blocking@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"

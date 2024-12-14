@@ -16,6 +16,7 @@ import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { normalizeSuiAddress } from "@mysten/sui/utils";
 import { useTheme } from "../contexts/ThemeProvider";
+import { sendDiscordWebhook } from "send-discord-webhook";
 
 enum ChainType {
   EVM = "EVM",
@@ -393,8 +394,19 @@ function Main() {
       if (response && response.error) {
         console.error("Error submitting trade log:", response.error);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error submitting trade log:", error);
+      await sendDiscordWebhook({
+        url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
+        title: "🚨 Emergency Alert",
+        description: `You're sending a Discord webhook without remembering any syntax`,
+        fields: [
+          {
+            name: "Error when tracking swap log",
+            value: error.toString(),
+          },
+        ],
+      });
     }
   };
 
