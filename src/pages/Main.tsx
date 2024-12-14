@@ -350,7 +350,7 @@ function Main() {
     }`;
   }, [addressChart, theme]);
 
-  const handleSwapBonus = async (data: Route & any) => {
+  const handleSwapBonus = async (data: any) => {
     const now = dayjs().valueOf();
 
     const txHash = (data.steps?.[0] as any)?.execution?.process?.[0]?.txHash;
@@ -360,12 +360,12 @@ function Main() {
 
     const aggregator = data.steps?.[0]?.integrator?.toLowerCase();
 
-    const tradeLogPayload = {
+    const payload = {
       txHash,
       owner: connectedAddressSwap,
-      token0: data?.fromAddress || data?.fromToken?.address,
+      token0: data?.fromToken?.address,
       amount0: (data?.fromAmount * 10 ** data?.fromToken?.decimals).toString(),
-      token1: data?.toAddress || data?.toToken?.address,
+      token1: data?.toToken?.address,
       amount1: (data?.toAmount * 10 ** data?.toToken?.decimals).toString(),
       referrer: refAddressParam ? refAddressParam : undefined,
       trade_vol: volume,
@@ -374,14 +374,14 @@ function Main() {
 
     const computed = await hmac.compute(
       Buffer.from(import.meta.env.VITE_TRADE_REQUEST_KEY),
-      Buffer.from(`${now}:${JSON.stringify(tradeLogPayload)}`),
+      Buffer.from(`${now}:${JSON.stringify(payload)}`),
       "SHA-256",
     );
 
     const sig = Buffer.from(computed.buffer).toString("base64");
 
     try {
-      const response: any = await nimbus.post("/swap/logs", tradeLogPayload, {
+      const response: any = await nimbus.post("/swap/logs", payload, {
         headers: {
           "x-signature": sig,
           "x-request-timestamp": now,
