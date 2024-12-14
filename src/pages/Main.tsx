@@ -3,7 +3,6 @@ import { nimbus } from "../lib/network";
 import {
   HiddenUI,
   NimbusSwapWidget,
-  type Route,
   type WidgetConfig,
   WidgetEvent,
   widgetEvents,
