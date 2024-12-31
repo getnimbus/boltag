@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.2.0.tgz#b06d69a8d66e9b32f298828c0352036fbf405509"
-  integrity sha512-thDiO8pv83YFwoTfIK1e/fYIyxbwLeKhfXwYbXMicKB6hsZkUPq9wIX+QWeONgTRMM7O7MX5lT+q3EAjdtcUyA==
+"@7kprotocol/sdk-ts@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.2.1.tgz#70cc141b4e9de27e5844be23d3542f10370d40f7"
+  integrity sha512-Sg5l+4VLHCDXvjRmJzkftg+d2ECmNskZRDOfaMAuYarnCdGzpxw3Wn9gMGF22Bcgq+tmK6I8lTN21SFD5EVueA==
 
 "@adraffy/ens-normalize@^1.10.1":
   version "1.11.0"
@@ -1059,10 +1059,10 @@
     bs58 "^6.0.0"
     viem "^2.21.55"
 
-"@cetusprotocol/aggregator-sdk@^0.3.13":
-  version "0.3.13"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.3.13.tgz#8190b8902b6a97a633137b9825d4f103ac2134dc"
-  integrity sha512-2x9OZ+IhcB/04nlhn3hTn0AN+n5BUOhmV7U5Yidv7gI0Ig3kCEgxe2ytH3VzHOLowD0ziwJ6fueQQUdg6yHvGQ==
+"@cetusprotocol/aggregator-sdk@^0.3.15":
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.3.15.tgz#b4bc88f47e1661a27bb6553c13555ffeff4dabf0"
+  integrity sha512-WN+xkf6YtWnSSII/XCorxAfgo59GZfY2J4CnefMwCkfKM6Jw+Z+kJm1BVYCtQhTIinlBPk93fRgpEGtNKnYyfA==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -9643,7 +9643,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.4.14, navi-sdk@^1.4.5:
+navi-sdk@1.4.14, navi-sdk@^1.4.5:
   version "1.4.14"
   resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.4.14.tgz#27e7fdf83543f94831653fcd7d94cd895f8f48e0"
   integrity sha512-7saWm6UYw+EZmZQ3HqYUU/iliU/8dDV1Fyepy3DCD/ZMc2Cnk+9bRgD6W/MZrZPBWxwYYSr+zYNyl/44nYH1tQ==
@@ -9679,13 +9679,13 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@4.64.2:
-  version "4.64.2"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.64.2.tgz#e22ea4914ae27aaa4e08e8d42bcc52c51d5de246"
-  integrity sha512-yvXHtxSA8xo0833DI9YScgNti1t4TFZpkTROWsyum1flVKAn7EZaoyGYKRLjOeR79JD4+mNE1pi0l2pB8NWOIg==
+nimbus-universal-swap@4.64.3:
+  version "4.64.3"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.64.3.tgz#a33ae022f4371f2a5819133404f4dba91469e09b"
+  integrity sha512-xNjzYWq05kB5BYy4EXAQqd7tiP83O5fz9w/TZQX325R+KKKCWINXKH5yUlqpbj4eNHJa9ko2p907XmKjevOOlw==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.2.0"
-    "@cetusprotocol/aggregator-sdk" "^0.3.13"
+    "@7kprotocol/sdk-ts" "^2.2.1"
+    "@cetusprotocol/aggregator-sdk" "^0.3.15"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.9.7"
@@ -9712,8 +9712,8 @@ nimbus-universal-swap@4.64.2:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.4.14"
-    nimbus-wallet-management "^3.8.0"
+    navi-sdk "1.4.14"
+    nimbus-wallet-management "^3.9.0"
     rainbow-swap-sdk "^1.5.2"
     react "^18.3.1"
     react-dom "^18.3.1"
@@ -9726,15 +9726,15 @@ nimbus-universal-swap@4.64.2:
     wagmi "^2.12.16"
     zustand "^4.5.5"
 
-nimbus-wallet-management@^3.8.0:
-  version "3.8.0"
-  resolved "https://registry.yarnpkg.com/nimbus-wallet-management/-/nimbus-wallet-management-3.8.0.tgz#27ace93315d93a80a9760979e65beb8b19987b91"
-  integrity sha512-V4N8RUaNRpmOYckTTcmaZd+ooq/IHLtL8ExGoO4pZU1WlBDPrMKOBwpKIJM465Is625ZUnCaAq8wE12ABCG8Lw==
+nimbus-wallet-management@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/nimbus-wallet-management/-/nimbus-wallet-management-3.9.0.tgz#3ed5f9bacff907723d0f4f0a4f0111e1d2547d5e"
+  integrity sha512-y+56UzQUWiBGnQIOn9rLqVn8vwqzU3epq3IrxMaKs8bDZkFc073GrHmGi/+VxsvZbtJG2PYMLropS35l0+WFWQ==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.2.0"
+    "@7kprotocol/sdk-ts" "^2.2.1"
     "@lifi/sdk" "^3.2.3"
     "@solana/wallet-adapter-base" "^0.9.23"
-    navi-sdk "^1.4.14"
+    navi-sdk "1.4.14"
     react "^18.3.1"
     viem "^2.21.16"
     wagmi "^2.12.16"
@@ -11646,6 +11646,7 @@ string-length@^4.0.1:
     strip-ansi "^6.0.0"
 
 "string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -11678,6 +11679,7 @@ string_decoder@~1.1.1:
     safe-buffer "~5.1.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -12640,6 +12642,7 @@ word-wrap@^1.2.5:
   integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
