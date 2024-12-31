@@ -129,7 +129,7 @@ export const BubbleAnimateBg = ({
   return (
     <div className="absolute inset-0 z-10 w-full h-full backdrop-blur-sm bg-white/30 dark:bg-black/50">
       <div
-        className="relative w-full h-full"
+        className="relative w-[80%] h-[80%]"
         style={{
           flexShrink: 0,
         }}
