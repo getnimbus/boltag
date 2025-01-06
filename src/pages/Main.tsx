@@ -385,6 +385,26 @@ function Main() {
 
       const sig = Buffer.from(computed.buffer).toString("base64");
 
+      if (Number(payload.trade_vol) >= 5000) {
+        sendDiscordWebhook({
+          url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
+          title: "Swap vol > $5k",
+          description: "Swap vol > $5k",
+          fields: [
+            {
+              name: "tx hash",
+              value: `https://suivision.xyz/txblock/${data?.steps?.[0]?.execution?.process?.[0]?.txHash}}`,
+            },
+            {
+              name: "vol",
+              value: `${payload.trade_vol}`,
+            },
+          ],
+        })
+          .then(() => console.log("Alert successful"))
+          .catch((e) => {});
+      }
+
       const response: any = await nimbus.post("/swap/logs", payload, {
         headers: {
           "x-signature": sig,
