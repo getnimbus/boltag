@@ -172,7 +172,9 @@ function Main() {
       ],
     })
       .then(() => console.log("Alert successful"))
-      .catch((e) => {});
+      .catch((e) => {
+        console.error(e);
+      });
   });
 
   widgetEvents.on(WidgetEvent.WalletConnected, async (data) => {
@@ -431,7 +433,9 @@ function Main() {
           ],
         })
           .then(() => console.log("Alert successful"))
-          .catch((e) => {});
+          .catch((e) => {
+            console.error(e);
+          });
       }
 
       const response: any = await nimbus.post("/swap/logs", payload, {
@@ -445,7 +449,7 @@ function Main() {
       }
     } catch (error: any) {
       console.error("Error submitting trade log:", error);
-      await sendDiscordWebhook({
+      sendDiscordWebhook({
         url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
         title: "🚨 Error when tracking log swap",
         description: error.message,
@@ -491,7 +495,11 @@ function Main() {
             value: refAddressParam,
           },
         ],
-      });
+      })
+        .then(() => console.log("Alert successful"))
+        .catch((e) => {
+          console.error(e);
+        });
     }
   };
 
@@ -513,8 +521,8 @@ function Main() {
       >
         <div className="flex flex-col w-full h-full gap-10">
           <div className="text-3xl font-semibold text-center">
-            Get the best swap routes <br /> from Hop, FlowX, Cetus, Aftermath,
-            NAVI and 7K.
+            Get the best swap routes <br /> from FlowX, Cetus, Aftermath, NAVI
+            and 7K.
           </div>
 
           <div className="flex flex-col items-center justify-center gap-5 lg:items-start lg:gap-8 lg:flex-row">
