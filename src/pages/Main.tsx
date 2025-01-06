@@ -146,6 +146,35 @@ function Main() {
     }
   }, []);
 
+  widgetEvents.on(WidgetEvent.RouteExecutionFailed, async (data: any) => {
+    const txHash = data?.steps?.[0]?.execution?.process?.[0]?.txHash;
+    const volume = Number(data?.fromAmountUSD || 0);
+    const connectedAddressSwap = data?.account?.address;
+    const aggregator = data?.steps?.[0]?.integrator?.toLowerCase();
+
+    sendDiscordWebhook({
+      url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
+      title: "🚨 Swap fail",
+      description: `Swap fail address ${connectedAddressSwap}`,
+      fields: [
+        {
+          name: "tx hash",
+          value: `https://suivision.xyz/txblock/${txHash}}`,
+        },
+        {
+          name: "vol",
+          value: `${volume}`,
+        },
+        {
+          name: "aggregator",
+          value: `${aggregator}`,
+        },
+      ],
+    })
+      .then(() => console.log("Alert successful"))
+      .catch((e) => {});
+  });
+
   widgetEvents.on(WidgetEvent.WalletConnected, async (data) => {
     if (Number(data.chainId) !== 0) {
       localStorage.setItem("publicAddress", data.address || "");
