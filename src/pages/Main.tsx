@@ -147,10 +147,10 @@ function Main() {
   }, []);
 
   widgetEvents.on(WidgetEvent.RouteExecutionFailed, async (data: any) => {
-    const txHash = data?.steps?.[0]?.execution?.process?.[0]?.txHash;
-    const volume = Number(data?.fromAmountUSD || 0);
-    const connectedAddressSwap = data?.account?.address;
-    const aggregator = data?.steps?.[0]?.integrator?.toLowerCase();
+    const txHash = data?.route?.steps?.[0]?.execution?.process?.[0]?.txHash;
+    const volume = Number(data?.route?.fromAmountUSD || 0);
+    const connectedAddressSwap = data?.route?.account?.address;
+    const aggregator = data?.route?.steps?.[0]?.integrator?.toLowerCase();
 
     sendDiscordWebhook({
       url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
@@ -168,6 +168,10 @@ function Main() {
         {
           name: "aggregator",
           value: `${aggregator}`,
+        },
+        {
+          name: "step",
+          value: `${data?.route?.steps}`,
         },
       ],
     })
