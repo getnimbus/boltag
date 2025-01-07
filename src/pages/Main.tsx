@@ -146,41 +146,6 @@ function Main() {
     }
   }, []);
 
-  widgetEvents.on(WidgetEvent.RouteExecutionFailed, async (data: any) => {
-    const txHash = data?.route?.steps?.[0]?.execution?.process?.[0]?.txHash;
-    const volume = Number(data?.route?.fromAmountUSD || 0);
-    const connectedAddressSwap = data?.route?.account?.address;
-    const aggregator = data?.route?.steps?.[0]?.integrator?.toLowerCase();
-
-    sendDiscordWebhook({
-      url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
-      title: "🚨 Swap fail",
-      description: `Swap fail address ${connectedAddressSwap}`,
-      fields: [
-        {
-          name: "tx hash",
-          value: `https://suivision.xyz/txblock/${txHash}}`,
-        },
-        {
-          name: "vol",
-          value: `${volume}`,
-        },
-        {
-          name: "aggregator",
-          value: `${aggregator}`,
-        },
-        {
-          name: "step",
-          value: `${data?.route?.steps}`,
-        },
-      ],
-    })
-      .then(() => console.log("Alert successful"))
-      .catch((e) => {
-        console.error(e);
-      });
-  });
-
   widgetEvents.on(WidgetEvent.WalletConnected, async (data) => {
     if (Number(data.chainId) !== 0) {
       localStorage.setItem("publicAddress", data.address || "");
@@ -384,6 +349,48 @@ function Main() {
         : theme
     }`;
   }, [addressChart, theme]);
+
+  const handleSwapLog = async (data: any) => {
+    try {
+      sendDiscordWebhook({
+        url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
+        title: "🚨 Swap fail",
+        description: `Swap fail address ${data?.address}`,
+        fields: [
+          {
+            name: "title",
+            value: `${data?.title}`,
+          },
+          {
+            name: "msg",
+            value: `${data?.message}`,
+          },
+          {
+            name: "chain",
+            value: `${data?.chainName}`,
+          },
+          {
+            name: "tx hash",
+            value: `https://suivision.xyz/txblock/${data.transactionHash}}`,
+          },
+          {
+            name: "amount",
+            value: `${data.amount}`,
+          },
+          {
+            name: "symbol",
+            value: `${data?.symbol}`,
+          },
+        ],
+      })
+        .then(() => console.log("Alert successful"))
+        .catch((e) => {
+          console.error(e);
+        });
+    } catch (e) {
+      console.error(e);
+    }
+  };
 
   const handleSwapBonus = async (data: any) => {
     try {
@@ -593,6 +600,7 @@ function Main() {
                     fromToken: fromTokenParam,
                     toToken: toTokenParam,
                     handleSwapBonus,
+                    handleSwapLog,
                     handleSelectChainId,
                     handleSelectToken,
                     isUniversalSwap: true,
