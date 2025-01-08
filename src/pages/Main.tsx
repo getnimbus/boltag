@@ -435,11 +435,11 @@ function Main() {
           fields: [
             {
               name: "tx hash",
-              value: `https://suivision.xyz/txblock/${data?.steps?.[0]?.execution?.process?.[0]?.txHash}}`,
+              value: `https://suivision.xyz/txblock/${txHash}`,
             },
             {
               name: "vol",
-              value: `${payload.trade_vol}`,
+              value: `$${payload.trade_vol}`,
             },
           ],
         })
