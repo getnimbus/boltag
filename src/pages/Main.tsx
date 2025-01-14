@@ -352,6 +352,14 @@ function Main() {
 
   const handleSwapLog = async (data: any) => {
     try {
+      if (
+        data?.message === "Rejected from user" ||
+        data?.message ===
+          "Operation not allowed, dapp doesn't have the required permissions"
+      ) {
+        return;
+      }
+
       sendDiscordWebhook({
         url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
         title: "🚨 Swap fail",
@@ -380,6 +388,10 @@ function Main() {
           {
             name: "symbol",
             value: `${data?.symbol}`,
+          },
+          {
+            name: "agg",
+            value: `${data?.agg}`,
           },
         ],
       })
