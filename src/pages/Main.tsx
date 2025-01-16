@@ -353,6 +353,7 @@ function Main() {
   const handleSwapLog = async (data: any) => {
     try {
       if (
+        data?.message.toLowerCase().includes("rejection") ||
         data?.message === "Rejected from user" ||
         data?.message ===
           "Operation not allowed, dapp doesn't have the required permissions"
