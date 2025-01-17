@@ -13,10 +13,9 @@ declare module "@tanstack/react-router" {
   }
 }
 
-function App() {
-  function addSchemaJsonLd() {
-    return {
-      __html: `{
+function addSchemaJsonLd() {
+  return {
+    __html: `{
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Bolt.ag",
@@ -28,9 +27,10 @@ function App() {
           "https://bolt.ag/"
         ]
       }`,
-    };
-  }
+  };
+}
 
+function App() {
   return (
     <React.Fragment>
       <head>
