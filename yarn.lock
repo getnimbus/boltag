@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^2.3.0":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.3.0.tgz#aff05f53740fa7b56278740ebaeb68b52c076c4a"
-  integrity sha512-2il0AYN5hkTErejmu16qFzUlMvuE0WN5o0uJtvy+6S+9nkMuRjMtqivWKYPktQeRBuac6BaqXSxVAsvdcUg/7Q==
+"@7kprotocol/sdk-ts@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.3.1.tgz#371588439277905b8f0c80694506b7954be2c942"
+  integrity sha512-NLhOHW9gC/fUYLQGsbCEHO/suVi37AdcielXn94SyvX/6bCgaWJGICA3NSv+8Vn3bDVQUKtWqYvAC7CAhrIOXg==
 
 "@adraffy/ens-normalize@^1.10.1":
   version "1.11.0"
@@ -1059,10 +1059,10 @@
     bs58 "^6.0.0"
     viem "^2.21.55"
 
-"@cetusprotocol/aggregator-sdk@^0.3.19":
-  version "0.3.19"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.3.19.tgz#571a75220d4cf2cbfa3f0c023696e10d397926c8"
-  integrity sha512-AJ2lg+DdMjpeZPfj/TrR0vQqwzp22CRC2jNrFzZK2+f5PP4WuXhX2CyZB2LPO7Z2cNkP9nbmRK0OOko6yJKlPg==
+"@cetusprotocol/aggregator-sdk@^0.3.20":
+  version "0.3.20"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.3.20.tgz#419491ea73e0fa98b271869a40eb602ea379e31d"
+  integrity sha512-ZHRGV1ftmXmlw5kHvUVeYxnlhnXKOjO1e7zJWrDtxRI1DCCnKZtuMEmrqcXhz2TL7w+M2ta3P1PoltRQKgVtbQ==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -5019,10 +5019,10 @@ acorn@^8.11.0, acorn@^8.14.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.14.0.tgz#063e2c70cac5fb4f6467f0b11152e04c682795b0"
   integrity sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==
 
-aftermath-ts-sdk@^1.2.47:
-  version "1.2.47"
-  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.47.tgz#3392e79953851a4a57d26156a8103ef2b5d48a31"
-  integrity sha512-Y7fr6mfXWBDI3yDtsSTh4i81vChh+JodRrhQgr5tlr/W42YzAOFy3YB/p+B5CpDWmG7bMrdGDFacXtiqkJQHYQ==
+aftermath-ts-sdk@^1.2.49:
+  version "1.2.49"
+  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.49.tgz#e897ace97cfe54eb0319a7333f958de73acdb2b1"
+  integrity sha512-AW/daCtD6MtEAbiyWL+Nfs3Ov9iWR+L8STueVJ8N7x5cg2Wkh14HMU+bqgcsZOoezHDSr8vYr7On+FbH27lkrQ==
   dependencies:
     "@pythnetwork/pyth-sui-js" "^1.2.3"
     bn.js "^5.2.1"
@@ -9707,13 +9707,13 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@4.68.0:
-  version "4.68.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.68.0.tgz#4972961cdbbca198fa6367fdb68ab2ad232eeb4a"
-  integrity sha512-RVyBW8p29Uoyma33qwbAFUnAPFBs2lyfAN7eiIiIt0hyyr9j+M3+2P1SqRfg4ul5iLzHTAqa9XCRKPAob13hZA==
+nimbus-universal-swap@4.69.0:
+  version "4.69.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-4.69.0.tgz#e7228df1c955e198583fcbe6667cf4694f1b97cf"
+  integrity sha512-tUbqAJwoDY7MXSEo25JiHV8qj54wWjzL0w8RwK/Z29meFT2Cz1hyJ0pgRuYRIuAyCE02IxSbTy2DBNQNb1pnMw==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.3.0"
-    "@cetusprotocol/aggregator-sdk" "^0.3.19"
+    "@7kprotocol/sdk-ts" "^2.3.1"
+    "@cetusprotocol/aggregator-sdk" "^0.3.20"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.9.10"
@@ -9736,7 +9736,7 @@ nimbus-universal-swap@4.68.0:
     "@ton/crypto" "^3.2.0"
     "@tonconnect/sdk" "^3.0.3"
     "@tonconnect/ui" "^2.0.6"
-    aftermath-ts-sdk "^1.2.47"
+    aftermath-ts-sdk "^1.2.49"
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
