@@ -353,11 +353,13 @@ function Main() {
   const handleSwapLog = async (data: any) => {
     try {
       if (
+        [
+          "User denied request signature.",
+          "Rejected from user",
+          "Operation not allowed, dapp doesn't have the required permissions",
+        ].includes(data?.message) ||
         data?.message.toLowerCase().includes("rejected") ||
-        data?.message.toLowerCase().includes("rejection") ||
-        data?.message === "Rejected from user" ||
-        data?.message ===
-          "Operation not allowed, dapp doesn't have the required permissions"
+        data?.message.toLowerCase().includes("rejection")
       ) {
         return;
       }
