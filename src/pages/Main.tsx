@@ -23,6 +23,7 @@ enum ChainType {
   SVM = "SVM",
   TVM = "TVM",
   MVM = "MVM",
+  ECLIPSE = "ECLIPSE",
 }
 
 enum ChainId {
@@ -95,7 +96,12 @@ function Main() {
       chains: {
         types: {
           allow: [ChainType.MVM],
-          deny: [ChainType.SVM, ChainType.EVM, ChainType.TVM],
+          deny: [
+            ChainType.SVM,
+            ChainType.EVM,
+            ChainType.TVM,
+            ChainType.ECLIPSE,
+          ],
         },
       },
       commissionBps: {
