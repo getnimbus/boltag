@@ -625,7 +625,7 @@ function Main() {
                     handleSwapLog,
                     handleSelectChainId,
                     handleSelectToken,
-                    isUniversalSwap: true,
+                    isUniversalSwap: false,
                     commissionBpsSDK: {
                       [ChainId.MOVE]:
                         refAddressParam.length !== 0 ? 0.3 * 100 : 0, // 0.3% swap fee when referral address is provided
