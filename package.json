@@ -27,7 +27,7 @@
     "js-crypto-hmac": "^1.0.7",
     "mixpanel-browser": "^2.55.1",
     "nimbus-sui-kit": "^0.0.10",
-    "nimbus-universal-swap": "5.4.0",
+    "nimbus-universal-swap": "5.5.0",
     "numeral": "^2.0.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
