@@ -6211,7 +6211,7 @@
   resolved "https://registry.yarnpkg.com/@suchipi/femver/-/femver-1.0.0.tgz#4909dcc069695e07bd23a64c4bfe411d11d9692f"
   integrity sha512-bprE8+K5V+DPX7q2e2K57ImqNBdfGHDIWaGI5xHxZoxbKOuQZn4wzPiUxOAHnsUr3w3xHrWXwN7gnG/iIuEMIg==
 
-"@suiet/wallet-kit@0.3.4":
+"@suiet/wallet-kit@0.3.4", "@suiet/wallet-kit@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@suiet/wallet-kit/-/wallet-kit-0.3.4.tgz#3074098e658316eea844fa2921df6776fe50aa9a"
   integrity sha512-NaxiG4izrenA1MRZ+hKe676vlbRB2jOZKKXQEgpfocMQrWVhZvBXnB3uc8T2TGrXHwDz5iwtwY07PUbY7GzEmw==
@@ -6229,7 +6229,7 @@
     mitt "3.0.0"
     react-query "3.39.2"
 
-"@suiet/wallet-kit@^0.3.2", "@suiet/wallet-kit@^0.3.3":
+"@suiet/wallet-kit@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@suiet/wallet-kit/-/wallet-kit-0.3.3.tgz#72c94ec1dc80a123e9091b4ced0210fecfc678c9"
   integrity sha512-LEfyzt1vUBSQPXDmoCIQnry64gDUYxG8V0n/Nngjw7EZg/9dslgXhTiB9DHpCDvH31WrZVyz69jFRAiAfUQFTg==
@@ -13187,10 +13187,10 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.3.0.tgz#3b40c4e8b07bb0f3ed50e08d080f7027d5d91173"
-  integrity sha512-UaNoYHpy3ynorCaBwddpWhW0VmNnEEIb+8f9G+zMwQMxHRKDWJxpWC760Os/pLjT8WGx7zzUNF0aafbV2fgZxw==
+nimbus-universal-swap@5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.4.0.tgz#55a5ece803199aca44164b6001b4d76dbca2492b"
+  integrity sha512-j+NpcRJ86tjXytOTz2krbiE1CwSFyYtgw/nnUm0QI/B3Zo1R5pCuIg0pTndGPQrTlk3QTlm73ZxMWuJetDmpjg==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.3.6"
     "@cetusprotocol/aggregator-sdk" "^0.3.28"
@@ -13214,7 +13214,7 @@ nimbus-universal-swap@5.3.0:
     "@solana/wallet-adapter-react" "^0.15.35"
     "@solana/wallet-adapter-wallets" "^0.19.32"
     "@solana/web3.js" "^1.98.0"
-    "@suiet/wallet-kit" "^0.3.2"
+    "@suiet/wallet-kit" "^0.3.4"
     "@swap-coffee/sdk" "^1.4.0"
     "@tanstack/react-query" "^5.59.0"
     "@tanstack/react-virtual" "^3.10.8"
