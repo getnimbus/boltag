@@ -60,24 +60,23 @@ function App() {
         />
 
         <title>
-          Bolt.ag by Nimbus - Get the best swap routes from FlowX, Cetus,
-          Aftermath, NAVI and 7K
+          Bolt.ag - Best Crypto Swap Aggregator on SUI | Compare FlowX, Cetus,
+          Aftermath, NAVI & 7K
         </title>
         <meta
           name="description"
-          content="Bolt.ag by Nimbus is a crypto swap application on the SUI blockchain that finds the best routes from FlowX, and 7K for optimal trading rates"
+          content="Bolt.ag is the leading crypto swap aggregator on SUI blockchain. Get the best trading rates by comparing prices across FlowX, Cetus, Aftermath, NAVI and 7K. Trade with confidence using our advanced routing algorithm."
         />
 
         <meta property="og:url" content="https://bolt.ag/" />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Bolt.ag by Nimbus - Get the best swap routes from FlowX, Cetus,
-          Aftermath, NAVI and 7K"
+          content="Bolt.ag - Best Crypto Swap Aggregator on SUI | Compare FlowX, Cetus, Aftermath, NAVI & 7K"
         />
         <meta
           property="og:description"
-          content="Bolt.ag by Nimbus is a crypto swap application on the SUI blockchain that finds the best routes from FlowX, and 7K for optimal trading rates"
+          content="Bolt.ag is the leading crypto swap aggregator on SUI blockchain. Get the best trading rates by comparing prices across FlowX, Cetus, Aftermath, NAVI and 7K. Trade with confidence using our advanced routing algorithm."
         />
         <meta
           property="og:image"
@@ -88,12 +87,11 @@ function App() {
         <meta name="twitter:url" content="https://bolt.ag/" />
         <meta
           name="twitter:title"
-          content="Bolt.ag by Nimbus - Get the best swap routes from FlowX, Cetus,
-          Aftermath, NAVI and 7K"
+          content="Bolt.ag - Best Crypto Swap Aggregator on SUI | Compare FlowX, Cetus, Aftermath, NAVI & 7K"
         />
         <meta
           name="twitter:description"
-          content="Bolt.ag by Nimbus is a crypto swap application on the SUI blockchain that finds the best routes from FlowX, and 7K for optimal trading rates"
+          content="Bolt.ag is the leading crypto swap aggregator on SUI blockchain. Get the best trading rates by comparing prices across FlowX, Cetus, Aftermath, NAVI and 7K. Trade with confidence using our advanced routing algorithm."
         />
         <meta
           property="twitter:image"
@@ -102,9 +100,17 @@ function App() {
         />
 
         <link rel="canonical" href="https://bolt.ag/" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#1e96fc" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="Bolt.ag" />
+
         <meta
           name="keywords"
-          content="web3 portfolio for tracking crypto, crypto portfolio trackers, web3 portfolio website, web3 trading, defi portfolio tracking, tracking crypto portfolio, portfolio tracker for crypto, multichain portfolio tracker, online crypto portfolio tracker, portfolio tracker crypto and stocks, best crypto portfolio tracking app, portfolio tracking crypto, uniswap portfolio tracker,What is nimbus, nimbus blog, invest with nimbus, nimbus tools, tools for invest,How to invest bitcoin, how to make money with bitcoin, tools helping invest bitcoin, What is portfolio, how to make portfolio for invest, portfolio invest, What is nimbus, what is nimbus web3, nimbus, getnimbus, nimbus portfolio, why is nimbus, invest with nimbus, invest tools, web3 portfolio, web3 nimbus, web3 portfolio, web3 portfolio management, portfolio management, What is an investment, how to invest, Wherever you invest, you will have a lot of money, which platform is good for investment, what is investing crypto, how to invest crypto, how to invest, tool for investment, invest tools, top tools for investing, how to invest, crypto investment, crypto trading, tools for helping trading, make money with crypto but low cost, make money but don’t want to loss money, Crypto tracking, how to track crypto, how to update crypto info, how to track crypto, how to know my crypto is lost, tracking crypto profit, crypto tracking notification, whale tracking, whale crypto reading, whale crypto tracking, tracking whale crypto, What is blockchain, what is block, what is crypto, what should i know about crypto, what i should know about blockchain, make money with blockchain, make money with crypto, how to make money with crypto, how to make money with blockchain"
+          content="crypto swap, SUI blockchain, DEX aggregator, FlowX, Cetus, Aftermath, NAVI, 7K, best crypto rates, DeFi trading, crypto exchange, SUI token swap, decentralized exchange, crypto trading platform, DeFi aggregator, best swap rates, cryptocurrency exchange, digital asset trading, blockchain trading, crypto liquidity aggregator, SUI DeFi, crypto portfolio management, automated trading, smart order routing, cross-chain swap, token exchange"
         />
       </head>
 
