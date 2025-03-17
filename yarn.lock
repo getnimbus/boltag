@@ -3675,6 +3675,23 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
+"@mysten/sui@^1.21.1":
+  version "1.24.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.24.0.tgz#22b334e6f8f638d18e13e9b97d11ef2df647bc77"
+  integrity sha512-lmJJLM7eMrxM6Qpr6cdLr07UBXlxCM7SJjfcDO7NGrqZTx7/3TD2QhhRpDx0fS2tODxrNwQxCoHPApLVPjokIA==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.2.0"
+    "@mysten/bcs" "1.5.0"
+    "@noble/curves" "^1.4.2"
+    "@noble/hashes" "^1.4.0"
+    "@scure/base" "^1.2.4"
+    "@scure/bip32" "^1.4.0"
+    "@scure/bip39" "^1.3.0"
+    gql.tada "^1.8.2"
+    graphql "^16.9.0"
+    poseidon-lite "^0.2.0"
+    valibot "^0.36.0"
+
 "@mysten/wallet-standard@0.13.12":
   version "0.13.12"
   resolved "https://registry.yarnpkg.com/@mysten/wallet-standard/-/wallet-standard-0.13.12.tgz#d4c43211bff7807cd943c7d0ef015e72b0c508eb"
@@ -8226,6 +8243,15 @@ axios@^1.1.3, axios@^1.4.0, axios@^1.5.1, axios@^1.6.7, axios@^1.7.7, axios@^1.7
   version "1.7.9"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.7.9.tgz#d7d071380c132a24accda1b2cfc1535b79ec650a"
   integrity sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
+axios@^1.7.2:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.8.3.tgz#9ebccd71c98651d547162a018a1a95a4b4ed4de8"
+  integrity sha512-iP4DebzoNlP/YN2dpwCgb8zoCmhtkajzS48JvwmkSkXvPI3DHc7m+XYL5tGnSlJtR6nImXZmdCuN5aP8dh1d8A==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -13272,10 +13298,10 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.9.0:
-  version "5.9.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.9.0.tgz#529386b18b5f58352da9c8200cf00b5372be0f90"
-  integrity sha512-QlcixYfms9XCqL8I3bvK+X+ZL1y+e1BHN3WOih3L+Y73eZgV1bfdtZ2RJ0InKL7q+DgGnLiUfdrPmIbFPnuUuQ==
+nimbus-universal-swap@5.18.0:
+  version "5.18.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.18.0.tgz#939902b58bb900e766594699fc8270acdfcbd890"
+  integrity sha512-Tj54YHsmyf/+BsQHghuXMvYQ09v8efgvdnGuz0LA5Tpj79e0YRXrD1DmidxiLCQKGYsTGIqJ8g4MKFmhI/rEHA==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.3.6"
     "@cetusprotocol/aggregator-sdk" "^0.3.32"
@@ -13320,6 +13346,7 @@ nimbus-universal-swap@5.9.0:
     react-i18next "^15.0.2"
     react-intersection-observer "^9.13.1"
     react-router-dom "^6.26.2"
+    shio-fast-sdk "^0.0.5"
     solar-sdk "^0.2.8"
     tonweb "^0.0.66"
     uuid "^10.0.0"
@@ -15306,6 +15333,15 @@ shebang-regex@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/shebang-regex/-/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
+
+shio-fast-sdk@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/shio-fast-sdk/-/shio-fast-sdk-0.0.5.tgz#394a0e6d81a86976a144da51035f8d07b85326fd"
+  integrity sha512-AjnV1M2eCFHzuyfDVvxZAetn9l5CeQTwTUCrNVFiR6LoMKLBZzlIuU1xR/zz0VmulAAjiA/qfye+4w8n9u9Qcw==
+  dependencies:
+    "@mysten/sui" "^1.21.1"
+    axios "^1.7.2"
+    dotenv "^16.4.7"
 
 side-channel-list@^1.0.0:
   version "1.0.0"
