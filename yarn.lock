@@ -1082,10 +1082,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.3.32":
-  version "0.3.32"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.3.32.tgz#367a05c7f2c84f2343acf9c0da8a55a949c2df7a"
-  integrity sha512-R8omT92xtUC0Yuh3z2bLeveaal2IUlwXScXztDCJ/GgERh4Pbmim1fFo5eRrLopv0lEpOoI2Hh2RRTM9gs010Q==
+"@cetusprotocol/aggregator-sdk@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.4.4.tgz#7be1666b69a3f867a13f43d818e9387a1ee5e64a"
+  integrity sha512-rrWAkXlyCQeOBn+dr+WxDTP8lK1lr2SAwIPJP1w+uVTz1k9CCK8ufj7lhGfNVEC264qEivq5mIF7eWzsAgBELw==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -2143,10 +2143,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.8.tgz#21a907684723bbbaa5f0974cf7730bd797eb8e62"
   integrity sha512-kym7SodPp8/wloecOpcmSnWJsK7M0E5Wg8UcFA+uO4B9s5d0ywXOEro/8HM9x0rW+TljRzul/14UYz3TleT3ig==
 
-"@flowx-finance/sdk@^1.10.5":
-  version "1.10.5"
-  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.5.tgz#d53f0e4cd7646cd6d39451ac1b29978a1ed60bb4"
-  integrity sha512-8T8KEXNKQre8E8d3DDyGpbia+Sca0m1vVY7uQWXG31GAx99zAb+fYXre3A3Edu+XPFEetcJQnV4+Z64GldDqhw==
+"@flowx-finance/sdk@^1.10.6":
+  version "1.10.6"
+  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.6.tgz#e5124bfa6222f322f9ec74d40fb20b64fd6de649"
+  integrity sha512-B9PI5i7We/vt6XGT4PwjX9dz/NaIh3NZ/A9eSYmOLkthFLpJbkgJE7BHTdI1AXodANtwRw+I8Cae4cR/qW9bGA==
   dependencies:
     "@mysten/sui" "^1.14.2"
     "@mysten/sui.js" "^0.54.1"
@@ -2240,10 +2240,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.1.tgz#9a96ce501bc62df46c4031fbd970e3cc6b10f07b"
   integrity sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==
 
-"@invariant-labs/sdk-eclipse@^0.0.91":
-  version "0.0.91"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.91.tgz#bfea865d0fd4eec1d85a6857185b04e5401e4ee1"
-  integrity sha512-8HyRtKAy+P4OzfSJ6aorhTZfwqt99F8PDs5j4BZcmRh1Pq+rL9Jcn7h3mhAXaL88dg0gw0YeeEwd+T97IKL9TQ==
+"@invariant-labs/sdk-eclipse@^0.0.101":
+  version "0.0.101"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.101.tgz#ad20ea1ae13f8a783fd1abc1c27f25aeca65b1ae"
+  integrity sha512-OsRBFwbcAKQP3QlXbzHbevhQn6cOcUAJGRlGIleHl/rVXwgjy+9lkWAiMuHZi6K+plzi/toL7asDolUdPsm05w==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -7890,10 +7890,10 @@ aes-js@4.0.0-beta.5:
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-4.0.0-beta.5.tgz#8d2452c52adedebc3a3e28465d858c11ca315873"
   integrity sha512-G965FqalsNyrPqgEGON7nIx1e/OVENSgiEIzyC63haUMuvNnwIgIjMs52hlTCKhkBny7A2ORNlfY9Zu+jmGk1Q==
 
-aftermath-ts-sdk@^1.2.56:
-  version "1.2.56"
-  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.56.tgz#c9111030e0980a1a2602ca72aa62d0f393f08c37"
-  integrity sha512-7rtPtpO6eWLjkP76koaJ1IvSijtaDLGFgFNA2qYT87REK5P7J+4RQTwX27WWR2DjPIUbf8c6whP09cLfjv0Xrg==
+aftermath-ts-sdk@^1.2.63:
+  version "1.2.63"
+  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.63.tgz#0b3c7ae6770b5de1de516738746fdff66da50e63"
+  integrity sha512-4PrnO3DrP16HNkYZC3eEcgHEb7fkXOCnE44afvfSWR0vdfv85lngm7Gs4MMKA0sROvtQ/xzOn4urTbBfhzgZCA==
   dependencies:
     "@pythnetwork/pyth-sui-js" "^1.2.3"
     bn.js "^5.2.1"
@@ -13239,10 +13239,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.5.16:
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.5.16.tgz#e6e6b42413f3a60d23a4e2b3e7a756306bb867ed"
-  integrity sha512-LTYhwPZpCl9OIz6/tCxHuO2Ybxad8lINw/zHN7FP2Vq5ZjM8QlmHmHhnDnwWaRhtOcQSqgyO4G6eYHQP2ZEXtg==
+navi-sdk@^1.6.1:
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.2.tgz#8088de5ea3d3cfd1a9dc7ac6956364a9111fff7a"
+  integrity sha512-vF9UQi+ivUAXLAMfBu6Q9LCaICS8MIP1/+KyEaj9MLdql65yizmtsmxPhtOMxKJ2sKwbQ2Cz5VSzgSCJYiK5CA==
   dependencies:
     "@mayanfinance/swap-sdk" "10.3.0"
     "@mysten/sui" "^1.16.0"
@@ -13298,19 +13298,19 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.24.0:
-  version "5.24.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.24.0.tgz#6de9a17c34c8a26b76ee3c9ecbc6af1edd85a5c4"
-  integrity sha512-cA4c9Omb1IVNXwPn/co3tcc/0thJVN64j7YYoBGvTHsi84JFSHR5wECPG/PphGhuUX1y+/VcCWbztPQoSrRdVw==
+nimbus-universal-swap@5.25.0:
+  version "5.25.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.25.0.tgz#c91bc028689e62c926fb18847d413e98168a4993"
+  integrity sha512-RYpWmER/8qToKVyt01VxhCSwn12hy6+2go+lyeeZucQjW78cZZ1jM894cWaRcZWohvdBdjiAqbKMKGAjZLY/dQ==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.3.6"
-    "@cetusprotocol/aggregator-sdk" "^0.3.32"
+    "@cetusprotocol/aggregator-sdk" "^0.4.4"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
-    "@flowx-finance/sdk" "^1.10.5"
+    "@flowx-finance/sdk" "^1.10.6"
     "@hop.ag/sdk" "^4.0.9"
-    "@invariant-labs/sdk-eclipse" "^0.0.91"
+    "@invariant-labs/sdk-eclipse" "^0.0.101"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.7"
@@ -13334,14 +13334,14 @@ nimbus-universal-swap@5.24.0:
     "@ton/crypto" "^3.2.0"
     "@tonconnect/sdk" "^3.0.3"
     "@tonconnect/ui" "^2.0.6"
-    aftermath-ts-sdk "^1.2.56"
+    aftermath-ts-sdk "^1.2.63"
     bn.js "^5.2.1"
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.5.16"
+    navi-sdk "^1.6.1"
     nimbus-wallet-management "^4.0.0"
-    rainbow-swap-sdk "^1.5.7"
+    rainbow-swap-sdk "^1.5.8"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-i18next "^15.0.2"
@@ -14563,10 +14563,10 @@ radix3@^1.1.2:
   resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.1.2.tgz#fd27d2af3896c6bf4bcdfab6427c69c2afc69ec0"
   integrity sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==
 
-rainbow-swap-sdk@^1.5.7:
-  version "1.5.7"
-  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.7.tgz#c224bcf1241bdd6b6786c50b5b8a8922d47c3650"
-  integrity sha512-lyZYGROiyJasVjzTsaqtx9SVJYwcqG0ml0J87ngXn5sst7Qjnn62HPe7aFyuMfyXADbjdkY+jxIRflJQbmD68A==
+rainbow-swap-sdk@^1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.8.tgz#6da9bff6eddf6ab03f4831a3b9b628c4925d611c"
+  integrity sha512-TsuJTJrN6rPhwLV/w6COQELHHbmuCceEw4uMfNm2Tk7e9vcFs564juKV9JPMX5wAe5CC35e9MWp1qDX6aw254w==
   dependencies:
     "@rnw-community/shared" "^0.74.0"
     axios "^1.7.9"
