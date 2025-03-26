@@ -363,6 +363,7 @@ function Main() {
           "User denied request signature.",
           "Rejected from user",
           "Operation not allowed, dapp doesn't have the required permissions",
+          "User canceled password",
         ].includes(data?.message) ||
         data?.message.toLowerCase().includes("rejected") ||
         data?.message.toLowerCase().includes("rejection")
