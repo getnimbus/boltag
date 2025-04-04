@@ -7682,10 +7682,10 @@ aes-js@4.0.0-beta.5:
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-4.0.0-beta.5.tgz#8d2452c52adedebc3a3e28465d858c11ca315873"
   integrity sha512-G965FqalsNyrPqgEGON7nIx1e/OVENSgiEIzyC63haUMuvNnwIgIjMs52hlTCKhkBny7A2ORNlfY9Zu+jmGk1Q==
 
-aftermath-ts-sdk@^1.2.65:
-  version "1.2.65"
-  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.65.tgz#a8a84e4d89ccbd9ac01dd69c815e8f604dbc8614"
-  integrity sha512-pZ96VjUnuMD/hNckdvwdd0L0SnJ6Kj8UR5gNp8VgkyjJTHsmZ6CUC6L7dI7WGzRP0Rj+sbSSZEPBJrhhEKb95w==
+aftermath-ts-sdk@^1.2.66:
+  version "1.2.66"
+  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.66.tgz#8450f8cc0c25b3de1c302ba6b4f337bab67eab5a"
+  integrity sha512-3TjRw9zavVxcDKWmmZkPtP4VML7nBEMM7OHESe3s7Wp3kSHfhhld3UGIGaZvGXQjqTwkd8dILeq44fNUjng93g==
   dependencies:
     "@pythnetwork/pyth-sui-js" "^1.2.3"
     bn.js "^5.2.1"
@@ -13019,10 +13019,10 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.28.2:
-  version "5.28.2"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.28.2.tgz#148e6a172c9b068ba4fa5a595c6ac2b976515b74"
-  integrity sha512-MYBFNwBQqyb5W8ll76t0uhbum2hFbv1QNN2QopmT7O/MRPX+Y7+jQj3HOSPBvfsqPxc8xD+xsLEJmqAEuR9kew==
+nimbus-universal-swap@5.29.0:
+  version "5.29.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.29.0.tgz#6300aec520c2ec3671df653cabadea54a74e508c"
+  integrity sha512-OBxN/+RgriQTY42PGsl63iTN+EjqmHu3bd6WAqlf6Zig7PukqYQmDq9wt9iyLtJKT37o64CX5Xl5CQyA9Y3fyg==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.3.7"
     "@cetusprotocol/aggregator-sdk" "^0.5.0"
@@ -13054,7 +13054,7 @@ nimbus-universal-swap@5.28.2:
     "@ton/crypto" "^3.2.0"
     "@tonconnect/sdk" "^3.0.3"
     "@tonconnect/ui" "^2.0.6"
-    aftermath-ts-sdk "^1.2.65"
+    aftermath-ts-sdk "^1.2.66"
     bn.js "^5.2.1"
     i18next "^23.15.1"
     microdiff "^1.4.0"
@@ -15367,6 +15367,7 @@ string-length@^4.0.1:
     strip-ansi "^6.0.0"
 
 "string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -15408,6 +15409,7 @@ string_decoder@~1.1.1:
     safe-buffer "~5.1.0"
 
 "strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  name strip-ansi-cjs
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -16522,6 +16524,7 @@ word-wrap@^1.2.5:
   integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
