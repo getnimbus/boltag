@@ -364,6 +364,9 @@ function Main() {
           "Rejected from user",
           "Operation not allowed, dapp doesn't have the required permissions",
           "User canceled password",
+          "Plugin Closed",
+          "Approval Denied",
+          "Cannot serialize empty transaction",
         ].includes(data?.message) ||
         data?.message.toLowerCase().includes("rejected") ||
         data?.message.toLowerCase().includes("rejection")
