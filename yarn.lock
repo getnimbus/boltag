@@ -1071,10 +1071,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.5.0.tgz#0523f0a08bc5cda8e6a3cbc3daa9bb2685a0641c"
-  integrity sha512-+G/9f+Tm4J+xPGUajFZuJaDz7ypyypDcAJjyTJy1gKbSH9LyvDfNRroW/HIUrYero5FIjslG8ydQ+1lHrznCoQ==
+"@cetusprotocol/aggregator-sdk@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.6.0.tgz#96c54c7af8368632931dc9b8f5ec46fbd76c0536"
+  integrity sha512-tcT4xHS+ks3yXro0qiOTDgYizo2Tuq8wib4q58pTnziG0QVyKk6nnBZgQF+/QxsFNUutpDJgkgTEq/Fm/J2M0w==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -2155,10 +2155,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.9.tgz#50dea3616bc8191fb8e112283b49eaff03e78429"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
-"@flowx-finance/sdk@^1.10.12":
-  version "1.10.12"
-  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.12.tgz#188bb70b01f55de11372af176308ccf2946b73c7"
-  integrity sha512-lUN4jFT+9hau0KTEWyvZREMBP6lWDVsOt2k0hoOr4bogdHe0eeqDr9Eow8A+RSxrb4F3W7SLPIzhIwrWhyOGNw==
+"@flowx-finance/sdk@^1.10.13":
+  version "1.10.13"
+  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.13.tgz#6dd346b1f844021cc64161ce6afe03a32c6f012a"
+  integrity sha512-VKliPWqOk4b6TdvGT4SaOURHOl9Dj8FeYjTgm76kw1SAhjPnQFJttEy1MQ9UlvGAYNIzj1/d+OOYOID1H0/4Rg==
   dependencies:
     "@mysten/sui" "^1.14.2"
     "@mysten/sui.js" "^0.54.1"
@@ -2252,10 +2252,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@invariant-labs/sdk-eclipse@^0.0.106":
-  version "0.0.106"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.106.tgz#3b9499e536e3146422aa3741133cc7783277737e"
-  integrity sha512-X3/LAi7GktbFPHnhZua7Dq/hnkgsnnCoPyw4c2b8TJyLRAflbRm+pIofyPsNfEQ7IeGqV78j+HltmMayNusokQ==
+"@invariant-labs/sdk-eclipse@^0.0.114":
+  version "0.0.114"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.114.tgz#bc743b116bff82bf71ca4c9a0d686788c03a7474"
+  integrity sha512-RZPnpgaFNuLa8A1L5F8DF2y0YajXr221wobE/QfwyIL2XMMMUebo9LaBXplJPfZONvjMObdp8/Xva39VAiIWWA==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -3580,10 +3580,27 @@
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.14.2", "@mysten/sui@^1.16.0", "@mysten/sui@^1.16.2", "@mysten/sui@^1.2.0", "@mysten/sui@^1.21.1", "@mysten/sui@^1.26.1", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
+"@mysten/sui@^1.14.2", "@mysten/sui@^1.16.0", "@mysten/sui@^1.16.2", "@mysten/sui@^1.2.0", "@mysten/sui@^1.21.1", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
   version "1.26.1"
   resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.26.1.tgz#1f60709fe310868f051635940fe545e2e2ce2a2f"
   integrity sha512-bBVvn2wZKipAvuUkKzHwGhs1JiIM33+b97d0uIWg3T6dJH/n1nfnGrzkBQsMGpoBAFOIUnKQAZmDwT4qvJbKkg==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.2.0"
+    "@mysten/bcs" "1.6.0"
+    "@noble/curves" "^1.8.1"
+    "@noble/hashes" "^1.7.1"
+    "@scure/base" "^1.2.4"
+    "@scure/bip32" "^1.6.2"
+    "@scure/bip39" "^1.5.4"
+    gql.tada "^1.8.2"
+    graphql "^16.9.0"
+    poseidon-lite "^0.2.0"
+    valibot "^0.36.0"
+
+"@mysten/sui@^1.27.0":
+  version "1.27.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.27.0.tgz#abda66dfbe482d356e6b880c5caad89692d5c24d"
+  integrity sha512-sTzqzgM/d1XkRPh/ylDlWqm1NZOWvlvurRkkUBBgLmI0ezf54ScaYLQD3ZtcQpVxmE4WK5tVCrHtAfY/QpThXA==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.0"
@@ -6293,10 +6310,10 @@
     "@svgr/plugin-jsx" "^6.5.1"
     "@svgr/plugin-svgo" "^6.5.1"
 
-"@swap-coffee/sdk@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@swap-coffee/sdk/-/sdk-1.5.1.tgz#c7d781c18c4abc307a0a837b45d187bd588d1bef"
-  integrity sha512-nuMbc0r1dOveIZ+qaBiM6b7WSGKx+OxziBdGyaPdSp9F8StAYHYcgcKBxyMBW7h+OQFbcP45q1aLZTC+jyj+tw==
+"@swap-coffee/sdk@^1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@swap-coffee/sdk/-/sdk-1.5.2.tgz#db182455c0fbfc90af66551cf5d768cd5ac44582"
+  integrity sha512-Khyf1d+KKb8/6GLdjw9qxG1sh5CAXF/T10tp4e2lYaV76XW7aqdaKEvI1QsaIfpd8coxnjf4pAR5U5KiL3dM0Q==
 
 "@swc/helpers@^0.5.11":
   version "0.5.15"
@@ -13019,19 +13036,19 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.30.0:
-  version "5.30.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.30.0.tgz#6236ecc1ef942b15f2129791940b1ef16918fa86"
-  integrity sha512-IXud3OLV01759PRJ3ZCs0sNmBY8xAZtv+1gpU1Rokxh21krVP4aWzewVo5VTg314vCRcphvl9q1ND4lWq8+c4g==
+nimbus-universal-swap@5.31.0:
+  version "5.31.0"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.0.tgz#72faeb3cf307840c238f2b698ec7d96c5d52cd0e"
+  integrity sha512-6y+6KdC5/7497btFnElBeBykzo6o1k1ECM2TPc6If1GbfgUE6qrhKysofVZykkKh9XbJbWGYqPB2CSzrIcm5hA==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.3.7"
-    "@cetusprotocol/aggregator-sdk" "^0.5.0"
+    "@cetusprotocol/aggregator-sdk" "^0.6.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
-    "@flowx-finance/sdk" "^1.10.12"
+    "@flowx-finance/sdk" "^1.10.13"
     "@hop.ag/sdk" "^4.0.9"
-    "@invariant-labs/sdk-eclipse" "^0.0.106"
+    "@invariant-labs/sdk-eclipse" "^0.0.114"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.7"
@@ -13039,7 +13056,7 @@ nimbus-universal-swap@5.30.0:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.26.1"
+    "@mysten/sui" "^1.27.0"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
@@ -13047,7 +13064,7 @@ nimbus-universal-swap@5.30.0:
     "@solana/wallet-adapter-wallets" "^0.19.32"
     "@solana/web3.js" "^1.98.0"
     "@suiet/wallet-kit" "^0.3.4"
-    "@swap-coffee/sdk" "^1.5.1"
+    "@swap-coffee/sdk" "^1.5.2"
     "@tanstack/react-query" "^5.59.0"
     "@tanstack/react-virtual" "^3.10.8"
     "@ton/core" "^0.56.3"
@@ -15366,8 +15383,16 @@ string-length@^4.0.1:
     char-regex "^1.0.2"
     strip-ansi "^6.0.0"
 
-"string-width-cjs@npm:string-width@^4.2.0", "string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
-  name string-width-cjs
+"string-width-cjs@npm:string-width@^4.2.0":
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
+
+"string-width@^1.0.2 || 2 || 3 || 4", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -15408,8 +15433,7 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
-  name strip-ansi-cjs
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -15422,6 +15446,13 @@ strip-ansi@^5.0.0, strip-ansi@^5.1.0, strip-ansi@^5.2.0:
   integrity sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA==
   dependencies:
     ansi-regex "^4.1.0"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
 
 strip-ansi@^7.0.1:
   version "7.1.0"
@@ -16523,8 +16554,7 @@ word-wrap@^1.2.5:
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.5.tgz#d2c45c6dd4fbce621a66f136cbe328afd0410b34"
   integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
-"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
-  name wrap-ansi-cjs
+"wrap-ansi-cjs@npm:wrap-ansi@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
@@ -16546,6 +16576,15 @@ wrap-ansi@^6.0.1, wrap-ansi@^6.2.0:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-6.2.0.tgz#e9393ba07102e6c91a3b221478f0257cd2856e53"
   integrity sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==
+  dependencies:
+    ansi-styles "^4.0.0"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+
+wrap-ansi@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
+  integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
   dependencies:
     ansi-styles "^4.0.0"
     string-width "^4.1.0"
