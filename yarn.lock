@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^2.3.7":
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.3.7.tgz#18e8062c535ecbc1ba78c3792fe24dcbc706c2af"
-  integrity sha512-Kf74Gc4SfiPh6pO87elPXzn6Ttf6f1J6qMjGDT/MDgILtKuKr97fC2S/Q9ZVzfk9x2WjoIfTRPre1C1jHRleQw==
+"@7kprotocol/sdk-ts@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.4.0.tgz#7190dd41a1582fbd1012d4b09a21acf534a49a78"
+  integrity sha512-C/cKyMULJ6WYhLcEQwwzqHdgejc/P6755vEktNqMWCev/sWftm1LBP6lBvOWyOfNUENRrfTQhNkI02U00f1FeA==
 
 "@adraffy/ens-normalize@1.10.1":
   version "1.10.1"
@@ -2155,10 +2155,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.9.tgz#50dea3616bc8191fb8e112283b49eaff03e78429"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
-"@flowx-finance/sdk@^1.10.13":
-  version "1.10.13"
-  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.13.tgz#6dd346b1f844021cc64161ce6afe03a32c6f012a"
-  integrity sha512-VKliPWqOk4b6TdvGT4SaOURHOl9Dj8FeYjTgm76kw1SAhjPnQFJttEy1MQ9UlvGAYNIzj1/d+OOYOID1H0/4Rg==
+"@flowx-finance/sdk@^1.10.14":
+  version "1.10.14"
+  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.14.tgz#16bb0678aaca2e2c91d5d91edb93c2086ca9525a"
+  integrity sha512-+MA9uDU8/foLjC0MLi/qmbqfh0OD4mYZPLQb8n4gg9I/CAyqYToqL/yb8krjodNSYrIHNfS1YdFkPBkIGQuQYg==
   dependencies:
     "@mysten/sui" "^1.14.2"
     "@mysten/sui.js" "^0.54.1"
@@ -2252,10 +2252,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@invariant-labs/sdk-eclipse@^0.0.114":
-  version "0.0.114"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.114.tgz#bc743b116bff82bf71ca4c9a0d686788c03a7474"
-  integrity sha512-RZPnpgaFNuLa8A1L5F8DF2y0YajXr221wobE/QfwyIL2XMMMUebo9LaBXplJPfZONvjMObdp8/Xva39VAiIWWA==
+"@invariant-labs/sdk-eclipse@^0.0.119":
+  version "0.0.119"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.119.tgz#91c7b40434c783a14ed1fbc10cde91cc9cb4cff5"
+  integrity sha512-XZ0uQVD8zGBgxnDVCwY9TlAnuYb2uUPQmTU6snWDnK4pV1kVGxeIy2ejZue/cQCi3Fq+DAuud5HX3Ra6yQKAfw==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -7699,10 +7699,10 @@ aes-js@4.0.0-beta.5:
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-4.0.0-beta.5.tgz#8d2452c52adedebc3a3e28465d858c11ca315873"
   integrity sha512-G965FqalsNyrPqgEGON7nIx1e/OVENSgiEIzyC63haUMuvNnwIgIjMs52hlTCKhkBny7A2ORNlfY9Zu+jmGk1Q==
 
-aftermath-ts-sdk@^1.2.66:
-  version "1.2.66"
-  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.66.tgz#8450f8cc0c25b3de1c302ba6b4f337bab67eab5a"
-  integrity sha512-3TjRw9zavVxcDKWmmZkPtP4VML7nBEMM7OHESe3s7Wp3kSHfhhld3UGIGaZvGXQjqTwkd8dILeq44fNUjng93g==
+aftermath-ts-sdk@^1.2.67:
+  version "1.2.67"
+  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.67.tgz#dbdae96b9c153f5fa53013eb3d65768dfda70a90"
+  integrity sha512-woDzP1fn28PXkLqsZf7bygFAALED9UjSt8Z8Eab5DAz97xELNqTquJLqySIo2hD1wq7sbmWzgUXFZQkmaSmmQw==
   dependencies:
     "@pythnetwork/pyth-sui-js" "^1.2.3"
     bn.js "^5.2.1"
@@ -13036,19 +13036,19 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.0:
-  version "5.31.0"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.0.tgz#72faeb3cf307840c238f2b698ec7d96c5d52cd0e"
-  integrity sha512-6y+6KdC5/7497btFnElBeBykzo6o1k1ECM2TPc6If1GbfgUE6qrhKysofVZykkKh9XbJbWGYqPB2CSzrIcm5hA==
+nimbus-universal-swap@5.31.1:
+  version "5.31.1"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.1.tgz#1dc612c1cbcdacd6e24203daffe88af7976a773e"
+  integrity sha512-5PPvtakEDnztuhjzE9VM88ncGdXbkUpOu72dkVldY1h7BX7ptuevVg3z9Go+wuFqvhOU2jmqICgx36FCQ5A+5g==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.3.7"
+    "@7kprotocol/sdk-ts" "^2.4.0"
     "@cetusprotocol/aggregator-sdk" "^0.6.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
-    "@flowx-finance/sdk" "^1.10.13"
+    "@flowx-finance/sdk" "^1.10.14"
     "@hop.ag/sdk" "^4.0.9"
-    "@invariant-labs/sdk-eclipse" "^0.0.114"
+    "@invariant-labs/sdk-eclipse" "^0.0.119"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.7"
@@ -13071,7 +13071,7 @@ nimbus-universal-swap@5.31.0:
     "@ton/crypto" "^3.2.0"
     "@tonconnect/sdk" "^3.0.3"
     "@tonconnect/ui" "^2.0.6"
-    aftermath-ts-sdk "^1.2.66"
+    aftermath-ts-sdk "^1.2.67"
     bn.js "^5.2.1"
     i18next "^23.15.1"
     microdiff "^1.4.0"
