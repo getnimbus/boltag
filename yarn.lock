@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.4.0.tgz#7190dd41a1582fbd1012d4b09a21acf534a49a78"
-  integrity sha512-C/cKyMULJ6WYhLcEQwwzqHdgejc/P6755vEktNqMWCev/sWftm1LBP6lBvOWyOfNUENRrfTQhNkI02U00f1FeA==
+"@7kprotocol/sdk-ts@^2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.4.1.tgz#ecf0458bb836890089084bcda756ceb703ca141a"
+  integrity sha512-BseY6JG9Nc4W9PEnO7tVr0+ewMob78ky3YJOPKrnm6WEEj6w+fdzQ7vgWDZx7/i258dSJaA16e5lGVniqocvlQ==
 
 "@adraffy/ens-normalize@1.10.1":
   version "1.10.1"
@@ -1071,10 +1071,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.6.0.tgz#96c54c7af8368632931dc9b8f5ec46fbd76c0536"
-  integrity sha512-tcT4xHS+ks3yXro0qiOTDgYizo2Tuq8wib4q58pTnziG0QVyKk6nnBZgQF+/QxsFNUutpDJgkgTEq/Fm/J2M0w==
+"@cetusprotocol/aggregator-sdk@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.7.0.tgz#c1888470bd9dcf2927aa9744b6371e10b26a7808"
+  integrity sha512-4puz4OaWt0VC0iuqn+6b5UlNoNFqSg0wVMe6uaJVyOEyp4GmyjBCiMPRAgUTlW9m0zEwzihPrAlhCqYHdDB/Pg==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -2155,10 +2155,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.9.tgz#50dea3616bc8191fb8e112283b49eaff03e78429"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
-"@flowx-finance/sdk@^1.10.14":
-  version "1.10.14"
-  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.14.tgz#16bb0678aaca2e2c91d5d91edb93c2086ca9525a"
-  integrity sha512-+MA9uDU8/foLjC0MLi/qmbqfh0OD4mYZPLQb8n4gg9I/CAyqYToqL/yb8krjodNSYrIHNfS1YdFkPBkIGQuQYg==
+"@flowx-finance/sdk@^1.10.15":
+  version "1.10.15"
+  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.15.tgz#7b1fe8e9847a2654759bf2810fc3b6e9e4c6d45d"
+  integrity sha512-dpTeewU2VCL0oz7pmvArwvVHM+L4dkvM3GindWHUAX2H9ck8LZ+d5451bPenQBHwe9a67EKToVXn3tFMUlu8sA==
   dependencies:
     "@mysten/sui" "^1.14.2"
     "@mysten/sui.js" "^0.54.1"
@@ -3597,13 +3597,14 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.27.0":
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.27.0.tgz#abda66dfbe482d356e6b880c5caad89692d5c24d"
-  integrity sha512-sTzqzgM/d1XkRPh/ylDlWqm1NZOWvlvurRkkUBBgLmI0ezf54ScaYLQD3ZtcQpVxmE4WK5tVCrHtAfY/QpThXA==
+"@mysten/sui@^1.28.0":
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.28.0.tgz#32322ade494a64284e1bf09a995b46de72a93935"
+  integrity sha512-ABcKc+QBpazBl5/ByLChxHOiPjqxISSdXnBuU1rLm1frp5tjMSCChiL7Reth2zcxWO2qYFK70ewEkYVtJvJQvw==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.0"
+    "@mysten/utils" "0.0.0"
     "@noble/curves" "^1.8.1"
     "@noble/hashes" "^1.7.1"
     "@scure/base" "^1.2.4"
@@ -3613,6 +3614,13 @@
     graphql "^16.9.0"
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
+
+"@mysten/utils@0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@mysten/utils/-/utils-0.0.0.tgz#e088ddd10d2e99c9cecbf2bc93f999d299cc1b06"
+  integrity sha512-KRI57Qow3E7TGqczimazwGf7+fwukdOi+6a31igSCzz0kPjAXbyK1a1gXaxeLMF8xEZ07ouW3RnsWt+EaUuHUw==
+  dependencies:
+    "@scure/base" "^1.2.4"
 
 "@mysten/wallet-standard@0.13.3":
   version "0.13.3"
@@ -7699,10 +7707,10 @@ aes-js@4.0.0-beta.5:
   resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-4.0.0-beta.5.tgz#8d2452c52adedebc3a3e28465d858c11ca315873"
   integrity sha512-G965FqalsNyrPqgEGON7nIx1e/OVENSgiEIzyC63haUMuvNnwIgIjMs52hlTCKhkBny7A2ORNlfY9Zu+jmGk1Q==
 
-aftermath-ts-sdk@^1.2.67:
-  version "1.2.67"
-  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.67.tgz#dbdae96b9c153f5fa53013eb3d65768dfda70a90"
-  integrity sha512-woDzP1fn28PXkLqsZf7bygFAALED9UjSt8Z8Eab5DAz97xELNqTquJLqySIo2hD1wq7sbmWzgUXFZQkmaSmmQw==
+aftermath-ts-sdk@^1.2.69:
+  version "1.2.69"
+  resolved "https://registry.yarnpkg.com/aftermath-ts-sdk/-/aftermath-ts-sdk-1.2.69.tgz#69422be8f8128dc171bc6084a38a41e8db49f1bc"
+  integrity sha512-qppshusT+S6kRVdFag6oI6KEJbYEIgBywIQe3RBkl6a/US+qt7TSXsXcESrBuoD9K5ChHRQI7t5rVnmZbBjLdg==
   dependencies:
     "@pythnetwork/pyth-sui-js" "^1.2.3"
     bn.js "^5.2.1"
@@ -13036,17 +13044,17 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.1:
-  version "5.31.1"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.1.tgz#1dc612c1cbcdacd6e24203daffe88af7976a773e"
-  integrity sha512-5PPvtakEDnztuhjzE9VM88ncGdXbkUpOu72dkVldY1h7BX7ptuevVg3z9Go+wuFqvhOU2jmqICgx36FCQ5A+5g==
+nimbus-universal-swap@5.31.2:
+  version "5.31.2"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.2.tgz#f5feb31b2d02b137dbd98918eaf60ffc9bcd5032"
+  integrity sha512-Ydx8CaIC/7Po6IywiiQuAbioWktKxzJougwFXU5N5C/00Kf+ublwdb+GQv140eBB4r29geVYwASSlw35ltSy3w==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.4.0"
-    "@cetusprotocol/aggregator-sdk" "^0.6.0"
+    "@7kprotocol/sdk-ts" "^2.4.1"
+    "@cetusprotocol/aggregator-sdk" "^0.7.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
-    "@flowx-finance/sdk" "^1.10.14"
+    "@flowx-finance/sdk" "^1.10.15"
     "@hop.ag/sdk" "^4.0.9"
     "@invariant-labs/sdk-eclipse" "^0.0.119"
     "@lifi/sdk" "^3.2.3"
@@ -13056,7 +13064,7 @@ nimbus-universal-swap@5.31.1:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.27.0"
+    "@mysten/sui" "^1.28.0"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
@@ -13071,14 +13079,14 @@ nimbus-universal-swap@5.31.1:
     "@ton/crypto" "^3.2.0"
     "@tonconnect/sdk" "^3.0.3"
     "@tonconnect/ui" "^2.0.6"
-    aftermath-ts-sdk "^1.2.67"
+    aftermath-ts-sdk "^1.2.69"
     bn.js "^5.2.1"
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
     navi-sdk "^1.6.3"
     nimbus-wallet-management "^4.0.0"
-    rainbow-swap-sdk "^1.5.8"
+    rainbow-swap-sdk "^1.5.9"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-i18next "^15.0.2"
@@ -14295,10 +14303,10 @@ radix3@^1.1.2:
   resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.1.2.tgz#fd27d2af3896c6bf4bcdfab6427c69c2afc69ec0"
   integrity sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==
 
-rainbow-swap-sdk@^1.5.8:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.8.tgz#6da9bff6eddf6ab03f4831a3b9b628c4925d611c"
-  integrity sha512-TsuJTJrN6rPhwLV/w6COQELHHbmuCceEw4uMfNm2Tk7e9vcFs564juKV9JPMX5wAe5CC35e9MWp1qDX6aw254w==
+rainbow-swap-sdk@^1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.9.tgz#264639a666af2d19c37ca85200630fe3330373d1"
+  integrity sha512-bCZhvRytiu1S1sbtr79obdsxUmBz1txMXguCQgm8cX38war7bKR7o3obC7BGGKrwxdiEOP75pSIqqavId+A1Gw==
   dependencies:
     "@rnw-community/shared" "^0.74.0"
     axios "^1.7.9"
