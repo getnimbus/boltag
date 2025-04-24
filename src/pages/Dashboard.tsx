@@ -79,15 +79,26 @@ function Dashboard() {
     }
   }, []);
 
+  console.log("suiWalletInstance: ", suiWalletInstance);
+
   const handleSignAddressMessage = async (nonce: string) => {
-    return await (suiWalletInstance !== null &&
-      (suiWalletInstance as WalletState) &&
-      (suiWalletInstance as WalletState)?.connected &&
-      (suiWalletInstance as WalletState)?.signPersonalMessage({
+    if (!suiWalletInstance || !(suiWalletInstance as WalletState)?.connected) {
+      return null;
+    }
+
+    try {
+      const result = await (
+        suiWalletInstance as WalletState
+      ).signPersonalMessage({
         message: new TextEncoder().encode(
           `I am signing my one-time nonce: ${nonce}`,
         ),
-      }));
+      });
+      return result;
+    } catch (error) {
+      console.error("Error signing message:", error);
+      return null;
+    }
   };
 
   const handleGetSUIToken = async (data: any) => {

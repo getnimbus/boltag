@@ -10,6 +10,7 @@ import {
   useSignAndExecuteTransaction,
   useReportTransactionEffects,
   useSignTransaction,
+  useSuiClient,
 } from "@mysten/dapp-kit";
 
 const shorterAddress = (string: string) => {
@@ -42,6 +43,8 @@ export const Auth = () => {
     SuiInstanceStateContext,
   );
 
+  const client = useSuiClient();
+
   const { mutateAsync: signTransaction } = useSignTransaction();
   const { mutateAsync: reportTransactionEffects } =
     useReportTransactionEffects();
@@ -51,17 +54,58 @@ export const Auth = () => {
   const account = useCurrentAccount();
 
   const wallet = {
-    signTransaction: async (input: { transaction: string }) => {
-      return await signTransaction(input);
-    },
     reportTransactionEffects: async (input: { effects: string }) => {
       return await reportTransactionEffects(input);
     },
+    signTransaction: async (input: { transaction: string }) => {
+      const { bytes, signature, reportTransactionEffects } =
+        await signTransaction({
+          ...input,
+        });
+
+      const executeResult = await client.executeTransactionBlock({
+        transactionBlock: bytes,
+        signature,
+        options: {
+          showRawEffects: true,
+        },
+      });
+
+      // Always report transaction effects to the wallet after execution
+      reportTransactionEffects(
+        Buffer.from(executeResult.rawEffects!).toString("base64"),
+      );
+
+      return executeResult;
+    },
     signAndExecuteTransaction: async (input: { transaction: string }) => {
-      return await signAndExecuteTransaction(input);
+      return await signAndExecuteTransaction(
+        {
+          ...input,
+        },
+        {
+          onSuccess: (result) => {
+            console.log("executed transaction", result);
+          },
+        },
+      );
     },
     signPersonalMessage: async (input: { message: Uint8Array }) => {
-      return await signPersonalMessage(input);
+      return new Promise((resolve, reject) => {
+        signPersonalMessage(
+          {
+            ...input,
+          },
+          {
+            onSuccess: (result) => {
+              resolve(result);
+            },
+            onError: (error) => {
+              reject(error);
+            },
+          },
+        );
+      });
     },
     disconnect: async () => {
       await disconnect();
@@ -76,6 +120,7 @@ export const Auth = () => {
   useEffect(() => {
     if (account && account?.address) {
       setShowModal(false);
+      localStorage.setItem("publicAddress", account?.address || "");
     }
   }, [account]);
 

@@ -19,21 +19,21 @@ const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <SuiClientProvider networks={networkConfig} defaultNetwork="mainnet">
-        <WalletProvider
-          autoConnect={true}
-          slushWallet={{
-            name: "Nimbus",
-          }}
-        >
-          <SuiInstanceProvider>
-            <ThemeProvider>
+    <ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <SuiClientProvider networks={networkConfig} defaultNetwork="mainnet">
+          <WalletProvider
+            autoConnect={true}
+            slushWallet={{
+              name: "Nimbus",
+            }}
+          >
+            <SuiInstanceProvider>
               <App />
-            </ThemeProvider>
-          </SuiInstanceProvider>
-        </WalletProvider>
-      </SuiClientProvider>
-    </QueryClientProvider>
+            </SuiInstanceProvider>
+          </WalletProvider>
+        </SuiClientProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   </StrictMode>,
 );
