@@ -12,6 +12,10 @@ import {
   useSignTransaction,
 } from "@mysten/dapp-kit";
 
+const shorterAddress = (string: string) => {
+  return string ? string.slice(0, 6) + "..." + string.substr(-4) : string;
+};
+
 export const Auth = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
@@ -87,10 +91,18 @@ export const Auth = () => {
   return (
     <>
       {account && account?.address ? (
-        <div onClick={() => disconnect()}>Disconnect</div>
+        <div className="rounded-[10px] text-sm py-[9px] px-[12px] font-semibold text-black bg-white cursor-pointer transition-all">
+          <div onClick={() => disconnect()}>
+            {shorterAddress(account?.address)}
+          </div>
+        </div>
       ) : (
         <ConnectModal
-          trigger={<div>Connect wallet</div>}
+          trigger={
+            <div className="rounded-[10px] text-sm py-[9px] px-[12px] font-bold text-white bg-[#1e96fc] cursor-pointer hover:bg-[#1878c9] transition-all">
+              Connect wallet
+            </div>
+          }
           open={showModal}
           onOpenChange={(isOpen) => setShowModal(isOpen)}
         />
