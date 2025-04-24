@@ -79,8 +79,6 @@ function Dashboard() {
     }
   }, []);
 
-  console.log("suiWalletInstance: ", suiWalletInstance);
-
   const handleSignAddressMessage = async (nonce: string) => {
     if (!suiWalletInstance || !(suiWalletInstance as WalletState)?.connected) {
       return null;

@@ -79,16 +79,21 @@ export const Auth = () => {
       return executeResult;
     },
     signAndExecuteTransaction: async (input: { transaction: string }) => {
-      return await signAndExecuteTransaction(
-        {
-          ...input,
-        },
-        {
-          onSuccess: (result) => {
-            console.log("executed transaction", result);
+      return new Promise((resolve, reject) => {
+        signAndExecuteTransaction(
+          {
+            ...input,
           },
-        },
-      );
+          {
+            onSuccess: (result) => {
+              resolve(result);
+            },
+            onError: (error) => {
+              reject(error);
+            },
+          },
+        );
+      });
     },
     signPersonalMessage: async (input: { message: Uint8Array }) => {
       return new Promise((resolve, reject) => {
