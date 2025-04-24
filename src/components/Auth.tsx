@@ -16,7 +16,7 @@ const shorterAddress = (string: string) => {
   return string ? string.slice(0, 6) + "..." + string.substr(-4) : string;
 };
 
-const ChevronDownIcon = ({ isOpen }: { isOpen: boolean }) => (
+const ChevronIcon = ({ isOpen }: { isOpen: boolean }) => (
   <svg
     className={`w-4 h-4 ml-1 transition-transform ${isOpen ? "rotate-180" : ""}`}
     fill="none"
@@ -116,7 +116,7 @@ export const Auth = () => {
             className="rounded-[10px] text-sm py-[10px] px-[12px] font-semibold text-black bg-white cursor-pointer transition-all hover:bg-gray-100 flex items-center"
           >
             {shorterAddress(account?.address)}
-            <ChevronDownIcon isOpen={showDisconnectPopover} />
+            <ChevronIcon isOpen={showDisconnectPopover} />
           </div>
           {showDisconnectPopover && (
             <div className="absolute top-full left-0 mt-1 w-full bg-white rounded-[10px] shadow-lg border border-gray-200">

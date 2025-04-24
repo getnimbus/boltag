@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { Theme } from "@radix-ui/themes";
 
 type Theme = "light" | "dark" | "system";
 
@@ -27,6 +28,8 @@ export default function ThemeProvider({
     return savedTheme || "system";
   });
 
+  const [themeSystem, setThemeSystem] = useState<"light" | "dark">("light");
+
   useEffect(() => {
     const root = window.document.documentElement;
     localStorage.setItem("theme", theme);
@@ -39,6 +42,8 @@ export default function ThemeProvider({
 
       root.classList.remove("light", "dark");
       root.classList.add(systemTheme);
+
+      setThemeSystem(systemTheme);
     } else {
       root.classList.remove("light", "dark");
       root.classList.add(theme);
@@ -47,7 +52,9 @@ export default function ThemeProvider({
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
+      <Theme appearance={theme === "system" ? themeSystem : theme}>
+        {children}
+      </Theme>
     </ThemeContext.Provider>
   );
 }
