@@ -1,12 +1,14 @@
 import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
-import type { WalletState } from "nimbus-sui-kit";
+import type { WalletState } from "nimbus-sui-wallet";
 import { useContext, useState } from "react";
 import { Link } from "@tanstack/react-router";
+
 import {
   WalletProvider,
   defineStashedWallet,
   AllDefaultWallets,
 } from "@suiet/wallet-kit";
+
 import { Auth } from "./Auth";
 import HamburgerMenu from "./HamburgerMenu";
 

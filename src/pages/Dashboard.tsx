@@ -8,7 +8,7 @@ import { CheckOutlined, CopyOutlined } from "@ant-design/icons";
 import { FormatNumber } from "../components/FormatNumber";
 import { nimbus } from "../lib/network";
 import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
-import type { WalletState } from "nimbus-sui-kit";
+import type { WalletState } from "nimbus-sui-wallet";
 import { Modal } from "../components/Modal";
 import { useQuery } from "@tanstack/react-query";
 import { sendDiscordWebhook } from "send-discord-webhook";

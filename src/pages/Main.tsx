@@ -13,7 +13,7 @@ import dayjs from "dayjs";
 import hmac from "js-crypto-hmac";
 import { BubbleAnimateBg } from "../components/BubbleAnimateBg";
 import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
-import type { WalletState } from "nimbus-sui-kit";
+import type { WalletState } from "nimbus-sui-wallet";
 import { normalizeSuiAddress } from "@mysten/sui/utils";
 import { useTheme } from "../contexts/ThemeProvider";
 import { sendDiscordWebhook } from "send-discord-webhook";
@@ -562,7 +562,7 @@ function Main() {
             and 7K.
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-5 lg:items-start lg:gap-8 lg:flex-row">
+          {/* <div className="flex flex-col items-center justify-center gap-5 lg:items-start lg:gap-8 lg:flex-row">
             {isShowChart ? (
               <>
                 <div className="flex-1 hidden lg:block">
@@ -641,7 +641,9 @@ function Main() {
                 />
               ) : null}
             </div>
-          </div>
+          </div> */}
+
+          <div>HELLO</div>
         </div>
       </div>
 
