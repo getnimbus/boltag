@@ -1071,10 +1071,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.7.0.tgz#c1888470bd9dcf2927aa9744b6371e10b26a7808"
-  integrity sha512-4puz4OaWt0VC0iuqn+6b5UlNoNFqSg0wVMe6uaJVyOEyp4GmyjBCiMPRAgUTlW9m0zEwzihPrAlhCqYHdDB/Pg==
+"@cetusprotocol/aggregator-sdk@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.8.0.tgz#8591702b3792381c87051da388bdbbc1a73b1e38"
+  integrity sha512-BWEy6b4BFKk54dk2T7pyruQsss0xB0/6vueHiEhg17HA+uPTGT990WR/GA5cDBqKx06Z4mGoUc+Y+TBLXg9+7A==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -3597,10 +3597,10 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.28.0":
-  version "1.28.0"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.28.0.tgz#32322ade494a64284e1bf09a995b46de72a93935"
-  integrity sha512-ABcKc+QBpazBl5/ByLChxHOiPjqxISSdXnBuU1rLm1frp5tjMSCChiL7Reth2zcxWO2qYFK70ewEkYVtJvJQvw==
+"@mysten/sui@^1.28.2":
+  version "1.28.2"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.28.2.tgz#ded2ae122c53ac3bb6f05d731b5847e447512eb2"
+  integrity sha512-d+lSp3rAtuOX0taIiIv0KNILDsbmAB9koNGHBinfREraGnE9tUFW315UByuyvuZ9K53ji4i2risdtwxCQ1a8Zw==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.0"
@@ -4451,10 +4451,10 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.23.0.tgz#35390d0e7779626c026b11376da6789eb8389242"
   integrity sha512-O3rHJzAQKamUz1fvE0Qaw0xSFqsA/yafi2iqeE0pvdFtCO1viYx8QL6f3Ln/aCCTLxs68SLf0KPM9eSeM8yBnA==
 
-"@rnw-community/shared@^0.74.0":
-  version "0.74.0"
-  resolved "https://registry.yarnpkg.com/@rnw-community/shared/-/shared-0.74.0.tgz#57ec5c93935e7547f0ef8132e9ba7c51a0bd1539"
-  integrity sha512-PxEuyL6jKrNF8bDxGYRG+NEqEKtkanMahr6YSGLwmWDd57XenpwETz6LUvSoVTJGGwndwu5pwWJhsz4jqa1bDQ==
+"@rnw-community/shared@^0.83.0":
+  version "0.83.0"
+  resolved "https://registry.yarnpkg.com/@rnw-community/shared/-/shared-0.83.0.tgz#255dc48bb6505cb778531de77321819d2fadaf82"
+  integrity sha512-KJiwh13wTQW8PuUe91kSQvFMRGoe6cKV14XCZlYeK87sHLLxFz4LdDzoZ7M0Mm4IjTIJudYVVcK5jfEDAcJ/EA==
 
 "@rollup/plugin-inject@^5.0.5":
   version "5.0.5"
@@ -8065,6 +8065,15 @@ axios@^1.1.3, axios@^1.4.0, axios@^1.5.1, axios@^1.6.7, axios@^1.7.2, axios@^1.7
   version "1.8.4"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.8.4.tgz#78990bb4bc63d2cae072952d374835950a82f447"
   integrity sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==
+  dependencies:
+    follow-redirects "^1.15.6"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
+axios@^1.8.4:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.9.0.tgz#25534e3b72b54540077d33046f77e3b8d7081901"
+  integrity sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -13044,13 +13053,13 @@ nimbus-sui-kit@^0.0.10:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.2:
-  version "5.31.2"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.2.tgz#f5feb31b2d02b137dbd98918eaf60ffc9bcd5032"
-  integrity sha512-Ydx8CaIC/7Po6IywiiQuAbioWktKxzJougwFXU5N5C/00Kf+ublwdb+GQv140eBB4r29geVYwASSlw35ltSy3w==
+nimbus-universal-swap@5.31.7:
+  version "5.31.7"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.7.tgz#deed328cb7209144b30790d98a1517d252720b07"
+  integrity sha512-skiD5GMmBzRanvmEOaJQzDKKHUPGRD/7domPHyUpGu7VHsqtXno2DQ+JlqdP3GuQRk/UkX9huZJvRj6KkVaVgQ==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.4.1"
-    "@cetusprotocol/aggregator-sdk" "^0.7.0"
+    "@cetusprotocol/aggregator-sdk" "^0.8.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
@@ -13064,7 +13073,7 @@ nimbus-universal-swap@5.31.2:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.28.0"
+    "@mysten/sui" "^1.28.2"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
@@ -13086,7 +13095,7 @@ nimbus-universal-swap@5.31.2:
     mitt "^3.0.1"
     navi-sdk "^1.6.3"
     nimbus-wallet-management "^4.0.0"
-    rainbow-swap-sdk "^1.5.9"
+    rainbow-swap-sdk "^1.5.10"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-i18next "^15.0.2"
@@ -14303,13 +14312,13 @@ radix3@^1.1.2:
   resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.1.2.tgz#fd27d2af3896c6bf4bcdfab6427c69c2afc69ec0"
   integrity sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==
 
-rainbow-swap-sdk@^1.5.9:
-  version "1.5.9"
-  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.9.tgz#264639a666af2d19c37ca85200630fe3330373d1"
-  integrity sha512-bCZhvRytiu1S1sbtr79obdsxUmBz1txMXguCQgm8cX38war7bKR7o3obC7BGGKrwxdiEOP75pSIqqavId+A1Gw==
+rainbow-swap-sdk@^1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.10.tgz#6b70176a53b047ef52773fc6d788556f6c1a7ed0"
+  integrity sha512-N7WYt1BE/zJl3ArP4T4uJEF2cTPxoKFE0RNczFXN0bJTQvUZqY0BuBgA3p4YCpILLauhGF1BG8naQuwtPpnVew==
   dependencies:
-    "@rnw-community/shared" "^0.74.0"
-    axios "^1.7.9"
+    "@rnw-community/shared" "^0.83.0"
+    axios "^1.8.4"
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
