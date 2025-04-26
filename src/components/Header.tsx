@@ -7,11 +7,17 @@ import {
   PhantomWallet,
   SlushWallet,
   SuietWallet,
+  defineSlushWallet,
 } from "@suiet/wallet-kit";
 import { Auth } from "./Auth";
 import HamburgerMenu from "./HamburgerMenu";
 
 import Bolt from "../assets/bolt.png";
+
+const slushWallet = defineSlushWallet({
+  appName: "Nimbus",
+  network: "mainnet",
+});
 
 const chains = [
   {
@@ -34,7 +40,7 @@ export const Header = () => {
     <WalletProvider
       autoConnect={true}
       chains={chains}
-      defaultWallets={[SlushWallet, SuietWallet, PhantomWallet]}
+      defaultWallets={[SlushWallet, slushWallet, SuietWallet, PhantomWallet]}
     >
       <div
         className={`fixed top-0 left-0 z-30 md:shadow-none shadow-sm w-full ${navigationOpen ? "bg-white dark:bg-black" : "backdrop-blur-sm bg-white/30 dark:bg-black/30"}`}

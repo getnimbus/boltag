@@ -13056,10 +13056,26 @@ nimbus-sui-kit@0.0.16:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.8:
-  version "5.31.8"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.8.tgz#dd896c2e8e17cf5234ef483d9d7aebd9f4043fb5"
-  integrity sha512-Nsj4M384dA094RmE/FhHyTfo6ARRhiq3LnwiiPHiepnudGoXQqSk32/YKZ5TT3Kgb8FxALXZuWAsEpnv5zrSTw==
+nimbus-sui-kit@^0.0.17:
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-0.0.17.tgz#974a1813078846081fd12436706c83627b22a88c"
+  integrity sha512-Ed/a54BdM8RjYrRO7XPccSq3r6gHu9uvyGG4IDUeN9fcydd+sTDbiinPW4Kj6GT9bioRMNgEPvDkdQsGX77PuQ==
+  dependencies:
+    "@mysten/sui.js" "^0.54.1"
+    "@suiet/wallet-kit" "^0.3.5"
+    "@types/react" "^18.2.58"
+    "@types/react-dom" "^18.2.19"
+    axios "^1.6.7"
+    react "18.3.1"
+    react-dom "18.3.1"
+    react-i18next "^14.0.1"
+    react-intersection-observer "^9.6.0"
+    react-router-dom "^6.22.0"
+
+nimbus-universal-swap@5.31.9:
+  version "5.31.9"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.9.tgz#68b6fb9cae894fc8426f5c7a0f64f5a89e702a04"
+  integrity sha512-oqGfcpnl7CAXBPPj+6/g8x1LEZ8bLrqmT1cotJ1i+5IlPvNy8nuDOkCxuYw9SiKHRsR6js86bmFIdSVZuF/tlA==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.4.1"
     "@cetusprotocol/aggregator-sdk" "^0.8.0"
@@ -13097,6 +13113,7 @@ nimbus-universal-swap@5.31.8:
     microdiff "^1.4.0"
     mitt "^3.0.1"
     navi-sdk "^1.6.3"
+    nimbus-sui-kit "^0.0.17"
     nimbus-wallet-management "^4.0.0"
     rainbow-swap-sdk "^1.5.10"
     react "^18.3.1"
