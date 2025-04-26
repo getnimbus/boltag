@@ -4,8 +4,9 @@ import { useContext, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import {
   WalletProvider,
-  defineStashedWallet,
-  AllDefaultWallets,
+  PhantomWallet,
+  SlushWallet,
+  SuietWallet,
 } from "@suiet/wallet-kit";
 import { Auth } from "./Auth";
 import HamburgerMenu from "./HamburgerMenu";
@@ -21,10 +22,6 @@ const chains = [
   },
 ];
 
-const stashedWalletConfig = defineStashedWallet({
-  appName: "Nimbus",
-});
-
 export const Header = () => {
   const { suiWalletInstance } = useContext(SuiInstanceStateContext);
   const [navigationOpen, setNavigationOpen] = useState<boolean>(false);
@@ -37,7 +34,7 @@ export const Header = () => {
     <WalletProvider
       autoConnect={true}
       chains={chains}
-      defaultWallets={[stashedWalletConfig, ...AllDefaultWallets]}
+      defaultWallets={[SlushWallet, SuietWallet, PhantomWallet]}
     >
       <div
         className={`fixed top-0 left-0 z-30 md:shadow-none shadow-sm w-full ${navigationOpen ? "bg-white dark:bg-black" : "backdrop-blur-sm bg-white/30 dark:bg-black/30"}`}
