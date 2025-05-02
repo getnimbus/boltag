@@ -453,6 +453,28 @@ function Main() {
 
       const sig = Buffer.from(computed.buffer).toString("base64");
 
+      if (Number(payload.trade_vol) === 0) {
+        sendDiscordWebhook({
+          url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
+          title: "Swap vol = $0",
+          description: "Swap vol = $0",
+          fields: [
+            {
+              name: "tx hash",
+              value: `https://suivision.xyz/txblock/${txHash}`,
+            },
+            {
+              name: "vol",
+              value: `$${payload.trade_vol}`,
+            },
+          ],
+        })
+          .then(() => console.log("Alert successful"))
+          .catch((e) => {
+            console.error(e);
+          });
+      }
+
       if (Number(payload.trade_vol) >= 5000) {
         sendDiscordWebhook({
           url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,

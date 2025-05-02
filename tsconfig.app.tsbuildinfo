@@ -25,5 +25,5 @@
     "./src/routes/index.tsx",
     "./src/utils/index.ts"
   ],
-  "version": "5.8.2"
+  "version": "5.8.3"
 }
