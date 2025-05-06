@@ -7,7 +7,7 @@ import {
   WidgetEvent,
   widgetEvents,
 } from "nimbus-universal-swap";
-import { wait } from "../utils";
+import { wait, sendDiscordWebhook } from "../utils";
 import { motion } from "framer-motion";
 import dayjs from "dayjs";
 import hmac from "js-crypto-hmac";
@@ -16,7 +16,6 @@ import { SuiInstanceStateContext } from "../contexts/SuiInstanceProvider";
 import type { WalletState } from "nimbus-sui-kit";
 import { normalizeSuiAddress } from "@mysten/sui/utils";
 import { useTheme } from "../contexts/ThemeProvider";
-import { sendDiscordWebhook } from "send-discord-webhook";
 
 enum ChainType {
   EVM = "EVM",
@@ -375,7 +374,6 @@ function Main() {
       }
 
       sendDiscordWebhook({
-        url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
         title: "🚨 Swap fail",
         description: `Swap fail address ${data?.address}`,
         fields: [
@@ -455,7 +453,6 @@ function Main() {
 
       if (Number(payload.trade_vol) === 0) {
         sendDiscordWebhook({
-          url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
           title: "Swap vol = $0",
           description: "Swap vol = $0",
           fields: [
@@ -477,7 +474,6 @@ function Main() {
 
       if (Number(payload.trade_vol) >= 5000) {
         sendDiscordWebhook({
-          url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
           title: "Swap vol > $5k",
           description: "Swap vol > $5k",
           fields: [
@@ -509,7 +505,6 @@ function Main() {
     } catch (error: any) {
       console.error("Error submitting trade log:", error);
       sendDiscordWebhook({
-        url: import.meta.env.VITE_DISCORD_WEBHOOK_URL,
         title: "🚨 Error when tracking log swap",
         description: error.message,
         fields: [

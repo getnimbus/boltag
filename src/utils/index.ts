@@ -1,4 +1,5 @@
 import numeral from "numeral";
+import { nimbus } from "../lib/network";
 
 export const wait = (time: number) => {
   return new Promise((resolve) => {
@@ -169,5 +170,20 @@ export const formatBigBalance = (input: number) => {
         number_size: "",
       };
     }
+  }
+};
+
+export const sendDiscordWebhook = async (data: {
+  title: string;
+  description: string;
+  fields: {
+    name: string;
+    value: string;
+  }[];
+}) => {
+  try {
+    await nimbus.post("/v3/swap/webhook", data);
+  } catch (error) {
+    console.error("Error when send discord webhook:", error);
   }
 };
