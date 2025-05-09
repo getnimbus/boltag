@@ -5902,17 +5902,17 @@
   resolved "https://registry.yarnpkg.com/@suchipi/femver/-/femver-1.0.0.tgz#4909dcc069695e07bd23a64c4bfe411d11d9692f"
   integrity sha512-bprE8+K5V+DPX7q2e2K57ImqNBdfGHDIWaGI5xHxZoxbKOuQZn4wzPiUxOAHnsUr3w3xHrWXwN7gnG/iIuEMIg==
 
-"@suiet/wallet-kit@0.3.8", "@suiet/wallet-kit@^0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@suiet/wallet-kit/-/wallet-kit-0.3.8.tgz#005cf20b6c2af1dea46289d4b54a46fa7f212425"
-  integrity sha512-pfGFoAZSwtlv24VgipgjzlhqZYc9TTFZ8b8ZgAkIjtmhvhLPiIqdLz6EznYpfLattFWVMAh8J8hiBoL0y+mdRg==
+"@suiet/wallet-kit@0.4.1", "@suiet/wallet-kit@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@suiet/wallet-kit/-/wallet-kit-0.4.1.tgz#f0bc3f4cb9c8551e69e623b879cee311a3497729"
+  integrity sha512-WXObzp8VfmgN6EK7Syg7lS6TgI7OZqmT+8C2ti2zF2Dno1rO+cbXv2wr0Q4C5s+dDMrYW4idZ7ptvR37WCrR8w==
   dependencies:
     "@mysten/slush-wallet" "0.1.0"
     "@mysten/sui" "1.28.2"
     "@mysten/wallet-standard" "0.14.7"
     "@mysten/zksend" "0.11.0"
     "@radix-ui/react-dialog" "1.0.2"
-    "@suiet/wallet-sdk" "0.3.7"
+    "@suiet/wallet-sdk" "0.4.1"
     "@svgr/rollup" "6.5.1"
     "@wallet-standard/core" "1.0.3"
     buffer "6.0.3"
@@ -5921,10 +5921,10 @@
     mitt "3.0.0"
     react-query "3.39.2"
 
-"@suiet/wallet-sdk@0.3.7":
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/@suiet/wallet-sdk/-/wallet-sdk-0.3.7.tgz#d01ae1995bf23fd4052d6d588b4038c7111c2e88"
-  integrity sha512-le+ezOBVzp4d09aLwUrEDfQAKwE8aCjLlF/gTG7+EQclteDOausyHt6DctBHDQsVUMNQP7Pj9mNG5k6H9YRaFg==
+"@suiet/wallet-sdk@0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@suiet/wallet-sdk/-/wallet-sdk-0.4.1.tgz#52ecbbacfcfa47813aa9fd17dc13f4b1e4c5735d"
+  integrity sha512-5vREHstuNcj/Ua3PfGmOujcWYcwLucHCvNj7lpkDQ7c20L4kNCHTwpz/5EmJpZbHOVFN1vMm1WI3fCcJwh013w==
   dependencies:
     "@mysten/slush-wallet" "0.1.0"
     "@mysten/sui" "1.28.2"
@@ -12880,10 +12880,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.6.3:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.4.tgz#35aee71341578568b682bc47faa806876da9c50e"
-  integrity sha512-gQWqXD2DwU7yf8wrG3o/r2I8bOG8qWzAdIrkDiLu2z1JdXGOhB2zm5PiH0jfJ2DTDZhQdCJcytWDIN+rVjCCpw==
+navi-sdk@^1.6.5:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.5.tgz#0468e504f6e2be181c9033b38d45c795b8d92192"
+  integrity sha512-+3zHeOrWF9lxx6wtqzv9ndB1dHc+P3D0FEW3cNy6OmHsiDWOJwzRxZTIKXEiMETDBzbPycit7PdU0i3dCWxuWA==
   dependencies:
     "@mayanfinance/swap-sdk" "10.3.0"
     "@mysten/sui" "^1.16.0"
@@ -12923,13 +12923,13 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.4.tgz#777948e2452651c570b712dd01c23e262713fff7"
   integrity sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==
 
-nimbus-sui-kit@0.0.20:
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-0.0.20.tgz#c67c32a5b2e4b8c4a5afcf462d875b9b2a3d79d4"
-  integrity sha512-RYvBffggoXfvAsRITkRfdXrRiv6h+Q01uNuEd9EpXdKCndH3mKXoudOtpzA1hFKEWdhrDTGTGi0NSQkiyE9wrw==
+nimbus-sui-kit@0.0.21:
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-0.0.21.tgz#d8e65cc71254f10bf846ac223c8f45e8e4fe5e2a"
+  integrity sha512-TxHr+tz9Hc+5+I4kXzc+h14Ex63ZH/Ab8cPjeTBe02SeARrxmDnhPw579FNf7yhNvnqO2T3u7ZMy5BqpVl4qEw==
   dependencies:
     "@mysten/sui.js" "^0.54.1"
-    "@suiet/wallet-kit" "^0.3.8"
+    "@suiet/wallet-kit" "^0.4.1"
     "@types/react" "^18.2.58"
     "@types/react-dom" "^18.2.19"
     axios "^1.6.7"
@@ -12939,10 +12939,10 @@ nimbus-sui-kit@0.0.20:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.12:
-  version "5.31.12"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.12.tgz#68b10b590fc895c89cb803a92f43e7a04b18dabe"
-  integrity sha512-uns6rpLlFAPtdujmRubO7+U1pOjPALj2W/4TLIX1fOO21C8uq4V1GSlltDpyNsRlcQIYUPNWry+fi+AQ2Evz/w==
+nimbus-universal-swap@5.31.13:
+  version "5.31.13"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.13.tgz#3c72111a5e4d3ae42d361dfcbc725a92c04cd41d"
+  integrity sha512-b6FKtosLCP5nG1uRZH6M7uB83oZyzWsGPxyUEh6bVm5O00WWfYcHZx0M+q0wAJ9soa79ztlbgv5Xml/rEAiKOA==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.4.1"
     "@cetusprotocol/aggregator-sdk" "^0.8.0"
@@ -12966,7 +12966,7 @@ nimbus-universal-swap@5.31.12:
     "@solana/wallet-adapter-react" "^0.15.35"
     "@solana/wallet-adapter-wallets" "^0.19.32"
     "@solana/web3.js" "^1.98.0"
-    "@suiet/wallet-kit" "^0.3.8"
+    "@suiet/wallet-kit" "^0.4.1"
     "@swap-coffee/sdk" "^1.5.3"
     "@tanstack/react-query" "^5.59.0"
     "@tanstack/react-virtual" "^3.10.8"
@@ -12979,9 +12979,9 @@ nimbus-universal-swap@5.31.12:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.6.3"
+    navi-sdk "^1.6.5"
     nimbus-wallet-management "^4.0.0"
-    rainbow-swap-sdk "^1.5.10"
+    rainbow-swap-sdk "^1.5.11"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-i18next "^15.0.2"
@@ -14163,10 +14163,10 @@ radix3@^1.1.2:
   resolved "https://registry.yarnpkg.com/radix3/-/radix3-1.1.2.tgz#fd27d2af3896c6bf4bcdfab6427c69c2afc69ec0"
   integrity sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA==
 
-rainbow-swap-sdk@^1.5.10:
-  version "1.5.10"
-  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.10.tgz#6b70176a53b047ef52773fc6d788556f6c1a7ed0"
-  integrity sha512-N7WYt1BE/zJl3ArP4T4uJEF2cTPxoKFE0RNczFXN0bJTQvUZqY0BuBgA3p4YCpILLauhGF1BG8naQuwtPpnVew==
+rainbow-swap-sdk@^1.5.11:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/rainbow-swap-sdk/-/rainbow-swap-sdk-1.5.11.tgz#e6385209caebd949c03688a7d74264410d75a2a4"
+  integrity sha512-bbKE3gL5sXadWbfMVbG9Wa8qZf5eL7l795rNV0ymBqrQxyg6TVSImpAILJhwpYZtPxkVXApL76pavRZyJYAoPw==
   dependencies:
     "@rnw-community/shared" "^0.83.0"
     axios "^1.8.4"
