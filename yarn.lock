@@ -1068,10 +1068,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.8.0.tgz#8591702b3792381c87051da388bdbbc1a73b1e38"
-  integrity sha512-BWEy6b4BFKk54dk2T7pyruQsss0xB0/6vueHiEhg17HA+uPTGT990WR/GA5cDBqKx06Z4mGoUc+Y+TBLXg9+7A==
+"@cetusprotocol/aggregator-sdk@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.9.0.tgz#8e7f88e89459f1928481e9c56f8b598b273199f4"
+  integrity sha512-2VY9rry66IcQVxOI5b7//LzGCrywFBka/03Y6ZMjPDaDFtmxpm0BJ7t4ry350+0kjjU9+okU4W3iC9FZcBZJsA==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -2232,10 +2232,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@invariant-labs/sdk-eclipse@^0.0.119":
-  version "0.0.119"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.119.tgz#91c7b40434c783a14ed1fbc10cde91cc9cb4cff5"
-  integrity sha512-XZ0uQVD8zGBgxnDVCwY9TlAnuYb2uUPQmTU6snWDnK4pV1kVGxeIy2ejZue/cQCi3Fq+DAuud5HX3Ra6yQKAfw==
+"@invariant-labs/sdk-eclipse@0.0.119-sim-fix":
+  version "0.0.119-sim-fix"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.119-sim-fix.tgz#9f893048236ee5175abe0126e8c78418527cd19d"
+  integrity sha512-Wg0ZKy+zicIewjbWVf2le9+KDN8V+vw9j2+Z6tLW9gRIlgdUBIOS6R55L3ZLSxHeNW17q5AptqK9OY0H7+MgZg==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -12880,10 +12880,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.6.5:
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.5.tgz#0468e504f6e2be181c9033b38d45c795b8d92192"
-  integrity sha512-+3zHeOrWF9lxx6wtqzv9ndB1dHc+P3D0FEW3cNy6OmHsiDWOJwzRxZTIKXEiMETDBzbPycit7PdU0i3dCWxuWA==
+navi-sdk@^1.6.7:
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.7.tgz#4b126bd8a48bb04671c9a108bd81f373f90df3a1"
+  integrity sha512-yCQN1jIdc+Tdur1YoIz9uRikiwRr2ZUuY5ElIvoZZTcBagm2ls1yaPAifSwL3h4QwcUR5wXuLGIgJI3cinWIPg==
   dependencies:
     "@mayanfinance/swap-sdk" "10.3.0"
     "@mysten/sui" "^1.16.0"
@@ -12939,19 +12939,19 @@ nimbus-sui-kit@0.0.21:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.13:
-  version "5.31.13"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.13.tgz#3c72111a5e4d3ae42d361dfcbc725a92c04cd41d"
-  integrity sha512-b6FKtosLCP5nG1uRZH6M7uB83oZyzWsGPxyUEh6bVm5O00WWfYcHZx0M+q0wAJ9soa79ztlbgv5Xml/rEAiKOA==
+nimbus-universal-swap@5.31.14:
+  version "5.31.14"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.14.tgz#f2bf56baf5fd5c6619e756fffe66e7cb98a5474b"
+  integrity sha512-yxE65j8xGYMld5UUZ99SCwHAlCoaksf8+vo+lV6oISJgfxgyuRxbuW9xsIILL7oQzt3qJjFogDQZJdN7TlqMPQ==
   dependencies:
     "@7kprotocol/sdk-ts" "^2.4.1"
-    "@cetusprotocol/aggregator-sdk" "^0.8.0"
+    "@cetusprotocol/aggregator-sdk" "^0.9.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.10.16"
     "@hop.ag/sdk" "^4.0.9"
-    "@invariant-labs/sdk-eclipse" "^0.0.119"
+    "@invariant-labs/sdk-eclipse" "0.0.119-sim-fix"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.7"
@@ -12979,7 +12979,7 @@ nimbus-universal-swap@5.31.13:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.6.5"
+    navi-sdk "^1.6.7"
     nimbus-wallet-management "^4.0.0"
     rainbow-swap-sdk "^1.5.11"
     react "^18.3.1"
