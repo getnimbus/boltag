@@ -12923,10 +12923,10 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.4.tgz#777948e2452651c570b712dd01c23e262713fff7"
   integrity sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==
 
-nimbus-sui-kit@0.0.21:
-  version "0.0.21"
-  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-0.0.21.tgz#d8e65cc71254f10bf846ac223c8f45e8e4fe5e2a"
-  integrity sha512-TxHr+tz9Hc+5+I4kXzc+h14Ex63ZH/Ab8cPjeTBe02SeARrxmDnhPw579FNf7yhNvnqO2T3u7ZMy5BqpVl4qEw==
+nimbus-sui-kit@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-1.0.3.tgz#b081dc656827f2ccac67cfc60d6c0f070ffdf3d5"
+  integrity sha512-feZfsNLc3uZ6cCVq1dwiVSI1nBMbYz+NjL7rQdJnWGwUu2oQUjAbGwYxZT6KopQZUiWMTiF1sIeswvoX05A0xg==
   dependencies:
     "@mysten/sui.js" "^0.54.1"
     "@suiet/wallet-kit" "^0.4.1"
