@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^2.4.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-2.4.1.tgz#ecf0458bb836890089084bcda756ceb703ca141a"
-  integrity sha512-BseY6JG9Nc4W9PEnO7tVr0+ewMob78ky3YJOPKrnm6WEEj6w+fdzQ7vgWDZx7/i258dSJaA16e5lGVniqocvlQ==
+"@7kprotocol/sdk-ts@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.0.0.tgz#5f788a0268e2be8a6cf1eccd928108d0ab954b03"
+  integrity sha512-NCeZAl8/Davh0fnuvDzXP13qqLmHKnCx6lrJk9zY/1hVGKI5A9UndGEv2QgmBIxG5FC5/6jv2bjd6FRyAG3uwQ==
 
 "@adraffy/ens-normalize@1.10.1":
   version "1.10.1"
@@ -1068,10 +1068,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.9.1.tgz#e089b582c1524c8f8dbe62dcc5c116ff831275e6"
-  integrity sha512-pprMz1RqMY+Bif9hBnhRjQL/TvMVoCbBMyEM5jR6FU1YyTj2HUoHELbqLUADAGm8OrmtON9GI5LsFMLUInUAnQ==
+"@cetusprotocol/aggregator-sdk@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.10.0.tgz#731f82edb59c8d9b397e479056854d6ce56f54a1"
+  integrity sha512-SmLv1rJt9V+nC4aQuKElwupi62zRLzeqM0tnJeQ29abwBb02LDcWVU/VNoVYmaLwcQ9wdnDi0sD0qk3jIhyAgQ==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -2232,10 +2232,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@invariant-labs/sdk-eclipse@0.0.119-sim-fix":
-  version "0.0.119-sim-fix"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.119-sim-fix.tgz#9f893048236ee5175abe0126e8c78418527cd19d"
-  integrity sha512-Wg0ZKy+zicIewjbWVf2le9+KDN8V+vw9j2+Z6tLW9gRIlgdUBIOS6R55L3ZLSxHeNW17q5AptqK9OY0H7+MgZg==
+"@invariant-labs/sdk-eclipse@^0.0.121":
+  version "0.0.121"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.121.tgz#f543ca0d673a4bfaab9ec62511568d7a51790379"
+  integrity sha512-vrY2t9GKbg28MOSlpDXdm0wJdvDbgWhJVRjbDftC+eS4SdltlNjhSV5W24QOWCi2ETCN697dsmoffKEdj5MLPw==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -12939,19 +12939,19 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.15:
-  version "5.31.15"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.15.tgz#de3458ef44fdb6202bb5670c09b7737b7b67a048"
-  integrity sha512-z4EMevojbLV59uNLQYa6Sn8ug5hUUcQOM73JLDweqTZ76RMDouA6D7i9YS4Nz3Cp5Xbnfr8KN/k982/Anvfxag==
+nimbus-universal-swap@5.31.17:
+  version "5.31.17"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.17.tgz#447f774e8d99f2eaf89ce28761e6198321dad9de"
+  integrity sha512-lFzoNdJSMsR3/JrtEiUUdGuJ0QBQMmYjI/2W1FH6NH8PKJwOrXMIxKd4bkKILO+o3/hHXlP1rtC6RgXYgEvxcg==
   dependencies:
-    "@7kprotocol/sdk-ts" "^2.4.1"
-    "@cetusprotocol/aggregator-sdk" "^0.9.1"
+    "@7kprotocol/sdk-ts" "^3.0.0"
+    "@cetusprotocol/aggregator-sdk" "^0.10.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.10.16"
     "@hop.ag/sdk" "^4.0.9"
-    "@invariant-labs/sdk-eclipse" "0.0.119-sim-fix"
+    "@invariant-labs/sdk-eclipse" "^0.0.121"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.7"
