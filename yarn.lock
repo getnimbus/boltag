@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.0.0.tgz#5f788a0268e2be8a6cf1eccd928108d0ab954b03"
-  integrity sha512-NCeZAl8/Davh0fnuvDzXP13qqLmHKnCx6lrJk9zY/1hVGKI5A9UndGEv2QgmBIxG5FC5/6jv2bjd6FRyAG3uwQ==
+"@7kprotocol/sdk-ts@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.0.1.tgz#da42c3d599d091e7b6f1c74df31ade02ef6c20de"
+  integrity sha512-AeMPePT8sKJ78sOs+fLau3xcnIh5cXQ3fPr5PGXBshv4lcUawAI6Ucx7RbCG71IGqgcA0ecId2zS1MFw31dScg==
 
 "@adraffy/ens-normalize@1.10.1":
   version "1.10.1"
@@ -12898,10 +12898,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.6.9:
-  version "1.6.9"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.9.tgz#2a073ec1c6e7c27bb8e9d682e43ee9ee5869ee51"
-  integrity sha512-Anl17qr4IKEZ9tAq54z8dlJLybLffNI0Q9RQ9zLrfmI49Hqm3mWadQznll7SxB6YYvHzPWDlhdz0eobpDjexTA==
+navi-sdk@^1.6.10:
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.10.tgz#1d184ebf59b3735f0b9565d59305a56f3e07ed8f"
+  integrity sha512-HiQn4/84yrnbfPrUO5DNghh1NSVtFWniSMmeEZFFGSu7QNvjhHRi2wfIUYQP6v3NU+bgO2Qa7QyXUdvUE+1rNw==
   dependencies:
     "@mayanfinance/swap-sdk" "10.3.0"
     "@mysten/sui" "^1.16.0"
@@ -12957,12 +12957,12 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.21:
-  version "5.31.21"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.21.tgz#13fad3de4258c0254c79f02e9bbfec084b90f9d7"
-  integrity sha512-/IQTD6bU4MzuMDs55yD1xg80U/cd73ACbUMw9Wdf0N8HYJgBzdXNDjycFDyuV8CXWwORyA8rfAsKA052R9e7Iw==
+nimbus-universal-swap@5.31.22:
+  version "5.31.22"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.22.tgz#80c55cd3cd8ef5b8e111451c1cf141747bd90305"
+  integrity sha512-IdFGoaORqijHlDW+nJaVF3Y1/jdUBWnEM2QbGceSALSPiKsYsvdkmdkR2QiOCQb4cZjvQrx6seOJKChKMcOynA==
   dependencies:
-    "@7kprotocol/sdk-ts" "^3.0.0"
+    "@7kprotocol/sdk-ts" "^3.0.1"
     "@cetusprotocol/aggregator-sdk" "^0.11.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
@@ -12997,7 +12997,7 @@ nimbus-universal-swap@5.31.21:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.6.9"
+    navi-sdk "^1.6.10"
     nimbus-wallet-management "^4.0.0"
     rainbow-swap-sdk "^1.5.11"
     react "^18.3.1"
