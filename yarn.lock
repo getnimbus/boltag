@@ -2135,10 +2135,10 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.9.tgz#50dea3616bc8191fb8e112283b49eaff03e78429"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
-"@flowx-finance/sdk@^1.10.22":
-  version "1.10.22"
-  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.22.tgz#aaa06d190fdb5f4442c3c50d0348d103c0a2912e"
-  integrity sha512-lKJd9C4WDkWA4s2TmajEndDd9sYxLPaUlARyRBFTwyphJtc6V1NwPCkHZP2aiJGFs9XmmCIR7qr0exfvdOtQQg==
+"@flowx-finance/sdk@^1.10.24":
+  version "1.10.24"
+  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.10.24.tgz#7d14a8b9459960589d657cf92cb2ee841448039a"
+  integrity sha512-jofYAEpG0T9GStOTXxK+ruFclujZCVighRdu0sdOo0Tq+4RsG9q9stAcKJSLyuMaSScqU+LTGgl6iCxyMo6S/Q==
   dependencies:
     "@mysten/sui" "^1.14.2"
     "@mysten/sui.js" "^0.54.1"
@@ -3433,10 +3433,10 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@1.30.4", "@mysten/sui@^1.30.4":
-  version "1.30.4"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.30.4.tgz#e8b920143441210323db6189fcd311740b166990"
-  integrity sha512-jdLV4qSfhN6oVbspoUTcj6amaAyj7Idd0JSuol5FHuzrK2KhLr/R9U3c6Lv9nWxW/JR5A3+teaCDZwuwwM5yFA==
+"@mysten/sui@1.30.5", "@mysten/sui@^1.30.5":
+  version "1.30.5"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.30.5.tgz#0c485532d4e9d7e3b9c2781eb1b622de2822809f"
+  integrity sha512-+b7WW0UV3nfnQnbM46mLpKgaXQiigh1LdH+Lys7kNQHbJmF3U1SMHddCs46Hhsansk9JMEMl2Qs15ibUW+CpTw==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.2"
@@ -12925,10 +12925,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.6.10:
-  version "1.6.10"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.10.tgz#1d184ebf59b3735f0b9565d59305a56f3e07ed8f"
-  integrity sha512-HiQn4/84yrnbfPrUO5DNghh1NSVtFWniSMmeEZFFGSu7QNvjhHRi2wfIUYQP6v3NU+bgO2Qa7QyXUdvUE+1rNw==
+navi-sdk@^1.6.11:
+  version "1.6.11"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.11.tgz#a02e73666120fe6bef32499fe76a503f3d35345f"
+  integrity sha512-lg8YS8DIcK+j0l9eERJkKWqJ/CbSxlrgxs5d6iiMv5p/52d4UtuGftaVG1iuwl6NlNW03MIHPEmf5b/MOdVogg==
   dependencies:
     "@mayanfinance/swap-sdk" "10.3.0"
     "@mysten/sui" "^1.16.0"
@@ -12984,17 +12984,17 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.24:
-  version "5.31.24"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.24.tgz#f127df95851e243f2c20fc48c9c628e6b04a1f3b"
-  integrity sha512-ISA50cRdDcDkdfZyMqa4x2hUCBrF2/UGS9+b6wEc2E9k1GbZ8fBJqhNkLTZONWBP+ges2saqPbAPtJGgMa3WLQ==
+nimbus-universal-swap@5.31.25:
+  version "5.31.25"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.25.tgz#06763de3b1e6ac43902bc00e072930193c17001d"
+  integrity sha512-W7hOJp2poT434N5KE3v1dumOYLG1xBjZjGQpjtNRLpZPJbfzmZCnwa2LRd/cg9vTIz7Lp6ncpeLSysfP9cS2NA==
   dependencies:
     "@7kprotocol/sdk-ts" "^3.0.2"
     "@cetusprotocol/aggregator-sdk" "^0.11.1"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
-    "@flowx-finance/sdk" "^1.10.22"
+    "@flowx-finance/sdk" "^1.10.24"
     "@hop.ag/sdk" "^4.0.9"
     "@invariant-labs/sdk-eclipse" "^0.0.122"
     "@lifi/sdk" "^3.2.3"
@@ -13004,7 +13004,7 @@ nimbus-universal-swap@5.31.24:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.30.4"
+    "@mysten/sui" "^1.30.5"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
@@ -13024,7 +13024,7 @@ nimbus-universal-swap@5.31.24:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.6.10"
+    navi-sdk "^1.6.11"
     nimbus-wallet-management "^4.0.0"
     rainbow-swap-sdk "^1.5.11"
     react "^18.3.1"
