@@ -1068,10 +1068,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.11.1":
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.11.1.tgz#e46a2fdad9eafee0626fb0c56eff7224fa20c3e5"
-  integrity sha512-uuqMKs1VIVwGvMJTfNZ4bADUSxXbfyA3w+NqlXkA3C+ZbjGlxjrnGriiRw1V930F2YuZ5jb7kWTvVpygxKgjzQ==
+"@cetusprotocol/aggregator-sdk@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.12.0.tgz#ca954f2f0e0acdea74420ba7bb57227cbe021a98"
+  integrity sha512-uhTCpm3M2M7bUsqeZCUohr9DTAob3UKISjwmhutVt2z5dkga1EUhlwgPLD9o1AcYIEBSQ8FIQBrx5/AEIQqs+Q==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -12984,13 +12984,13 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.25:
-  version "5.31.25"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.25.tgz#06763de3b1e6ac43902bc00e072930193c17001d"
-  integrity sha512-W7hOJp2poT434N5KE3v1dumOYLG1xBjZjGQpjtNRLpZPJbfzmZCnwa2LRd/cg9vTIz7Lp6ncpeLSysfP9cS2NA==
+nimbus-universal-swap@5.31.26:
+  version "5.31.26"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.26.tgz#3cd122fd8816a863c8cd5e3972f25f7f9b9a1834"
+  integrity sha512-Rkkam7DNCZZlRkQ2tUHAA3ZW6n+iJ/Nolmb9vqZzJtX96JDZckblwEVu4im9M/+zDEAX+XB3kVzblmdD+Rap/Q==
   dependencies:
     "@7kprotocol/sdk-ts" "^3.0.2"
-    "@cetusprotocol/aggregator-sdk" "^0.11.1"
+    "@cetusprotocol/aggregator-sdk" "^0.12.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
