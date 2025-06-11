@@ -2194,12 +2194,12 @@
   resolved "https://registry.yarnpkg.com/@graphql-typed-document-node/core/-/core-3.2.0.tgz#5f3d96ec6b2354ad6d8a28bf216a1d97b5426861"
   integrity sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==
 
-"@hop.ag/sdk@^4.0.9":
-  version "4.0.9"
-  resolved "https://registry.yarnpkg.com/@hop.ag/sdk/-/sdk-4.0.9.tgz#2cd6e43a6892a58a6699ca0a57a98623904c7722"
-  integrity sha512-MZCVsjUhNv9vWihxHE4fdRregM4IQmG/G7oco7FwsPLf0N8LD7xVtq0NuycC0PNT8PwJBEWkZWe0pWaq9jw7EA==
+"@hop.ag/sdk@^4.0.17":
+  version "4.0.17"
+  resolved "https://registry.yarnpkg.com/@hop.ag/sdk/-/sdk-4.0.17.tgz#8b07a2bb3d54e9535847bf44a4e2ebbe82cbecd9"
+  integrity sha512-dPmozNO9TN6jrB9pfhBzP/NbcblTSdbQtAaTVrOn6nfoWVn8rmxYdrYWPZd+hPv3GlNyuSBlUogsQlZ+IZcIhA==
   dependencies:
-    "@mysten/sui" "^1.2.0"
+    "@mysten/sui" "^1.28.2"
     cross-fetch "^4.0.0"
     tslib "^2.6.2"
     zod "^3.23.8"
@@ -3433,10 +3433,10 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@1.30.5", "@mysten/sui@^1.30.5":
-  version "1.30.5"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.30.5.tgz#0c485532d4e9d7e3b9c2781eb1b622de2822809f"
-  integrity sha512-+b7WW0UV3nfnQnbM46mLpKgaXQiigh1LdH+Lys7kNQHbJmF3U1SMHddCs46Hhsansk9JMEMl2Qs15ibUW+CpTw==
+"@mysten/sui@1.31.0", "@mysten/sui@^1.28.2", "@mysten/sui@^1.31.0":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.31.0.tgz#9daa7fa4d4cb66f7635711420089b39710f66e6b"
+  integrity sha512-SXxlVCXKA+ieJ2QAZEyonLBoLtjq5yAA6UxIh3dNAPVg96FhUBiFsQa7WjCz/PfCUyg+h71bShtyfrrkdmjq1A==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.2"
@@ -3469,7 +3469,7 @@
     tweetnacl "^1.0.3"
     valibot "^0.36.0"
 
-"@mysten/sui@^1.14.2", "@mysten/sui@^1.16.0", "@mysten/sui@^1.16.2", "@mysten/sui@^1.2.0", "@mysten/sui@^1.29.1", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
+"@mysten/sui@^1.14.2", "@mysten/sui@^1.16.0", "@mysten/sui@^1.16.2", "@mysten/sui@^1.29.1", "@mysten/sui@^1.3.0", "@mysten/sui@^1.6.0":
   version "1.29.1"
   resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.29.1.tgz#1b2af78ff2816b1b20ce2e1558a1d6d8149a24f4"
   integrity sha512-VkmaLIgXpuRMBFe47SC0swHemDx9qfhGQyxybFr2r3dTnh42gTFi0BlyW3aLr0Y2GxWbNlLphB5C3ELR7aqacw==
@@ -12925,10 +12925,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.6.11:
-  version "1.6.11"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.11.tgz#a02e73666120fe6bef32499fe76a503f3d35345f"
-  integrity sha512-lg8YS8DIcK+j0l9eERJkKWqJ/CbSxlrgxs5d6iiMv5p/52d4UtuGftaVG1iuwl6NlNW03MIHPEmf5b/MOdVogg==
+navi-sdk@^1.6.13:
+  version "1.6.13"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.13.tgz#196c1eb26a9974b23bb0ca90a164a50073fa4c2c"
+  integrity sha512-d4NwrHH1mpDTvgbCzVSVJ+Od2SiMOJS4wrKf3EkpavOlpYywjFIVPaAN9xSsCpFXOEnowx9vDIr3EN1fNyNG2A==
   dependencies:
     "@mayanfinance/swap-sdk" "10.3.0"
     "@mysten/sui" "^1.16.0"
@@ -12984,10 +12984,10 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.26:
-  version "5.31.26"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.26.tgz#3cd122fd8816a863c8cd5e3972f25f7f9b9a1834"
-  integrity sha512-Rkkam7DNCZZlRkQ2tUHAA3ZW6n+iJ/Nolmb9vqZzJtX96JDZckblwEVu4im9M/+zDEAX+XB3kVzblmdD+Rap/Q==
+nimbus-universal-swap@5.31.28:
+  version "5.31.28"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.28.tgz#497e5b5f0cfe061c69161c97f696cecefed06198"
+  integrity sha512-inp3q/0HoUOcCRP2kVuO/L69lb87SG3yfLHi8bqKWObThQexDKEWNtbgsZ0y6PaU6iZBrKekElfeHjj9ZLo3MQ==
   dependencies:
     "@7kprotocol/sdk-ts" "^3.0.2"
     "@cetusprotocol/aggregator-sdk" "^0.12.0"
@@ -12995,7 +12995,7 @@ nimbus-universal-swap@5.31.26:
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.10.24"
-    "@hop.ag/sdk" "^4.0.9"
+    "@hop.ag/sdk" "^4.0.17"
     "@invariant-labs/sdk-eclipse" "^0.0.122"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
@@ -13004,7 +13004,7 @@ nimbus-universal-swap@5.31.26:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.30.5"
+    "@mysten/sui" "^1.31.0"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
@@ -13024,7 +13024,7 @@ nimbus-universal-swap@5.31.26:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.6.11"
+    navi-sdk "^1.6.13"
     nimbus-wallet-management "^4.0.0"
     rainbow-swap-sdk "^1.5.11"
     react "^18.3.1"
