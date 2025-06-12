@@ -1068,10 +1068,10 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
-"@cetusprotocol/aggregator-sdk@^0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.12.0.tgz#ca954f2f0e0acdea74420ba7bb57227cbe021a98"
-  integrity sha512-uhTCpm3M2M7bUsqeZCUohr9DTAob3UKISjwmhutVt2z5dkga1EUhlwgPLD9o1AcYIEBSQ8FIQBrx5/AEIQqs+Q==
+"@cetusprotocol/aggregator-sdk@^0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.12.1.tgz#cf3254351d265b9d86d4bc0112e032e06e2dfc50"
+  integrity sha512-7QGtVaa/R0TSXXLdzu3/AlVRWgLpOm9SP2H7g9uGu62uD+8j+ncVdUjbrOmTm/uhgKDiV3hjGtY1B1tNMUEGtw==
   dependencies:
     "@babel/core" "^7.24.5"
     "@babel/preset-env" "^7.24.5"
@@ -2232,10 +2232,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@invariant-labs/sdk-eclipse@^0.0.122":
-  version "0.0.122"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.122.tgz#f23730e941e577e720d70357bc2eb6aff954f7b3"
-  integrity sha512-aFOrR/j2dQ4G1d9NkE0Wq/0CKWKO0T8DjeqmYU2jZgeIkVK98QIkidepmuFTMsdKrLdK5GbMICXrytpz1HNENA==
+"@invariant-labs/sdk-eclipse@^0.0.124":
+  version "0.0.124"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.124.tgz#08aeabbab89faaab39d56e3cdf0a73b591ce7d00"
+  integrity sha512-XfO5Vj1X4HrzdYrhLqGII0r6Xq5TZtIhXQqCpY15hsW4KE0F1UMylRSbvZ0aYEoHWXjdPWM3hp8N17hTpGoNZA==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -3433,10 +3433,10 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@1.31.0", "@mysten/sui@^1.28.2", "@mysten/sui@^1.31.0":
-  version "1.31.0"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.31.0.tgz#9daa7fa4d4cb66f7635711420089b39710f66e6b"
-  integrity sha512-SXxlVCXKA+ieJ2QAZEyonLBoLtjq5yAA6UxIh3dNAPVg96FhUBiFsQa7WjCz/PfCUyg+h71bShtyfrrkdmjq1A==
+"@mysten/sui@1.32.0", "@mysten/sui@^1.32.0":
+  version "1.32.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.32.0.tgz#a492ce5d1d05f613235240d6cd535879fb77c052"
+  integrity sha512-rGKAWvlpIvURdu/OU/CjYp0gEwdWilD+3u73SCSdBSC5sUpz6VCJWXqi1l92IZQB44fdmboxYUUMQXuGSYwNhg==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.2"
@@ -3484,6 +3484,24 @@
     "@scure/bip39" "^1.5.4"
     gql.tada "^1.8.2"
     graphql "^16.9.0"
+    poseidon-lite "^0.2.0"
+    valibot "^0.36.0"
+
+"@mysten/sui@^1.28.2":
+  version "1.31.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.31.0.tgz#9daa7fa4d4cb66f7635711420089b39710f66e6b"
+  integrity sha512-SXxlVCXKA+ieJ2QAZEyonLBoLtjq5yAA6UxIh3dNAPVg96FhUBiFsQa7WjCz/PfCUyg+h71bShtyfrrkdmjq1A==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.2.0"
+    "@mysten/bcs" "1.6.2"
+    "@mysten/utils" "0.0.1"
+    "@noble/curves" "^1.9.1"
+    "@noble/hashes" "^1.8.0"
+    "@scure/base" "^1.2.6"
+    "@scure/bip32" "^1.7.0"
+    "@scure/bip39" "^1.6.0"
+    gql.tada "^1.8.2"
+    graphql "^16.11.0"
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
@@ -12984,19 +13002,19 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.28:
-  version "5.31.28"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.28.tgz#497e5b5f0cfe061c69161c97f696cecefed06198"
-  integrity sha512-inp3q/0HoUOcCRP2kVuO/L69lb87SG3yfLHi8bqKWObThQexDKEWNtbgsZ0y6PaU6iZBrKekElfeHjj9ZLo3MQ==
+nimbus-universal-swap@5.31.29:
+  version "5.31.29"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.29.tgz#2bec6d52f548e9130a95eec193d311facaf72ca8"
+  integrity sha512-tGWt0gkN/oyNjMhYcM8mJMv3xszafLfwL9JRGmt2WVDG+Grj1nIWb6kAfKC3FkxhATb8sQcBrMFkeYBk/5N8/Q==
   dependencies:
     "@7kprotocol/sdk-ts" "^3.0.2"
-    "@cetusprotocol/aggregator-sdk" "^0.12.0"
+    "@cetusprotocol/aggregator-sdk" "^0.12.1"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.10.24"
     "@hop.ag/sdk" "^4.0.17"
-    "@invariant-labs/sdk-eclipse" "^0.0.122"
+    "@invariant-labs/sdk-eclipse" "^0.0.124"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.7"
@@ -13004,7 +13022,7 @@ nimbus-universal-swap@5.31.28:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.31.0"
+    "@mysten/sui" "^1.32.0"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
