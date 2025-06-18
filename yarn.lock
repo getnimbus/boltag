@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.0.2.tgz#c3bd4871f0a46471dc63313c49c0d67f4afdde1c"
-  integrity sha512-vnybcZod2JZAMrl3H9P1Zhh7jldP6X/G2G+D99VSItY0N4Ezr8WxRLCStYTSGCvmOn0sWUmCCqw4PCN+oxeooQ==
+"@7kprotocol/sdk-ts@^3.1.0":
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.1.0.tgz#0d066fffeb73817094694a4d86e87a0df7119824"
+  integrity sha512-dH8ug1jjtEFxBm7Sc4H6MdqzAey6Jh0Kh0KOPS93GhlR7J+goWh9cBLAGc3DO9PkSJskmsx2WxYWfhb01B5dPQ==
 
 "@adraffy/ens-normalize@1.10.1":
   version "1.10.1"
@@ -2747,7 +2747,7 @@
     viem "^2.28.1"
     zustand "^5.0.3"
 
-"@lifinity/sdk-v2-eclipse@^0.1.7":
+"@lifinity/sdk-v2-eclipse@^0.1.9":
   version "0.1.9"
   resolved "https://registry.yarnpkg.com/@lifinity/sdk-v2-eclipse/-/sdk-v2-eclipse-0.1.9.tgz#b33a686efa70f07528c5bac9d66d9aae201e81a6"
   integrity sha512-3/m4tVGCDFJiEdSuvK7XJX2jv0aNMII+rxLovZQirnSikfRVbv5mHN5ND34ya3JmlleHr2VzsIcdVuJvMtyKxw==
@@ -13011,12 +13011,12 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.30:
-  version "5.31.30"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.30.tgz#6249e6d6b6d0688d3930e28f2e0b2ed5add872d4"
-  integrity sha512-t/BtP+ms8DJUbmG9aVfZjS0ZZjj/ea/EXxzmQjA2z+iuYJ+TTEVHJwoz80Ff+ibZCUQdopQ0s+3LTaWO57xyRg==
+nimbus-universal-swap@5.31.31:
+  version "5.31.31"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.31.tgz#bdc9a75c19c88f979d9f686664c464fa665f5a41"
+  integrity sha512-XfS1+b23smzin+D+3WHEzP3buLdBxbb7iGkJLvV0YVreV1Q+5tcuUHyspGww6oqaaqi/LEF3yDnYVeLomTRnVw==
   dependencies:
-    "@7kprotocol/sdk-ts" "^3.0.2"
+    "@7kprotocol/sdk-ts" "^3.1.0"
     "@cetusprotocol/aggregator-sdk" "^0.12.1"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
@@ -13026,7 +13026,7 @@ nimbus-universal-swap@5.31.30:
     "@invariant-labs/sdk-eclipse" "^0.0.124"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
-    "@lifinity/sdk-v2-eclipse" "^0.1.7"
+    "@lifinity/sdk-v2-eclipse" "^0.1.9"
     "@metaplex-foundation/js" "^0.20.1"
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
