@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.1.0.tgz#0d066fffeb73817094694a4d86e87a0df7119824"
-  integrity sha512-dH8ug1jjtEFxBm7Sc4H6MdqzAey6Jh0Kh0KOPS93GhlR7J+goWh9cBLAGc3DO9PkSJskmsx2WxYWfhb01B5dPQ==
+"@7kprotocol/sdk-ts@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.2.0.tgz#d873d0366e293c9066ebf933ea50ecee56fb4426"
+  integrity sha512-wEb3260TjszRBgViE7wcfvFITvPhaN6xIvphd6JAeAWwzhqhr3dGe/KmYJM+mT5kC/zz6vFUUhp9CaijdIfzAQ==
 
 "@adraffy/ens-normalize@1.10.1":
   version "1.10.1"
@@ -3441,10 +3441,10 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@1.33.0", "@mysten/sui@^1.33.0":
-  version "1.33.0"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.33.0.tgz#e17b0b9edf5903349ef6ff8a48aef75595e89bec"
-  integrity sha512-V6hNQrFe0IT85iZquBJ2BccywQtLXCmq5jojRsdy1iFTZCve2h+Aj0kE7z9+b8X0QD7weg/6KC9JMUa1j05neQ==
+"@mysten/sui@1.34.0", "@mysten/sui@^1.34.0":
+  version "1.34.0"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.34.0.tgz#97cdf69f7f7b775666ba6249a9f4ff4b9d5765b4"
+  integrity sha512-Btf2Tq5VPXqABOXqtw9hV13DskepggP7MpeGb7OnRNF2grh1nHyWj9J0Y2UmkhZUEdTWpnVRnl/ufIZ6VmU1kg==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.3"
@@ -5998,39 +5998,6 @@
     lodash-es "4.17.21"
     mitt "3.0.0"
     react-query "3.39.2"
-
-"@suiet/wallet-kit@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@suiet/wallet-kit/-/wallet-kit-0.4.1.tgz#f0bc3f4cb9c8551e69e623b879cee311a3497729"
-  integrity sha512-WXObzp8VfmgN6EK7Syg7lS6TgI7OZqmT+8C2ti2zF2Dno1rO+cbXv2wr0Q4C5s+dDMrYW4idZ7ptvR37WCrR8w==
-  dependencies:
-    "@mysten/slush-wallet" "0.1.0"
-    "@mysten/sui" "1.28.2"
-    "@mysten/wallet-standard" "0.14.7"
-    "@mysten/zksend" "0.11.0"
-    "@radix-ui/react-dialog" "1.0.2"
-    "@suiet/wallet-sdk" "0.4.1"
-    "@svgr/rollup" "6.5.1"
-    "@wallet-standard/core" "1.0.3"
-    buffer "6.0.3"
-    classnames "2.3.2"
-    lodash-es "4.17.21"
-    mitt "3.0.0"
-    react-query "3.39.2"
-
-"@suiet/wallet-sdk@0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@suiet/wallet-sdk/-/wallet-sdk-0.4.1.tgz#52ecbbacfcfa47813aa9fd17dc13f4b1e4c5735d"
-  integrity sha512-5vREHstuNcj/Ua3PfGmOujcWYcwLucHCvNj7lpkDQ7c20L4kNCHTwpz/5EmJpZbHOVFN1vMm1WI3fCcJwh013w==
-  dependencies:
-    "@mysten/slush-wallet" "0.1.0"
-    "@mysten/sui" "1.28.2"
-    "@mysten/wallet-standard" "0.14.7"
-    "@mysten/zksend" "0.11.0"
-    "@noble/hashes" "1.3.0"
-    buffer "6.0.3"
-    superstruct "1.0.3"
-    tweetnacl "1.0.3"
 
 "@suiet/wallet-sdk@0.5.0":
   version "0.5.0"
@@ -13037,13 +13004,13 @@ negotiator@^0.6.3:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.4.tgz#777948e2452651c570b712dd01c23e262713fff7"
   integrity sha512-myRT3DiWPHqho5PrJaIRyaMv2kgYf0mUVgBNOYMuCH5Ki1yEiQaf/ZJuQ62nvpc44wL5WDbTX7yGJi1Neevw8w==
 
-nimbus-sui-kit@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-1.0.3.tgz#b081dc656827f2ccac67cfc60d6c0f070ffdf3d5"
-  integrity sha512-feZfsNLc3uZ6cCVq1dwiVSI1nBMbYz+NjL7rQdJnWGwUu2oQUjAbGwYxZT6KopQZUiWMTiF1sIeswvoX05A0xg==
+nimbus-sui-kit@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/nimbus-sui-kit/-/nimbus-sui-kit-1.0.4.tgz#b06da575dfb83168fe77de2da2140f245d27e907"
+  integrity sha512-88+1uRJzvZeZIF6snVy2PboPoI/bq/fojlLlTWpwPcwkXVOGQDnpDuXYRM1DhngCOpnd80eAzgVoAvz/Lr9JyQ==
   dependencies:
     "@mysten/sui.js" "^0.54.1"
-    "@suiet/wallet-kit" "^0.4.1"
+    "@suiet/wallet-kit" "^0.5.1"
     "@types/react" "^18.2.58"
     "@types/react-dom" "^18.2.19"
     axios "^1.6.7"
@@ -13053,12 +13020,12 @@ nimbus-sui-kit@1.0.3:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.33:
-  version "5.31.33"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.33.tgz#e839acc0295ac52ef452d3b7ddc1ba25e29b6ccc"
-  integrity sha512-xjSJR7gGNpahEZTzwvLXiuIlHSrJ5E23uDZ+3QsKpTEvPkEVQr6q6yJ7iJKZxIkvVpHkSMcB/LP0teVPUPdHNg==
+nimbus-universal-swap@5.31.34:
+  version "5.31.34"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.34.tgz#eb85857e0aa5b7ce52a632484e8a9d5ce76c78c8"
+  integrity sha512-bwQsmTqfsQRtgkP/SXFJKGHAph726adTqaF9gIO+47STL9FOHiEIJUo/9E9gI06LdfNwOWuayyOf89Pkt6guSw==
   dependencies:
-    "@7kprotocol/sdk-ts" "^3.1.0"
+    "@7kprotocol/sdk-ts" "^3.2.0"
     "@cetusprotocol/aggregator-sdk" "^0.12.1"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
@@ -13073,7 +13040,7 @@ nimbus-universal-swap@5.31.33:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.33.0"
+    "@mysten/sui" "^1.34.0"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
