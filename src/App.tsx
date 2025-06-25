@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { Toaster } from "sonner";
 import { TailSpin } from "react-loader-spinner";
 import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { PWAUpdatePrompt } from "./components/PWAUpdatePrompt";
 
 import { routeTree } from "./routeTree.gen";
 
@@ -116,7 +117,7 @@ function App() {
 
       <Suspense
         fallback={
-          <div className="flex items-center justify-center h-screen">
+          <div className="flex justify-center items-center h-screen">
             <TailSpin
               visible={true}
               height="60"
@@ -132,6 +133,7 @@ function App() {
       >
         <Toaster expand={true} position="top-center" theme="light" />
         <RouterProvider router={router} />
+        <PWAUpdatePrompt />
       </Suspense>
     </React.Fragment>
   );
