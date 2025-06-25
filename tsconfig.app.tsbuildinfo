@@ -13,6 +13,7 @@
     "./src/components/hamburgermenu.tsx",
     "./src/components/header.tsx",
     "./src/components/modal.tsx",
+    "./src/components/pwaupdateprompt.tsx",
     "./src/components/theme.tsx",
     "./src/contexts/reactqueryprovider.tsx",
     "./src/contexts/suiinstanceprovider.tsx",

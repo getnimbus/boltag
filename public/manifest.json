@@ -1,0 +1,63 @@
+{
+  "name": "Bolt.ag by Nimbus",
+  "short_name": "Bolt.ag",
+  "description": "Get the best swap routes from FlowX, Cetus, Aftermath, NAVI and 7K",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["finance", "utilities"],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "icons": [
+    {
+      "src": "/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/favicon-196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/metadata.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Swap",
+      "short_name": "Swap",
+      "description": "Start a new swap",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/manifest-icon-192.maskable.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
