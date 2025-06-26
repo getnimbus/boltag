@@ -229,8 +229,8 @@ function Dashboard() {
           className="relative z-20 max-w-[1600px] m-auto xl:w-[88%] w-[90%] flex flex-col gap-8 bg-white dark:bg-[#121212] rounded-[20px] p-6"
           style={{ boxShadow: "0px 0px 40px 0px rgba(0, 0, 0, 0.1)" }}
         >
-          <div className="grid grid-cols-1 gap-4 xl:col-span-4 col-span-full lg:grid-cols-4 md:grid-cols-2">
-            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+          <div className="grid grid-cols-1 col-span-full gap-4 xl:col-span-4 lg:grid-cols-4 md:grid-cols-2">
+            <div className="col-span-1 border border-[#0000000d] dark:border-[#cdcdcd26] px-3 py-2 rounded-[8px] flex flex-col gap-1">
               <div className="text-[#00000099] dark:text-gray-400 md:text-base text-sm">
                 Total Volume
               </div>
@@ -239,14 +239,14 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+            <div className="col-span-1 border border-[#0000000d] dark:border-[#cdcdcd26] px-3 py-2 rounded-[8px] flex flex-col gap-1">
               <div className="text-[#00000099] dark:text-gray-400 md:text-base text-sm">
                 Current Commission
               </div>
               <div className="text-2xl xl:text-3xl">{commissionRate}%</div>
             </div>
 
-            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+            <div className="col-span-1 border border-[#0000000d] dark:border-[#cdcdcd26] px-3 py-2 rounded-[8px] flex flex-col gap-1">
               <div className="text-[#00000099] dark:text-gray-400 md:text-base text-sm">
                 Total Friends Referred
               </div>
@@ -255,7 +255,7 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className="col-span-1 border px-3 py-2 rounded-[8px] flex flex-col gap-1">
+            <div className="col-span-1 border border-[#0000000d] dark:border-[#cdcdcd26] px-3 py-2 rounded-[8px] flex flex-col gap-1">
               <div className="text-[#00000099] dark:text-gray-400 md:text-base text-sm">
                 Revenue Sharing
               </div>
@@ -281,7 +281,7 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className="h-full border px-3 py-2 rounded-[8px] flex justify-between items-center gap-1">
+            <div className="h-full border border-[#0000000d] dark:border-[#cdcdcd26] px-3 py-2 rounded-[8px] flex justify-between items-center gap-1">
               <div className="w-full overflow-hidden text-ellipsis whitespace-nowrap text-[#00000099] dark:text-gray-400">
                 {link}
               </div>
@@ -314,7 +314,7 @@ function Dashboard() {
           <div className="font-medium text-center">
             Sign your Stashed Wallet to connect Bolt
           </div>
-          <div className="flex justify-center gap-2">
+          <div className="flex gap-2 justify-center">
             <div
               className="w-[120px] flex items-center justify-center rounded-[10px] py-2 px-3 text-white bg-[#1e96fc] text-sm font-medium cursor-pointer hover:bg-[#1878c9] transition-all"
               onClick={() => {

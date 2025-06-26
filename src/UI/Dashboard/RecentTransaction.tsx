@@ -89,7 +89,7 @@ export const RecentTransaction = ({
               <tr className="bg-[#f4f5f8] dark:bg-[#222222]">
                 <th className="pl-3 py-3 rounded-tl-[10px]">
                   <div className="text-xs font-medium text-left uppercase">
-                    Transaction Hash
+                    Tx Hash
                   </div>
                 </th>
                 <th className="py-3">
@@ -108,7 +108,7 @@ export const RecentTransaction = ({
               {(isError || token.length === 0) && !isLoading ? (
                 <tr>
                   <td colSpan={3}>
-                    <div className="flex items-center justify-center h-full px-3 py-4 text-base text-gray-400">
+                    <div className="flex justify-center items-center px-3 py-4 h-full text-base text-gray-400">
                       Empty
                     </div>
                   </td>
@@ -130,7 +130,7 @@ export const RecentTransaction = ({
                         <td className="py-3 bg-[#fff] dark:bg-[#131313] group-hover:bg-gray-100 group-hover:dark:bg-black/30">
                           <div className="text-sm text-[#00000099] dark:text-gray-400">
                             {item.aggregator ? (
-                              <div className="flex items-center gap-2">
+                              <div className="flex gap-2 items-center">
                                 <img
                                   src={formatAggregator(item.aggregator)?.logo}
                                   alt={item.aggregator}
@@ -163,7 +163,7 @@ export const RecentTransaction = ({
               <tbody>
                 <tr>
                   <td colSpan={3}>
-                    <div className="flex items-center justify-center h-full px-3 py-3">
+                    <div className="flex justify-center items-center px-3 py-3 h-full">
                       <TailSpin
                         visible={true}
                         height="30"
@@ -184,7 +184,7 @@ export const RecentTransaction = ({
 
         <div className="xl:hidden block p-2 w-full overflow-hidden rounded-[10px] border border-[#0000000d] dark:border-[#cdcdcd26] bg-white dark:bg-[#131313]">
           {isError && !isLoading ? (
-            <div className="flex items-center justify-center h-full px-3 py-4 text-base text-gray-400">
+            <div className="flex justify-center items-center px-3 py-4 h-full text-base text-gray-400">
               Empty
             </div>
           ) : (
@@ -195,11 +195,11 @@ export const RecentTransaction = ({
                     key={index}
                     className="flex flex-col gap-4 border-b-[1px] border-[#0000000d] dark:border-[#cdcdcd26] last:border-none py-4"
                   >
-                    <div className="flex items-start justify-between">
+                    <div className="flex justify-between items-start">
                       <div className="text-sm font-medium text-right uppercase">
-                        Transaction Hash
+                        Tx Hash
                       </div>
-                      <div className="text-sm w-max">
+                      <div className="w-max text-sm">
                         <a
                           href={`https://suiscan.xyz/mainnet/tx/${item.txHash}`}
                           className="text-sm underline cursor-pointer transition-all hover:text-[#1e96fc] hover:dark:text-[#1e96fc] text-[#00000099] dark:text-gray-400"
@@ -209,13 +209,13 @@ export const RecentTransaction = ({
                       </div>
                     </div>
 
-                    <div className="flex items-start justify-between">
+                    <div className="flex justify-between items-start">
                       <div className="text-sm text-right uppercase">
                         Aggregator
                       </div>
                       <div className="text-sm w-max text-[#00000099] dark:text-gray-400">
                         {item.aggregator ? (
-                          <div className="flex items-center gap-2">
+                          <div className="flex gap-2 items-center">
                             <img
                               src={formatAggregator(item.aggregator)?.logo}
                               alt={item.aggregator}
@@ -229,7 +229,7 @@ export const RecentTransaction = ({
                       </div>
                     </div>
 
-                    <div className="flex items-start justify-between">
+                    <div className="flex justify-between items-start">
                       <div className="text-sm font-medium text-right uppercase">
                         Trade Volume
                       </div>
@@ -245,7 +245,7 @@ export const RecentTransaction = ({
               })}
 
               {isLoading ? (
-                <div className="flex items-center justify-center h-full px-3 py-3">
+                <div className="flex justify-center items-center px-3 py-3 h-full">
                   <TailSpin
                     visible={true}
                     height="30"
@@ -262,9 +262,9 @@ export const RecentTransaction = ({
           )}
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex justify-center items-center">
           <div
-            className={`w-[140px] border border-[#1e96fc] text-[#1e96fc] rounded-[10px] py-1 px-3 cursor-pointer flex items-center justify-center text-sm ${
+            className={`w-[120px] border border-[#1e96fc] text-[#1e96fc] rounded-[10px] py-2 px-3 cursor-pointer flex items-center justify-center text-sm ${
               page < data?.data?.result?.page ? "" : "opacity-45"
             }`}
             onClick={() => {
@@ -277,20 +277,7 @@ export const RecentTransaction = ({
               }
             }}
           >
-            {isLoading ? (
-              <TailSpin
-                visible={true}
-                height="30"
-                width="30"
-                color="#1e96fc"
-                ariaLabel="tail-spin-loading"
-                radius="1"
-                wrapperStyle={{}}
-                wrapperClass=""
-              />
-            ) : (
-              "Load more"
-            )}
+            {isLoading ? "Loading..." : "Load more"}
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import dayjs from "dayjs";
 import ReactECharts from "echarts-for-react";
 import { formatValue } from "../../utils";
 import { useTheme } from "../../contexts/ThemeProvider";
+import { AnimatePresence, motion } from "framer-motion";
 
 const listTimeRange = [
   {
@@ -213,27 +214,43 @@ export const TradingVolume = ({
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col items-start justify-between gap-3 md:gap-4 md:flex-row md:items-center">
+      <div className="flex flex-col gap-3 justify-between items-start md:gap-4 md:flex-row md:items-center">
         <div className="text-xl font-medium">Trading Volume with Ref</div>
         <div className="flex items-center">
-          {listTimeRange.map((item: any, index: number) => {
-            return (
-              <div
-                key={index}
-                className={`cursor-pointer py-1 text-sm rounded-[20px] w-[70px] flex items-center justify-center font-medium ${isError ? "opacity-45" : ""} ${selectedTimeRange === item.value ? "bg-[#1e96fc] text-white" : ""}`}
-                onClick={() => {
-                  if (!isLoading && !isError) {
-                    if (selectedTimeRange === item.value) {
-                      return;
-                    }
-                    setSelectedTimeRange(item.value);
-                  }
-                }}
-              >
-                {item.label}
-              </div>
-            );
-          })}
+          <AnimatePresence mode="wait">
+            {listTimeRange.map(
+              (item: { label: string; value: string }, index: number) => {
+                return (
+                  <motion.div
+                    key={index}
+                    layout
+                    className={`relative cursor-pointer py-1.5 text-sm rounded-[20px] w-[70px] flex items-center justify-center font-medium ${isError ? "opacity-45" : ""}`}
+                    onClick={() => {
+                      if (!isLoading && !isError) {
+                        if (selectedTimeRange === item.value) {
+                          return;
+                        }
+                        setSelectedTimeRange(item.value);
+                      }
+                    }}
+                  >
+                    <div className="relative z-20">{item.label}</div>
+
+                    {selectedTimeRange === item.value && (
+                      <motion.div
+                        layoutId="active-pill"
+                        transition={{
+                          type: "spring",
+                          duration: 0.6,
+                        }}
+                        className="absolute z-10 inset-0 rounded-full bg-[#1e96fc]"
+                      />
+                    )}
+                  </motion.div>
+                );
+              },
+            )}
+          </AnimatePresence>
         </div>
       </div>
 
@@ -251,7 +268,7 @@ export const TradingVolume = ({
           />
         </div>
       ) : (
-        <div className="flex items-center justify-center h-full">
+        <div className="flex justify-center items-center h-full">
           <ReactECharts
             option={chartOptions}
             notMerge={true}
