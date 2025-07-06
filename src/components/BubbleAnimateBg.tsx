@@ -51,7 +51,7 @@ const listDefaultToken = [
       "0x239e9725bdab1fcb2e4798a057da809e52f13134a09bc9913659d4a80ddfdaad::shui::SHUI",
   },
   {
-    logo: "https://ipfs.io/ipfs/bafkreig53olo3ewrkph3hfrhjuwvuj53pmbntl2cwxd4zlyfnj5eznoxcu",
+    logo: "https://assets.coingecko.com/coins/images/33317/standard/logo_flx.png?1701435649",
     symbol: "FLX",
     address:
       "0x6dae8ca14311574fdfe555524ea48558e3d1360d1607d1c7f98af867e3b7976c::flx::FLX",
