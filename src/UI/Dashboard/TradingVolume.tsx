@@ -234,7 +234,11 @@ export const TradingVolume = ({
                       }
                     }}
                   >
-                    <div className="relative z-20 text-white">{item.label}</div>
+                    <div
+                      className={`relative z-20 ${selectedTimeRange === item.value ? "text-white" : ""}`}
+                    >
+                      {item.label}
+                    </div>
 
                     {selectedTimeRange === item.value && (
                       <motion.div
