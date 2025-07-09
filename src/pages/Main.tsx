@@ -39,8 +39,8 @@ const listNativeToken = [
 ];
 
 const SUIAddress = "0x2::sui::SUI";
-const USDTAddress =
-  "0xc060006111016b8a020ad5b33834984a437aaa7d3c74c18e09a95d48aceab08c::coin::COIN";
+const USDCAddress =
+  "0xdba34672e30cb065b1f93e3ab55318768fd6fef66c15942c9f7cb846e2f900e7::usdc::USDC";
 
 function Main() {
   const { theme } = useTheme();
@@ -195,7 +195,32 @@ function Main() {
     }
   };
 
-  const handleSelectToken = (data: any) => {
+  const handleSelectToken = (data: {
+    fromToken: string;
+    fromTokenInfo: {
+      address: string;
+      chainId: number;
+      coinKey: string;
+      decimals: number;
+      isVerified: boolean;
+      logoURI: string;
+      name: string;
+      priceUSD: string;
+      symbol: string;
+    };
+    toToken: string;
+    toTokenInfo: {
+      address: string;
+      chainId: number;
+      coinKey: string;
+      decimals: number;
+      isVerified: boolean;
+      logoURI: string;
+      name: string;
+      priceUSD: string;
+      symbol: string;
+    };
+  }) => {
     if (data && Object.keys(data).length !== 0) {
       if (data.fromToken !== paramsTokenInfo.fromToken) {
         setParamsTokenInfo({
@@ -242,7 +267,7 @@ function Main() {
     if (chainParams && chainParams !== undefined && Number(chainParams) !== 0) {
       setParamsChain(Number(chainParams));
       setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
-      setToTokenParam(toTokenParams ? toTokenParams : USDTAddress);
+      setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
     } else {
       const connectedWalletSwapChainStorage = localStorage.getItem(
         "connectedWalletSwapChain",
@@ -253,7 +278,7 @@ function Main() {
       ) {
         setParamsChain(Number(connectedWalletSwapChainStorage));
         setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
-        setToTokenParam(toTokenParams ? toTokenParams : USDTAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
         if (Number(connectedWalletSwapChainStorage) !== 0) {
           window.history.replaceState(
             null,
@@ -271,7 +296,7 @@ function Main() {
       } else {
         setParamsChain(ChainId.MOVE);
         setFromTokenParam(fromTokenParams ? fromTokenParams : SUIAddress);
-        setToTokenParam(toTokenParams ? toTokenParams : USDTAddress);
+        setToTokenParam(toTokenParams ? toTokenParams : USDCAddress);
         window.history.replaceState(
           null,
           "",
@@ -499,6 +524,7 @@ function Main() {
           "x-request-timestamp": now,
         },
       });
+
       if (response && response.error) {
         console.error("Error submitting trade log:", response.error);
       }
