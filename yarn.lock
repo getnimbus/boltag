@@ -15,10 +15,10 @@
     "@gql.tada/internal" "^1.0.0"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
-"@7kprotocol/sdk-ts@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.2.0.tgz#d873d0366e293c9066ebf933ea50ecee56fb4426"
-  integrity sha512-wEb3260TjszRBgViE7wcfvFITvPhaN6xIvphd6JAeAWwzhqhr3dGe/KmYJM+mT5kC/zz6vFUUhp9CaijdIfzAQ==
+"@7kprotocol/sdk-ts@^3.3.0":
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/@7kprotocol/sdk-ts/-/sdk-ts-3.3.0.tgz#3fb655a89ca7290150e8407fee83751d4372d036"
+  integrity sha512-Jnir8JCf6ONsPdZZYdkbi6csHieaTF/fOzMTbdLUx3anJZH3t14vj3Ru4S0MdWL1k4v/G/lWb0ZQ2M61LMaXvg==
 
 "@adraffy/ens-normalize@1.10.1":
   version "1.10.1"
@@ -2382,6 +2382,15 @@
     "@gql.tada/internal" "1.0.8"
     graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
 
+"@gql.tada/cli-utils@1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@gql.tada/cli-utils/-/cli-utils-1.7.0.tgz#9aa3522dc4b5e13a8ca30f1b1b8834b82d29275f"
+  integrity sha512-Jj74qfIplT+MzUUWABeUJxHF5lxiyOJpE4ENeIOwvcPAi+QYoxsKNj/aPcGAk2jK5CrP9aFtE5O7794q2rWjlQ==
+  dependencies:
+    "@0no-co/graphqlsp" "^1.12.13"
+    "@gql.tada/internal" "1.0.8"
+    graphql "^15.5.0 || ^16.0.0 || ^17.0.0"
+
 "@gql.tada/internal@1.0.8", "@gql.tada/internal@^1.0.0":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@gql.tada/internal/-/internal-1.0.8.tgz#3ba9fa6534809788bbbe103492f70b8e9d754027"
@@ -2432,10 +2441,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@invariant-labs/sdk-eclipse@^0.0.130":
-  version "0.0.130"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.130.tgz#4f5d688ac9fae557fa83d94fbd41150adbedbc0a"
-  integrity sha512-9gHvQOM45BvpZY5sPJWjo8o60T3k82ab25LYAFbiijln31rwa9x6XWIlSJSP8OoUnEnJCNG8rGTCaKKHauobMg==
+"@invariant-labs/sdk-eclipse@^0.0.131":
+  version "0.0.131"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.131.tgz#7bb62121ba520a8d84bafd0328abd935f88c3adf"
+  integrity sha512-pVzwudkUjKKieKShhVnhZD5PnIpOAxhX8WasmcIo/d2yZRaOkvrztQHX8fqwoOmispNLjGIBDix8u/BaRr4okQ==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -3644,20 +3653,20 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@1.36.0", "@mysten/sui@^1.36.0":
-  version "1.36.0"
-  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.36.0.tgz#cc4687021b834658b54c2baefb50fd5dea311478"
-  integrity sha512-BHJatlqZir4pD1SRBjxh+SGg0BOTX1y9OxgX66e8rhEqZj33TztwpsSG2s+luLD+ugXDBAWt18/1Bk4/D1SwSg==
+"@mysten/sui@1.36.2", "@mysten/sui@^1.36.2":
+  version "1.36.2"
+  resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.36.2.tgz#4bf7586caf8429d22628d9028501011286b6829d"
+  integrity sha512-TRRdzJBa+ZvAQwwjvagecmWNALP6G4oqum8E+959D17KJKBwR5uY9TvlWzUR7dnjNWXIju7OH6KEqgah9hKzUw==
   dependencies:
     "@graphql-typed-document-node/core" "^3.2.0"
     "@mysten/bcs" "1.6.4"
     "@mysten/utils" "0.1.1"
-    "@noble/curves" "^1.9.1"
+    "@noble/curves" "^1.9.4"
     "@noble/hashes" "^1.8.0"
     "@scure/base" "^1.2.6"
     "@scure/bip32" "^1.7.0"
     "@scure/bip39" "^1.6.0"
-    gql.tada "^1.8.2"
+    gql.tada "^1.8.12"
     graphql "^16.11.0"
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
@@ -3978,6 +3987,13 @@
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/@noble/curves/-/curves-1.9.1.tgz#9654a0bc6c13420ae252ddcf975eaf0f58f0a35c"
   integrity sha512-k11yZxZg+t+gWvBbIswW0yoJlu8cHOC7dhunwOzoWH/mXGBiYyR4YY6hAEK/3EUs4UpB8la1RfdRpeGsFHkWsA==
+  dependencies:
+    "@noble/hashes" "1.8.0"
+
+"@noble/curves@^1.9.4":
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/@noble/curves/-/curves-1.9.4.tgz#a748c6837ee7854a558cc3b951aedd87a5e7d6a5"
+  integrity sha512-2bKONnuM53lINoDrSmK8qP8W271ms7pygDhZt4SiLOoLwBtoHqeCFi6RG42V8zd3mLHuJFhU/Bmaqo4nX0/kBw==
   dependencies:
     "@noble/hashes" "1.8.0"
 
@@ -10968,6 +10984,16 @@ gql.tada@^1.7.0, gql.tada@^1.8.2:
     "@gql.tada/cli-utils" "1.6.3"
     "@gql.tada/internal" "1.0.8"
 
+gql.tada@^1.8.12:
+  version "1.8.12"
+  resolved "https://registry.yarnpkg.com/gql.tada/-/gql.tada-1.8.12.tgz#b3a36a299b14cc673128d477fc71917747293213"
+  integrity sha512-VuHbhYyhPN7XDc06Gl3jYWxMlqa1MLX5xbrmbBbzelX/+M5khxDsNBE7FvTEvAmx0RyLyDkEtRPWRfIdMCTKTw==
+  dependencies:
+    "@0no-co/graphql.web" "^1.0.5"
+    "@0no-co/graphqlsp" "^1.12.13"
+    "@gql.tada/cli-utils" "1.7.0"
+    "@gql.tada/internal" "1.0.8"
+
 graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.9:
   version "4.2.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.11.tgz#4183e4e8bf08bb6e05bbb2f7d2e0c8f712ca40e3"
@@ -12840,19 +12866,19 @@ nimbus-sui-kit@1.0.4:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.41:
-  version "5.31.41"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.41.tgz#28a314c5d9dd7b5fe0b19874e69fd5c52060ab49"
-  integrity sha512-HMX8RAiwVDQrtZ++B9Ylb8H8ftTMsVPlek/dmc2EvbW1QcFC494/SoUgH/wDNsGp/QA4FRITZsWESq67TyrpDQ==
+nimbus-universal-swap@5.31.42:
+  version "5.31.42"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.42.tgz#a7db191a001bbc433d85f9999dbe92c5be05eb1a"
+  integrity sha512-jhOtlT0lfo1w+s9K4XDcUgLdJGSD8lcyBnbR16VDsB7ST0PFTFjr8N6vqfpZ0ZaTqCLCIlw06ScfhgLkw6Yshw==
   dependencies:
-    "@7kprotocol/sdk-ts" "^3.2.0"
+    "@7kprotocol/sdk-ts" "^3.3.0"
     "@cetusprotocol/aggregator-sdk" "^0.14.2"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
     "@flowx-finance/sdk" "^1.11.2"
     "@hop.ag/sdk" "^4.0.17"
-    "@invariant-labs/sdk-eclipse" "^0.0.130"
+    "@invariant-labs/sdk-eclipse" "^0.0.131"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.9"
@@ -12860,7 +12886,7 @@ nimbus-universal-swap@5.31.41:
     "@mui/icons-material" "^5.16.7"
     "@mui/lab" "^5.0.0-alpha.173"
     "@mui/material" "^5.16.7"
-    "@mysten/sui" "^1.36.0"
+    "@mysten/sui" "^1.36.2"
     "@project-serum/anchor" "^0.26.0"
     "@sentry/react" "^8.35.0"
     "@solana/wallet-adapter-base" "^0.9.23"
