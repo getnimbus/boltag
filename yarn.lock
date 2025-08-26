@@ -1276,6 +1276,11 @@
     bs58 "^6.0.0"
     viem "^2.22.21"
 
+"@bluefin-exchange/bluefin7k-aggregator-sdk@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@bluefin-exchange/bluefin7k-aggregator-sdk/-/bluefin7k-aggregator-sdk-4.3.1.tgz#10b1942859b2599acc2484a3b6a86e0bd8dae232"
+  integrity sha512-HDqP0W4st36CgiIfamumN5kTMNOvB66pVkdC/Ijo7octjzQBQudSm/T8z+ybWf4ng2LFx8HvWAvbALarjvxT7g==
+
 "@cetusprotocol/aggregator-sdk@^0.16.0":
   version "0.16.0"
   resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-0.16.0.tgz#ed7f2a609e0a6a7ea9544a686d8e28b95fb641f6"
@@ -1289,6 +1294,28 @@
     "@pythnetwork/pyth-sui-js" "^2.1.0"
     "@types/jest" "^29.5.12"
     "@types/json-bigint" "^1.0.4"
+    "@types/node" "^20.12.12"
+    babel-jest "^29.7.0"
+    bip39 "^3.1.0"
+    dotenv "^16.4.5"
+    jest "^29.7.0"
+    json-bigint "^1.0.0"
+    node-fetch "^3.3.2"
+    ts-jest "^29.1.3"
+    typescript "^5.0.0"
+
+"@cetusprotocol/aggregator-sdk@^1.0.3":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@cetusprotocol/aggregator-sdk/-/aggregator-sdk-1.1.1.tgz#8f6737b94cdac3b6b53f03474d94d3e3c2a9de1c"
+  integrity sha512-WW5aEmVAr/hJpo9hjg1bIqmIT6/9VIbSOOfI0Ix9TJQPNyQUnN9mmLHnYJj+ny6UI22X+QgRv0v76a5TJQ3HlQ==
+  dependencies:
+    "@babel/core" "^7.24.5"
+    "@babel/preset-env" "^7.24.5"
+    "@babel/preset-typescript" "^7.24.1"
+    "@jest/globals" "^29.7.0"
+    "@mysten/sui" "^1.0.5"
+    "@pythnetwork/pyth-sui-js" "^2.1.0"
+    "@types/jest" "^29.5.12"
     "@types/node" "^20.12.12"
     babel-jest "^29.7.0"
     bip39 "^3.1.0"
@@ -2340,13 +2367,16 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.9.tgz#50dea3616bc8191fb8e112283b49eaff03e78429"
   integrity sha512-MDWhGtE+eHw5JW7lq4qhc5yRLS11ERl1c7Z6Xd0a58DozHES6EnNNwUWbMiG4J9Cgj053Bhk8zvlhFYKVhULwg==
 
-"@flowx-finance/sdk@^1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.12.0.tgz#25bb139cb24a74362a9ca2d3f6e7e728b914cc7e"
-  integrity sha512-Zhlw7R0r9tutuK6yJeOKP7Zk104Anz7J6o8l9hCzStNv5L7khBzzuMhi4F38yIFVRXz+zyOWeTdEao8kl3txAw==
+"@flowx-finance/sdk@^1.13.2":
+  version "1.13.2"
+  resolved "https://registry.yarnpkg.com/@flowx-finance/sdk/-/sdk-1.13.2.tgz#222b18453acc8d40eaeab4ab9ed14c1502342904"
+  integrity sha512-i/wvj5lpTSZ/1xdIE9DIRU0+uyy7gB8JV8hWyt71jw4idvh9ov0Fz3weFW6ss+TzLAg5XqL/w4xGAgzqxKrGzw==
   dependencies:
+    "@bluefin-exchange/bluefin7k-aggregator-sdk" "^4.3.1"
+    "@cetusprotocol/aggregator-sdk" "^1.0.3"
     "@mysten/sui" "^1.14.2"
     "@mysten/sui.js" "^0.54.1"
+    aftermath-ts-sdk "^1.3.19"
     bignumber.js "^9.0.1"
     bn.js "^5.2.1"
     crypto-js "^4.2.0"
@@ -2441,10 +2471,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/retry/-/retry-0.4.2.tgz#1860473de7dfa1546767448f333db80cb0ff2161"
   integrity sha512-xeO57FpIu4p1Ri3Jq/EXq4ClRm86dVF2z/+kvFnyqVYRavTZmaFaUBbWCOuuTh0o/g7DSsk6kc2vrS4Vl5oPOQ==
 
-"@invariant-labs/sdk-eclipse@^0.0.146":
-  version "0.0.146"
-  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.146.tgz#7aab9aa8e855036aa85a97d69e187c273fadb065"
-  integrity sha512-WVbit2iA6p0rZ1Ls0EPmJkQJYiEDF08jAy/S8AjqmIyZAsd6/JimLikD03mxfC+4V7BBW2sUCif65sXR11v9XQ==
+"@invariant-labs/sdk-eclipse@^0.0.151":
+  version "0.0.151"
+  resolved "https://registry.yarnpkg.com/@invariant-labs/sdk-eclipse/-/sdk-eclipse-0.0.151.tgz#7d207c58d357283f499917ac8c9abb609a368cea"
+  integrity sha512-6Miyq1X5vaENne+/bN+h94R0ijAtgker0XFdePdGPZMkzyEynQ3FkpD1hvov3BtgFf6jFirtzDJPadsDiVusLg==
   dependencies:
     "@coral-xyz/anchor" "^0.29.0"
     "@solana/spl-token-registry" "^0.2.4484"
@@ -3630,7 +3660,7 @@
     poseidon-lite "^0.2.0"
     valibot "^0.36.0"
 
-"@mysten/sui@1.37.4", "@mysten/sui@^1.37.4":
+"@mysten/sui@1.37.4", "@mysten/sui@^1.0.5", "@mysten/sui@^1.37.4":
   version "1.37.4"
   resolved "https://registry.yarnpkg.com/@mysten/sui/-/sui-1.37.4.tgz#120cbac8e9815576853b491156496739c48525af"
   integrity sha512-3dKddNEF7XTfPnYIfVyHHTX+9fraQrKFxiBJ8nveISqo4skyClH/nDyS8Nkh7coknbWghuSSsD82liCOZX2uLw==
@@ -12756,10 +12786,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-navi-sdk@^1.6.16:
-  version "1.6.16"
-  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.16.tgz#8810aa194a7cc350073310769d21e8a5ae283f9c"
-  integrity sha512-01vuIIDpffLjybe5kRtoM/UxAd/lmZrirary6hRgs6+my/stnbdTbpVJKSCEGQAbAj7Kg4dYgGIm+BHe6gIVvQ==
+navi-sdk@^1.6.17:
+  version "1.6.18"
+  resolved "https://registry.yarnpkg.com/navi-sdk/-/navi-sdk-1.6.18.tgz#1a40abff2c42d1b0930c7ddc9dd0e930c58d9c59"
+  integrity sha512-6zhnZYkPRwqlFWO0h3aL0/zv5Bt5Wnb3O5tLYmlt9fGT8MiBRrMo/+tJ+FEiK6VvAWbdkGbHuXgwd8HsQgQK4w==
   dependencies:
     "@mayanfinance/swap-sdk" "10.3.0"
     "@mysten/sui" "^1.16.0"
@@ -12810,19 +12840,19 @@ nimbus-sui-kit@1.0.4:
     react-intersection-observer "^9.6.0"
     react-router-dom "^6.22.0"
 
-nimbus-universal-swap@5.31.48:
-  version "5.31.48"
-  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.48.tgz#45255b24f236ebb834d571c1b7cb81abce673520"
-  integrity sha512-5DrKCe7fxQnugKssaCq8EVlp1wcRrXvKBMbOSXvSW5mAoID41RdMEriEnDMKBFpNvD9tBGLkx10tuOvRs0qWMg==
+nimbus-universal-swap@5.31.49:
+  version "5.31.49"
+  resolved "https://registry.yarnpkg.com/nimbus-universal-swap/-/nimbus-universal-swap-5.31.49.tgz#e94d89d11dae360b062bedde1c8b1f916ba5c118"
+  integrity sha512-1DcEqRlPSLsEH9+wyiQqKXkGdSgUi0Jm0DIdtXC9mM2xKcdwzlFOvsSBA2PGweurK7oky5D+tVi5MU7R1n01Hg==
   dependencies:
     "@7kprotocol/sdk-ts" "^3.4.1"
     "@cetusprotocol/aggregator-sdk" "^0.16.0"
     "@drift-labs/snap-wallet-adapter" "^0.3.0"
     "@emotion/react" "^11.13.3"
     "@emotion/styled" "^11.13.0"
-    "@flowx-finance/sdk" "^1.12.0"
+    "@flowx-finance/sdk" "^1.13.2"
     "@hop.ag/sdk" "^4.0.17"
-    "@invariant-labs/sdk-eclipse" "^0.0.146"
+    "@invariant-labs/sdk-eclipse" "^0.0.151"
     "@lifi/sdk" "^3.2.3"
     "@lifi/wallet-management" "^3.1.7"
     "@lifinity/sdk-v2-eclipse" "^0.1.9"
@@ -12850,7 +12880,7 @@ nimbus-universal-swap@5.31.48:
     i18next "^23.15.1"
     microdiff "^1.4.0"
     mitt "^3.0.1"
-    navi-sdk "^1.6.16"
+    navi-sdk "^1.6.17"
     nimbus-wallet-management "^4.0.0"
     rainbow-swap-sdk "^1.5.12"
     react "^18.3.1"
