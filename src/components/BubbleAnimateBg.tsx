@@ -15,12 +15,6 @@ const listDefaultToken = [
       "0xb848cce11ef3a8f62eccea6eb5b35a12c4c2b1ee1af7755d02d7bd6218e8226f::coin::COIN",
   },
   {
-    logo: "https://api.movepump.com/uploads/Asset_10geckos_square_c7be378110.PNG",
-    symbol: "GECKO",
-    address:
-      "0x9f9cd83d94e8f53c6505956539afc0c852cb57c9bcae3e55d275877900ce9ed9::gecko::GECKO",
-  },
-  {
     logo: "https://assets.coingecko.com/coins/images/33610/standard/pug-head.png?1702513072",
     symbol: "FUD",
     address:
